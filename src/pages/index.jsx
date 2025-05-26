@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 import { isUserLogIn } from "@/firebase/firebaseClient";
+import { sendLoginRequest } from "@/api/user";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,19 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const token = document.cookie
+  //       .split("; ")
+  //       .find((row) => row.startsWith("firebase_id_token="))
+  //       ?.split("=")[1];
 
+  //     const data = await sendLoginRequest({ token });
+  //     console.log(data);
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   return (
     <div
