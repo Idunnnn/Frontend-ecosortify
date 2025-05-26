@@ -3,9 +3,10 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import Link from "next/link"; // Perhatikan 'Link' tanpa destructuring {}
+import Link from "next/link";
 import { isUserLogIn } from "@/firebase/firebaseClient";
 import Footer from '../components/templates/Web component/Footer';
+import Button from "@/components/Button"; // Import your Button component
 // ===========================================================
 
 // === Bagian inisialisasi font custom menggunakan next/font
@@ -33,35 +34,40 @@ export default function Home() {
 
   return (
     <div
-      className={`${geistSans.className} ${geistMono.className} min-h-screen text-gray-800`} // Default text color for sections without specific override
+      className={`${geistSans.className} ${geistMono.className} min-h-screen text-gray-800`}
       style={{
-        backgroundImage: 'url("/images/pexels-ollivves-931018.jpg")', // Your specified main background image path
+        backgroundImage: 'url("/images/pexels-ollivves-931018.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}
     >
       {/* === Bagian Header (Navigation Bar) */}
-      <header className="flex justify-between items-center p-8 z-10 relative text-white"> {/* Add text-white for header */}
+      <header className="flex justify-between items-center p-8 z-10 relative text-white">
         <div className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="Ecosortify Logo" width={100} height={100} /> {/* Adjust path to your logo */}
-          {/* <span className="text-2xl font-bold">Ecosortify</span> */}
+          <Image src="/images/logo.png" alt="Ecosortify Logo" width={100} height={100} />
         </div>
         <nav className="flex gap-8">
           <a href="src/pages/index.jsx" className="hover:text-green-300 transition">Home</a>
           <Link href="/scan" className="hover:text-green-300 transition">Scan</Link>
-          <a href="#" className="hover:text-green-300 transition">Guide</a>
-          <a href="#" className="hover:text-green-300 transition">Chatbot</a>
-          <a href="#" className="hover:text-green-300 transition">About</a>
+          <Link href="/guide" className="hover:text-green-300 transition">Guide</Link>
+          <Link href="/chatbot" className="hover:text-green-300 transition">Chatbot</Link>
+          <Link href="/about" className="hover:text-green-300 transition">About us</Link>
         </nav>
         <div className="flex gap-4">
-          <button className="bg-transparent border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-green-800 transition">Register</button>
-          <button className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Login</button>
+          {/* Using Button component for Register */}
+          <Button variant="rounded_secondary_sm" className="!py-2 !px-6"> {/* Override default padding to match original */}
+            Register
+          </Button>
+          {/* Using Button component for Login */}
+          <Button variant="primary_sm" className="!py-2 !px-6"> {/* Override default padding to match original */}
+            Login
+          </Button>
         </div>
       </header>
 
       {/* === Bagian konten utama (main hero section) */}
-      <main className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] text-center px-4 text-white"> {/* Add text-white for hero section */}
+      <main className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] text-center px-4 text-white">
         <h1 className="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">
           Untuk Bumi yang Lebih Bersih
         </h1>
@@ -69,12 +75,14 @@ export default function Home() {
           Satu artikel bisa mengubah cara kita melihat dan mengelola sampah
         </p>
         <div className="flex gap-6">
-          <button className="bg-green-600 text-white font-semibold text-lg px-8 py-4 rounded-full hover:bg-green-700 transition">
+          {/* Using Button component for Guide */}
+          <Button variant="rounded_primary_lg" className="!text-lg !px-8 !py-4"> {/* Override default padding/font to match original */}
             Guide
-          </button>
-          <button className="bg-transparent border border-white text-white font-semibold text-lg px-8 py-4 rounded-full hover:bg-white hover:text-green-800 transition">
+          </Button>
+          {/* Using Button component for Chatbot */}
+          <Button variant="rounded_secondary_lg" className="!text-lg !px-8 !py-4"> {/* Override default padding/font to match original */}
             Chatbot
-          </button>
+          </Button>
         </div>
       </main>
 
@@ -84,7 +92,7 @@ export default function Home() {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md h-64 md:h-96 rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <Image
-                src="/images/assets/istockphoto-1171440648-612x612.jpg" // Perhatikan garis miring di awal
+                src="/images/assets/istockphoto-1171440648-612x612.jpg"
                 alt="Tangan memegang kantong sampah"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -109,14 +117,14 @@ export default function Home() {
       {/* === Bagian: Mengapa Edukasi Sampah Itu Penting? Section */}
       <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-[#1b3d32] text-white">
         <div className="absolute inset-y-0 right-0 w-full md:w-1/2 lg:w-2/5">
-      <Image
-      src="/images/assets/pexels-tima-miroshnichenko-5428264.jpg" // PASTIKAN ADA GARIS MIRING DI AWAL SRC
-      alt="Anak-anak belajar tentang lingkungan"
-      fill
-      sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 40vw"
-      style={{ objectFit: 'cover', objectPosition: 'left center' }}
-      className="hidden md:block"
-    />
+          <Image
+            src="/images/assets/pexels-tima-miroshnichenko-5428264.jpg"
+            alt="Anak-anak belajar tentang lingkungan"
+            fill
+            sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 40vw"
+            style={{ objectFit: 'cover', objectPosition: 'left center' }}
+            className="hidden md:block"
+          />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row">
@@ -136,7 +144,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <Image
-                  src="/images/assets/forest (1).png" // PATH INI TELAH DIPERBARUI
+                  src="/images/assets/forest (1).png"
                   alt="hutan"
                   width={64}
                   height={64}
@@ -146,7 +154,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <Image
-                  src="/images/assets/planet-earth.png" // PATH INI TELAH DIPERBARUI
+                  src="/images/assets/planet-earth.png"
                   alt="planet"
                   width={64}
                   height={64}
@@ -155,8 +163,8 @@ export default function Home() {
                 <h3 className="font-semibold text-xl mb-2">Menghemat Sumber Daya Alam</h3>
               </div>
               <div className="text-center">
-                  <Image
-                  src="/images/assets/law.png" // PATH INI TELAH DIPERBARUI
+                <Image
+                  src="/images/assets/law.png"
                   alt="Law Document Icon"
                   width={64}
                   height={64}
@@ -169,15 +177,15 @@ export default function Home() {
 
           {/* Right Image Area (visible on mobile if needed, but primarily controlled by absolute positioning) */}
           <div className="w-full md:w-1/2 lg:w-2/5 mt-12 md:mt-0 md:hidden">
-             <div className="relative w-full h-64 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                    src="/images/children-learning.jpg"
-                    alt="Anak-anak belajar tentang lingkungan"
-                    fill
-                    sizes="(max-width: 768px) 100vw"
-                    style={{ objectFit: 'cover' }}
-                />
-             </div>
+            <div className="relative w-full h-64 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/children-learning.jpg"
+                alt="Anak-anak belajar tentang lingkungan"
+                fill
+                sizes="(max-width: 768px) 100vw"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -205,7 +213,7 @@ export default function Home() {
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/images/assets/kencanaonline-removebg-preview.png" // PATH INI TELAH DIPERBARUI
+                  src="/images/assets/kencanaonline-removebg-preview.png"
                   alt="Kencanaonline Logo"
                   width={48}
                   height={48}
@@ -225,7 +233,7 @@ export default function Home() {
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/images/assets/WHO 2.png" // PATH INI TELAH DIPERBARUI
+                  src="/images/assets/WHO 2.png"
                   alt="Kencanaonline Logo"
                   width={48}
                   height={48}
@@ -245,7 +253,7 @@ export default function Home() {
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/images/assets/United Nations.png" // PATH INI \ DIPERBARUI
+                  src="/images/assets/United Nations.png"
                   alt="Kencanaonline Logo"
                   width={48}
                   height={48}
@@ -263,8 +271,8 @@ export default function Home() {
             {/* Card 4: United Nations Environment Programme (UNEP) */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
-                <Image 
-                  src="/images/assets/UNEP.png" // PATH INI \ DIPERBARUI
+                <Image
+                  src="/images/assets/UNEP.png"
                   alt="Kencanaonline Logo"
                   width={48}
                   height={48}
@@ -286,12 +294,12 @@ export default function Home() {
       <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-[#1b3d32] text-white">
         <div className="absolute inset-y-0 left-0 w-full md:w-1/2 lg:w-2/5">
           <Image
-          src="/images/assets/pexels-buro-millennial-636760-1438072.jpg" // Dan di SINI
-          alt="Orang-orang sedang berbincang santai"
-          fill
-          sizes="(max-width: 768px) 100vw"
-          style={{ objectFit: 'cover' }}
-        />
+            src="/images/assets/pexels-buro-millennial-636760-1438072.jpg"
+            alt="Orang-orang sedang berbincang santai"
+            fill
+            sizes="(max-width: 768px) 100vw"
+            style={{ objectFit: 'cover' }}
+          />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row-reverse">
@@ -363,7 +371,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/assets/pexels-nc-farm-bureau-mark-2255935.jpg" // Path to organic waste image
+                  src="/images/assets/pexels-nc-farm-bureau-mark-2255935.jpg"
                   alt="Sampah Organik"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -382,7 +390,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/assets/pexels-mali-802221.jpg" // Path to inorganic waste image
+                  src="/images/assets/pexels-mali-802221.jpg"
                   alt="Sampah Anorganik"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -401,7 +409,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/assets/1676606284366.jpeg" // Path to B3 waste image
+                  src="/images/assets/1676606284366.jpeg"
                   alt="Sampah B3"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -420,7 +428,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images.jpegimages/pete-plastic.jpg" // Path to PETE plastic image
+                  src="/images.jpegimages/pete-plastic.jpg"
                   alt="Sampah Polyethylene Terephthalate (PETE)"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -439,7 +447,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/pp-plastic.jpg" // Path to PP plastic image
+                  src="/images/pp-plastic.jpg"
                   alt="Sampah Polypropylene (PP)"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -465,16 +473,17 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Biarkan AI membantu mu dalam hal pengelolaan sampah
               </h2>
-              <button className="bg-transparent border border-green-600 text-green-600 px-6 py-3 rounded-full hover:bg-green-600 hover:text-white transition-colors duration-300">
+              {/* Using Button component for Chatbot */}
+              <Button variant="rounded_secondary_sm" className="!px-6 !py-3 !text-green-600 hover:!bg-green-600 hover:!text-white border-green-600">
                 Chatbot
-              </button>
+              </Button>
             </div>
             <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
               <Image
-                src="/images/assets/image-removebg-preview (6).png" // Path to the blue robot image
+                src="/images/assets/image-removebg-preview (6).png"
                 alt="Blue Robot"
-                width={300} // Adjust width as needed for visual balance
-                height={300} // Adjust height as needed
+                width={300}
+                height={300}
                 className="max-w-full h-auto"
               />
             </div>

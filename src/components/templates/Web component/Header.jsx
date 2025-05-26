@@ -9,11 +9,11 @@ const Header = () => {
                 {/* <span className="text-2xl font-bold">Ecosortify</span> */}
               </div>
               <nav className="flex gap-8">
-                <a href="src/pages/index.jsx" className="hover:text-green-300 transition">Home</a>
+                <Link href="/index" className="hover:text-green-300 transition">Home</Link>
                 <Link href="/scan" className="hover:text-green-300 transition">Scan</Link>
-                <a href="#" className="hover:text-green-300 transition">Guide</a>
-                <a href="#" className="hover:text-green-300 transition">Chatbot</a>
-                <a href="#" className="hover:text-green-300 transition">About</a>
+                <Link href="/guide" className="hover:text-green-300 transition">Guide</Link>
+                <Link href="/chatbot" className="hover:text-green-300 transition">Chatbot</Link>
+                <Link href="/about" className="hover:text-green-300 transition">About us</Link>
               </nav>
               <div className="flex gap-4">
                 <button className="bg-transparent border border-black text-black px-6 py-2 rounded-full hover:bg-white hover:text-green-800 transition">Register</button>
