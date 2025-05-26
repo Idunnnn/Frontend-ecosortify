@@ -3,8 +3,9 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-
+import Link from "next/link"; // Perhatikan 'Link' tanpa destructuring {}
 import { isUserLogIn } from "@/firebase/firebaseClient";
+import Footer from '../components/templates/Web component/Footer';
 // ===========================================================
 
 // === Bagian inisialisasi font custom menggunakan next/font
@@ -47,8 +48,8 @@ export default function Home() {
           {/* <span className="text-2xl font-bold">Ecosortify</span> */}
         </div>
         <nav className="flex gap-8">
-          <a href="#" className="hover:text-green-300 transition">Home</a>
-          <a href="#" className="hover:text-green-300 transition">Scan</a>
+          <a href="src/pages/index.jsx" className="hover:text-green-300 transition">Home</a>
+          <Link href="/scan" className="hover:text-green-300 transition">Scan</Link>
           <a href="#" className="hover:text-green-300 transition">Guide</a>
           <a href="#" className="hover:text-green-300 transition">Chatbot</a>
           <a href="#" className="hover:text-green-300 transition">About</a>
@@ -83,7 +84,7 @@ export default function Home() {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md h-64 md:h-96 rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <Image
-                src="/images/hand-trash-bag.jpg" // Path for the trash bag image from your design
+                src="/images/assets/istockphoto-1171440648-612x612.jpg" // Perhatikan garis miring di awal
                 alt="Tangan memegang kantong sampah"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -108,14 +109,14 @@ export default function Home() {
       {/* === Bagian: Mengapa Edukasi Sampah Itu Penting? Section */}
       <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-[#1b3d32] text-white">
         <div className="absolute inset-y-0 right-0 w-full md:w-1/2 lg:w-2/5">
-          <Image
-            src="/images/children-learning.jpg" // Replace with the actual image path for the right side
-            alt="Anak-anak belajar tentang lingkungan"
-            fill
-            sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 40vw"
-            style={{ objectFit: 'cover', objectPosition: 'left center' }}
-            className="hidden md:block"
-          />
+      <Image
+      src="/images/assets/pexels-tima-miroshnichenko-5428264.jpg" // PASTIKAN ADA GARIS MIRING DI AWAL SRC
+      alt="Anak-anak belajar tentang lingkungan"
+      fill
+      sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 40vw"
+      style={{ objectFit: 'cover', objectPosition: 'left center' }}
+      className="hidden md:block"
+    />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row">
@@ -134,15 +135,33 @@ export default function Home() {
             {/* Benefit Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Image src="/icons/tree-icon.png" alt="Tree Icon" width={64} height={64} className="mx-auto mb-4" />
+                <Image
+                  src="/images/assets/forest (1).png" // PATH INI TELAH DIPERBARUI
+                  alt="hutan"
+                  width={64}
+                  height={64}
+                  className="mx-auto mb-4"
+                />
                 <h3 className="font-semibold text-xl mb-2">Meningkatkan kesadaran lingkungan</h3>
               </div>
               <div className="text-center">
-                <Image src="/icons/globe-leaf-icon.png" alt="Globe Leaf Icon" width={64} height={64} className="mx-auto mb-4" />
+                <Image
+                  src="/images/assets/planet-earth.png" // PATH INI TELAH DIPERBARUI
+                  alt="planet"
+                  width={64}
+                  height={64}
+                  className="mx-auto mb-4"
+                />
                 <h3 className="font-semibold text-xl mb-2">Menghemat Sumber Daya Alam</h3>
               </div>
               <div className="text-center">
-                <Image src="/icons/law-document-icon.png" alt="Law Document Icon" width={64} height={64} className="mx-auto mb-4" />
+                  <Image
+                  src="/images/assets/law.png" // PATH INI TELAH DIPERBARUI
+                  alt="Law Document Icon"
+                  width={64}
+                  height={64}
+                  className="mx-auto mb-4"
+                />
                 <h3 className="font-semibold text-xl mb-2">Mendorong Kebijakan yang Lebih Baik</h3>
               </div>
             </div>
@@ -185,7 +204,13 @@ export default function Home() {
             {/* Card 1: Kencanaonline.com */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
-                <Image src="/logos/kencanaonline-logo.png" alt="Kencanaonline Logo" width={48} height={48} className="rounded-full mr-4" />
+                <Image
+                  src="/images/assets/kencanaonline-removebg-preview.png" // PATH INI TELAH DIPERBARUI
+                  alt="Kencanaonline Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
+                />
                 <div>
                   <h3 className="font-bold text-xl">Kencanaonline.com</h3>
                   <p className="text-sm text-gray-500">Media Online</p>
@@ -199,7 +224,13 @@ export default function Home() {
             {/* Card 2: World Health Organization (WHO) */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
-                <Image src="/logos/who-logo.png" alt="WHO Logo" width={48} height={48} className="rounded-full mr-4" />
+                <Image
+                  src="/images/assets/WHO 2.png" // PATH INI TELAH DIPERBARUI
+                  alt="Kencanaonline Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
+                />
                 <div>
                   <h3 className="font-bold text-xl">World Health Organization (WHO)</h3>
                   <p className="text-sm text-gray-500">Media Online</p>
@@ -213,8 +244,13 @@ export default function Home() {
             {/* Card 3: United Nations (UN) */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
-                <Image src="/logos/un-logo.png" alt="UN Logo" width={48} height={48} className="rounded-full mr-4" />
-                <div>
+                <Image
+                  src="/images/assets/United Nations.png" // PATH INI \ DIPERBARUI
+                  alt="Kencanaonline Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
+                /><div>
                   <h3 className="font-bold text-xl">United Nations (UN)</h3>
                   <p className="text-sm text-gray-500">Lembaga Dunia</p>
                 </div>
@@ -227,8 +263,13 @@ export default function Home() {
             {/* Card 4: United Nations Environment Programme (UNEP) */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
               <div className="flex items-center mb-4">
-                <Image src="/logos/unep-logo.png" alt="UNEP Logo" width={48} height={48} className="rounded-full mr-4" />
-                <div>
+                <Image 
+                  src="/images/assets/UNEP.png" // PATH INI \ DIPERBARUI
+                  alt="Kencanaonline Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
+                /><div>
                   <h3 className="font-bold text-xl">United Nations Environment Programme (UNEP)</h3>
                   <p className="text-sm text-gray-500">Lembaga Dunia</p>
                 </div>
@@ -245,13 +286,12 @@ export default function Home() {
       <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-[#1b3d32] text-white">
         <div className="absolute inset-y-0 left-0 w-full md:w-1/2 lg:w-2/5">
           <Image
-            src="/images/people-talking.jpg" // Replace with the actual image path for the left side
-            alt="Orang-orang sedang berbincang santai"
-            fill
-            sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 40vw"
-            style={{ objectFit: 'cover', objectPosition: 'center center' }}
-            className="hidden md:block"
-          />
+          src="/images/assets/pexels-buro-millennial-636760-1438072.jpg" // Dan di SINI
+          alt="Orang-orang sedang berbincang santai"
+          fill
+          sizes="(max-width: 768px) 100vw"
+          style={{ objectFit: 'cover' }}
+        />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row-reverse">
@@ -271,7 +311,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Card 1: Buang sampah */}
               <div className="bg-green-700 rounded-lg p-6 flex items-start gap-4">
-                <Image src="/icons/trash-bin-icon.png" alt="Trash Bin Icon" width={48} height={48} />
+                <Image src="/images/assets/litter.png" alt="Trash Bin Icon" width={48} height={48} />
                 <div>
                   <h3 className="font-semibold text-xl mb-1">Buang sampah pada tempat sampah</h3>
                 </div>
@@ -279,7 +319,7 @@ export default function Home() {
 
               {/* Card 2: Pilah sampah */}
               <div className="bg-green-700 rounded-lg p-6 flex items-start gap-4">
-                <Image src="/icons/sort-trash-icon.png" alt="Sort Trash Icon" width={48} height={48} />
+                <Image src="/images/assets/reach.png" alt="Sort Trash Icon" width={48} height={48} />
                 <div>
                   <h3 className="font-semibold text-xl mb-1">Pilah sampah sebelum di buang</h3>
                 </div>
@@ -287,7 +327,7 @@ export default function Home() {
 
               {/* Card 3: Kurangi plastik */}
               <div className="bg-green-700 rounded-lg p-6 flex items-start gap-4">
-                <Image src="/icons/no-plastic-icon.png" alt="No Plastic Icon" width={48} height={48} />
+                <Image src="/images/assets/ad-blocker.png" alt="No Plastic Icon" width={48} height={48} />
                 <div>
                   <h3 className="font-semibold text-xl mb-1">Kurangi penggunaan plastic</h3>
                 </div>
@@ -295,25 +335,12 @@ export default function Home() {
 
               {/* Card 4: Edukasi dan ajak */}
               <div className="bg-green-700 rounded-lg p-6 flex items-start gap-4">
-                <Image src="/icons/educate-icon.png" alt="Educate Icon" width={48} height={48} />
+                <Image src="/images/assets/add-user.png" alt="Educate Icon" width={48} height={48} />
                 <div>
                   <h3 className="font-semibold text-xl mb-1">Edukasi dan ajak orang lain</h3>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Left Image Area (visible on mobile if needed, but primarily controlled by absolute positioning) */}
-          <div className="w-full md:w-1/2 lg:w-2/5 mt-12 md:mt-0 md:hidden">
-             <div className="relative w-full h-64 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                    src="/images/people-talking.jpg"
-                    alt="Orang-orang sedang berbincang santai"
-                    fill
-                    sizes="(max-width: 768px) 100vw"
-                    style={{ objectFit: 'cover' }}
-                />
-             </div>
           </div>
         </div>
       </section>
@@ -336,7 +363,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/organic-waste.jpg" // Path to organic waste image
+                  src="/images/assets/pexels-nc-farm-bureau-mark-2255935.jpg" // Path to organic waste image
                   alt="Sampah Organik"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -355,7 +382,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/inorganic-waste.jpg" // Path to inorganic waste image
+                  src="/images/assets/pexels-mali-802221.jpg" // Path to inorganic waste image
                   alt="Sampah Anorganik"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -374,7 +401,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/b3-waste.jpg" // Path to B3 waste image
+                  src="/images/assets/1676606284366.jpeg" // Path to B3 waste image
                   alt="Sampah B3"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -393,7 +420,7 @@ export default function Home() {
             <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-md group">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/images/pete-plastic.jpg" // Path to PETE plastic image
+                  src="/images.jpegimages/pete-plastic.jpg" // Path to PETE plastic image
                   alt="Sampah Polyethylene Terephthalate (PETE)"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -444,7 +471,7 @@ export default function Home() {
             </div>
             <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
               <Image
-                src="/images/blue-robot.png" // Path to the blue robot image
+                src="/images/assets/image-removebg-preview (6).png" // Path to the blue robot image
                 alt="Blue Robot"
                 width={300} // Adjust width as needed for visual balance
                 height={300} // Adjust height as needed
@@ -456,17 +483,7 @@ export default function Home() {
       </section>
 
       {/* === Bagian footer (Re-structured) */}
-      <footer className="bg-black text-white py-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <Image src="/images/logo.png" alt="Ecosortify Logo" width={40} height={40} /> {/* Smaller logo for footer */}
-            <span className="text-xl font-semibold">Ecosortify</span>
-          </div>
-          <p className="text-sm text-gray-400">
-            Copyright C 2025 Ecosortify
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
