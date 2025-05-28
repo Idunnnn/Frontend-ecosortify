@@ -5,10 +5,12 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Link from "next/link";
 import { isUserLogIn } from "@/firebase/firebaseClient";
+
 import Footer from '../components/templates/Web component/Footer';
 import Button from "@/components/Button"; // Import your Button component
 import { Montserrat } from "next/font/google";
 // ===========================================================
+
 
 // === Bagian inisialisasi font custom menggunakan next/font
 const geistSans = Geist({
@@ -30,6 +32,7 @@ const montserrat = Montserrat({
 
 // === Komponen halaman utama (Home Page)
 export default function Home() {
+
   const router = useRouter();
 
   useEffect(() => {
@@ -38,6 +41,8 @@ export default function Home() {
     //   router.push("/dashboard"); // Redirect to dashboard if logged in
     // }
   }, [router]);
+
+
 
   return (
     <div
