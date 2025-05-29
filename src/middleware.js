@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
 export function middleware(request) {
@@ -9,7 +9,7 @@ export function middleware(request) {
     const protedtedPaths = ['/chatbot', '/scan'];
     const authPaths = ['/login', '/register'];
 
-
+    console.log(token);
     // Kalau token ada, artinya sudah login
     if (token) {
         if (authPaths.includes(path)) {
