@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
 export function middleware(request) {
@@ -9,22 +9,21 @@ export function middleware(request) {
     const protedtedPaths = ['/chatbot', '/scan'];
     const authPaths = ['/login', '/register'];
 
-
     // Kalau token ada, artinya sudah login
-    if (token) {
-        if (authPaths.includes(path)) {
-            url.pathname = '/'
-            return NextResponse.redirect(url);
-        }
-        return NextResponse.next();
+    // if (token) {
+    //     if (authPaths.includes(path)) {
+    //         url.pathname = '/'
+    //         return NextResponse.redirect(url);
+    //     }
+    //     return NextResponse.next();
 
-    } else {
-        if (protedtedPaths.includes(path)) {
-            url.pathname = '/login'
-            return NextResponse.redirect(url);
-        }
-        return NextResponse.next();
-    }
+    // } else {
+    //     if (protedtedPaths.includes(path)) {
+    //         url.pathname = '/login'
+    //         return NextResponse.redirect(url);
+    //     }
+    //     return NextResponse.next();
+    // }
 }
 
 export const config = {
