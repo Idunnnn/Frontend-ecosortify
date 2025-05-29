@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { Icon } from "@iconify/react";
-export default function Button({ variant = "primary-lg", children, className, ...props }) {
+export default function Button({ variant = "primary_lg", children, className, ...props }) {
   const variants = {
-    rounded_primary_sm: "r-primary__sm",
-    rounded_primary_lg: "r-primary__lg",
+    rounded_primary_sm: "r-primary__sm body-7",
+    rounded_primary_lg: "r-primary__lg body-6",
 
     rounded_secondary_sm: "r-secondary__sm body-7",
     rounded_secondary_lg: "r-secondary__lg body-6",

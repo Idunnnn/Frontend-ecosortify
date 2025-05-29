@@ -5,10 +5,11 @@ import Header from "@/components/templates/Register-LoginHeader";
 import BaseInput from "@/components/BaseInput";
 import Button from "@/components/Button";
 import Link from "next/link";
-import { continueWithGoogle, login } from "@/firebase/firebaseClient";
+import { continueWithGoogle, loginWithEmailAndPassword } from "@/firebase/firebaseClient";
 import ToastAlert from "@/components/ToastAlert";
 import { getFirebaseErrorMessage } from "@/utils/utils";
 import { useRouter } from "next/router";
+import { useUser } from "@/contexts/UserContext";
 
 export default function Login() {
   const router = useRouter();
@@ -19,6 +20,8 @@ export default function Login() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [toastType, setToastType] = useState("success");
+
+  const { login } = useUser();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -31,8 +34,8 @@ export default function Login() {
 
     try {
       setLoading(true);
-      const result = await login(email, password);
-      console.log(result.message);
+      const result = await loginWithEmailAndPassword(email, password);
+      login(result.data.user);
       router.push("/");
     } catch (err) {
       setToastMessage(`${err.message}`);

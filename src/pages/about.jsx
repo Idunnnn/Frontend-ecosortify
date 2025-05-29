@@ -1,4 +1,4 @@
-import SecondaryHeader from "@/components/templates/Secondary-Header";
+import Header2 from "@/components/templates/Header2";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useEffect } from "react";
@@ -6,22 +6,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import AboutProfileImage from "@/components/AboutProfileImage";
 import Footer from "@/components/templates/footer";
-import {getCookie} from "@/firebase/firebaseClient";
+
 
 export default function about() {
+ 
   useEffect(() => {
     AOS.init({
       once: true,
       duration: 300,
     });
-
-    const token = getCookie("firebase_id_token");
-
-    console.log(token);
   }, []);
   return (
     <>
-      <SecondaryHeader />
+      <Header2 />
 
       <main>
         <div className="flex flex-col items-center mt-10 xl:gap-[120px] md:gap-[80px] gap-[60px]">
@@ -60,7 +57,7 @@ export default function about() {
               data-aos="zoom-in"
               src="/images/about-hero.jpg"
               width="600"
-              className="xl:w-[600px] lg:w-[500px] h-fit hidden lg:block"
+              className="xl:w-[550px] lg:w-[500px] h-fit hidden lg:block"
               height="500"
               alt="about-hero"
             ></Image>
