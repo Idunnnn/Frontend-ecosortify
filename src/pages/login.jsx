@@ -33,8 +33,7 @@ export default function Login() {
       setLoading(true);
       const result = await login(email, password);
       console.log(result.message);
-      router.push('/');
-
+      router.push("/");
     } catch (err) {
       setToastMessage(`${err.message}`);
       setToastType("danger");
@@ -47,8 +46,14 @@ export default function Login() {
 
   const handleContinueWithGoogle = async (e) => {
     e.preventDefault();
-    const result = await continueWithGoogle();
-    console.log(result.message);
+    try {
+      const token = await continueWithGoogle();
+      console.log(token);
+    } catch (err) {
+      setToastMessage(`${err.message}`);
+      setToastType("danger");
+      setShowToast(true);
+    }
   };
   return (
     <div className="flex min-h-screen h-fit relative justify-center lg:justify-end">
