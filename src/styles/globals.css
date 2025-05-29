@@ -49,6 +49,47 @@ body {
   @apply flex flex-col gap-3;
 }
 
+/* BUTTON */
+.r-primary__sm {
+  @apply rounded-full bg-[var(--btn-primary)] duration-200 transition text-white hover:bg-[var(--btn-primary-hover)];
+  @apply active:bg-[var(--btn-primary-hover)] py-3 px-6 text-base font-semibold;
+}
+
+.r-primary__lg {
+  @apply bg-[var(--btn-primary)] rounded-full duration-200 transition text-white;
+  @apply hover:bg-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)];
+  @apply py-3 px-6 text-sm min-w-[120px] hover:cursor-pointer;
+}
+.r-secondary__sm {
+  @apply rounded-lg bg-none text-white border border-white duration-200 transition hover:text-[var(--btn-primary-hover)] 
+  hover:border-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)]
+  py-3 px-6  hover:cursor-pointer;
+}
+.r-secondary__lg {
+  @apply rounded-full text-black border border-black duration-200 transition hover:text-[var(--btn-primary-hover)] 
+   hover:border-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)] py-3 px-6  hover:cursor-pointer;
+}
+.primary__sm {
+  @apply bg-[var(--btn-primary)] duration-200 transition 
+   text-white hover:bg-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)] 
+   rounded-lg py-3 px-6 hover:cursor-pointer;
+}
+
+.primary__lg {
+  @apply bg-[var(--btn-primary)] duration-200 transition text-white 
+   hover:bg-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)] 
+   rounded-lg py-4 min-w-[170px];
+}
+.secondary__sm {
+  @apply rounded-lg bg-none text-gray-600 border border-gray-600 duration-200 transition 
+  hover:border-[var(--btn-primary-hover)] hover:bg-[var(--btn-primary-hover)] hover:text-white  
+   active:bg-[var(--btn-primary-hover)] active:text-white py-3 px-6  hover:cursor-pointer;
+}
+.btn-google {
+  @apply shadow-sm rounded-lg duration-50 py-4 transition hover:bg-gray-50
+   active:bg-gray-100 border border-[#d9d9d9] active:text-blue-600 flex w-full items-center 
+   justify-center gap-3;
+}
 /* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
