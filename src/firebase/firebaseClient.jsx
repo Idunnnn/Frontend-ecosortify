@@ -9,6 +9,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useUser } from "@/contexts/UserContext";
 
 export const continueWithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
@@ -21,7 +22,8 @@ export const continueWithGoogle = async () => {
     document.cookie = `firebase_id_token=${token}; path=/; max-age=86400; Secure; SameSite=Strict`;
     return response;
 };
-export const login = async (email, password) => {
+
+export const loginWithEmailAndPassword = async (email, password) => {
   const result = await signInWithEmailAndPassword(auth, email, password);
   const user = result.user;
 
