@@ -38,10 +38,9 @@ export default function Login() {
       login(result.data.user);
       router.push("/");
     } catch (err) {
-      setToastMessage(`${err.message}`);
+      setToastMessage(getFirebaseErrorMessage(err));
       setToastType("danger");
       setShowToast(true);
-      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -50,12 +49,11 @@ export default function Login() {
   const handleContinueWithGoogle = async (e) => {
     e.preventDefault();
     try {
-      const token = await continueWithGoogle();
-      console.log(token);
+      const result = await continueWithGoogle();
+      login(result.data.user);
+      router.push("/");
     } catch (err) {
-      setToastMessage(`${err.message}`);
-      setToastType("danger");
-      setShowToast(true);
+      console.error(err.message);
     }
   };
   return (
@@ -64,7 +62,7 @@ export default function Login() {
 
       <form
         onSubmit={handleLogin}
-        className="flex flex-col p-8 max-w-[550px] lg:max-w-[40%] lg:w-[40%] items-center justify-center"
+        className="flex flex-col p-8 sm:max-w-[550px]  w-full lg:max-w-[40%] lg:w-[40%] items-center justify-center"
       >
         <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
         <Header title="Welcome Back" subTitle={"Glad to see you again \nLogin to your account below"} />

@@ -87,6 +87,7 @@ export default function Header2({ className, ...props }) {
                     src={user.picture ? user.picture : "/images/default-user-profile.jpg"}
                     alt="user-profile"
                     className="w-full h-full object-cover"
+                    loading="eager"
                   />
                 </div>
 
@@ -149,26 +150,44 @@ export default function Header2({ className, ...props }) {
             }
           >
             {}
-            <li className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center">
-              <Link href="/">Home</Link>
+            <Link
+              href="/"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+            >
+              <p>Home</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
-            </li>
-            <li className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center">
-              <Link href="/">Scan</Link>
+            </Link>
+
+            <Link
+              href="/scan"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+            >
+              <p>Scan</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
-            </li>
-            <li className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center">
-              <Link href="/">Guide</Link>
+            </Link>
+
+            <Link
+              href="/guide"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+            >
+              <p>Guide</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
-            </li>
-            <li className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center">
-              <Link href="/">Chatbot</Link>
+            </Link>
+
+            <Link
+              href="/chatbot"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+            >
+              <p>Chatbot</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
-            </li>
-            <li className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center">
-              <Link href="/">About Us</Link>
+            </Link>
+            <Link
+              href="/about"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+            >
+              <p>About Us</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
-            </li>
+            </Link>
 
             {!user && (
               <li className="p-5 flex gap-2 lg:hidden">
