@@ -15,7 +15,6 @@ export default function ApaItuSampahPage() {
 
         <main
           className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 "
-          tabIndex={0}
         >
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 className="text-2xl font-bold mb-5 text-gray-800">Apa itu sampah?</h1>

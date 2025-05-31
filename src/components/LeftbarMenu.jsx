@@ -7,11 +7,12 @@ const menuData = [
     section: "Main content",
     items: [
       {
-        id: "organic",
-        title: "Organic Waste",
+        id: "organik",
+        title: "Sampah Organik",
         links: [
-          { name: "Apa itu organic?", href: "/guide/organic/intro" },
-          { name: "Manfaat", href: "/guide/organic/benefit" },
+          { name: "Pengenalan", href: "/guide/sampah-organik/pengenalan" },
+          { name: "Jenis Sampah Organik", href: "/guide/sampah-organik/jenis-sampah-organik" },
+          { name: "Metode Pembuangan", href: "/guide/sampah-organik/metode-pembuangan" },
         ],
       },
       {
@@ -54,25 +55,25 @@ export default function LeftbarMenu() {
   return (
     <>
       {menuData.map((section) => (
-        <div key={section.section} className="mb-8 text-[#393939]">
+        <div key={section.section} className="mb-8 text-gray-800">
           <h2 className="font-bold mb-2">{section.section}</h2>
           <ul className="space-y-2 ml-3">
             {section.items.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => toggle(item.id)}
-                  className="w-full text-left font-medium hover:font-semibold flex gap-2 items-center"
+                  className="w-full text-left font-medium hover:font-semibold flex gap-1 items-center"
                 >
-                  <p>{item.title}</p>
                   <Icon
                     icon="mdi:chevron-right"
                     className={`transition-transform duration-200 text-xl ${
                       openItems.includes(item.id) ? "rotate-90" : "rotate-0"
                     }`}
                   />
+                  <p>{item.title}</p>
                 </button>
                 <ul
-                  className={`mt-1 ml-3 pl-3 text-sm text-gray-600 space-y-2 list-disc pt-1 transition-all duration-300 ${
+                  className={`mt-1 ml-3 pl-6 text-sm text-gray-600 space-y-2 list-disc pt-1 transition-all duration-300 ${
                     openItems.includes(item.id) ? "block" : "hidden"
                   }`}
                 >

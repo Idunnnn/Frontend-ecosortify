@@ -10,32 +10,32 @@ export default function Leftbar({ className, children, ...props }) {
     <>
       <aside
         className={clsx(
-          "hidden lg:flex flex-col fixed top-21 left-0 w-[350px] f h-[calc(100vh-4.1rem)] bg-white overflow-y-auto p-6 border-r-1 border-t-1 border-gray-200 z-1 overflow-x-hidden",
+          "hidden text-gray-800 lg:flex flex-col fixed top-21 left-0 w-[350px] f h-[calc(100vh-4.1rem)] bg-white overflow-y-auto p-6 border-r-1 border-t-1 border-gray-200 z-1 overflow-x-hidden",
           className
         )}
         {...props}
       >
-        <h2 className="font-bold mb-2 text-[#393939]">Introduction</h2>
+        <h2 className="font-bold mb-2 ">Introduction</h2>
         <ul className="mb-8 space-y-2 ml-3  ">
-          <li className="hover:font-semibold font-medium text-[#393939]">
-            <Link href="/guide">Overview</Link>
+          <li className="hover:font-semibold font-medium ">
+            <Link href="/guide/">Overview</Link>
           </li>
-          <li className="hover:font-semibold font-medium text-[#393939]">
-            <Link href="/guide/apa-itu-sampah">Apa itu sampah</Link>
+          <li className="hover:font-semibold font-medium ">
+            <Link href="/guide/apa-itu-sampah">Apa itu sampah?</Link>
           </li>
-          <li className="hover:font-semibold font-medium text-[#393939]">
-            <Link href="/guide/ada-berapa-jenis-sih-sampah-itu">Ada berapa jenis sih sampah itu?</Link>
+          <li className="hover:font-semibold font-medium ">
+            <Link href="/guide/apa-itu-bank-sampah">Apa itu bank sampah?</Link>
           </li>
-          <li className="hover:font-semibold font-medium text-[#393939]">
-            <Link href="/guide/the-great-pasific-garbage-patch">The Great Pacific Garbage Patch</Link>
+          <li className="hover:font-semibold font-medium ">
+            <Link href="/guide/the-great-pacific-garbage-patch">The Great Pacific Garbage Patch</Link>
           </li>
         </ul>
 
         <LeftbarMenu />
 
-        <h2 className="font-bold mb-2 text-[#393939]">FAQ</h2>
+        <h2 className="font-bold mb-2 ">FAQ</h2>
         <ul className="mb-8 space-y-2 ml-3  ">
-          <li className="hover:text-black font-medium text-[#393939]">
+          <li className="hover:text-black font-medium ">
             <Link href="/guide/apakah-semua-sampah-bisa-didaur-ulang?">Apakah semua sampah bisa didaur ulang?</Link>
           </li>
         </ul>
@@ -54,32 +54,32 @@ export default function Leftbar({ className, children, ...props }) {
         <aside
           className={
             open
-              ? "fixed top-0 left-0 z-40 h-full w-[350px] bg-white shadow-lg overflow-y-auto p-5 transition-all duration-200 border-r-1 border-t-1 border-gray-200 "
-              : "fixed top-0 -left-[350px] z-40 h-full w-[350px] bg-white shadow-lg overflow-y-auto p-5 transition-all duration-200"
+              ? "text-gray-800 fixed top-0 left-0 z-40 h-full w-[350px] bg-white shadow-lg overflow-y-auto p-5 transition-all duration-200 border-r-1 border-t-1 border-gray-200 "
+              : "text-gray-800 fixed top-0 -left-[350px] z-40 h-full w-[350px] bg-white shadow-lg overflow-y-auto p-5 transition-all duration-200"
           }
           {...props}
         >
-          <h2 className="font-bold mb-2 text-[#393939]">Introduction</h2>
+          <h2 className="font-bold mb-2 ">Introduction</h2>
           <ul className="mb-8 space-y-2 ml-3  ">
-            <li className="hover:font-semibold font-medium text-[#393939]">
-              <Link href="/guide">Overview</Link>
+            <li className="hover:font-semibold font-medium ">
+              <Link href="/guide/">Overview</Link>
             </li>
-            <li className="hover:font-semibold font-medium text-[#393939]">
+            <li className="hover:font-semibold font-medium ">
               <Link href="/guide/apa-itu-sampah">Apa itu sampah</Link>
             </li>
-            <li className="hover:font-semibold font-medium text-[#393939]">
+            <li className="hover:font-semibold font-medium ">
               <Link href="/guide/ada-berapa-jenis-sih-sampah-itu">Ada berapa jenis sih sampah itu?</Link>
             </li>
-            <li className="hover:font-semibold font-medium text-[#393939]">
-              <Link href="/guide/the-great-pasific-garbage-patch">The Great Pacific Garbage Patch</Link>
+            <li className="hover:font-semibold font-medium ">
+              <Link href="/guide/the-great-pacific-garbage-patch">The Great Pacific Garbage Patch</Link>
             </li>
           </ul>
 
           <LeftbarMenu />
 
-          <h2 className="font-bold mb-2 text-[#393939]">FAQ</h2>
+          <h2 className="font-bold mb-2">FAQ</h2>
           <ul className="mb-8 space-y-2 ml-3  ">
-            <li className="hover:text-black font-medium text-[#393939]">
+            <li className="hover:text-black font-medium ">
               <Link href="/guide/apakah-semua-sampah-bisa-didaur-ulang?">Apakah semua sampah bisa didaur ulang?</Link>
             </li>
           </ul>
