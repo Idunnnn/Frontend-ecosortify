@@ -60,11 +60,10 @@ body {
   @apply py-3 px-6 text-sm min-w-[100px] hover:cursor-pointer;
 }
 
-
 .r-secondary__sm {
   @apply rounded-lg bg-none text-white border border-white duration-200 transition hover:text-[var(--btn-primary-hover)] 
-  hover:border-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)]
-  py-3 px-6  hover:cursor-pointer;
+   hover:border-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)]
+   py-3 px-6  hover:cursor-pointer;
 }
 .r-secondary__lg {
   @apply rounded-full text-black border border-black duration-200 transition hover:text-[var(--btn-primary-hover)] 
@@ -85,13 +84,13 @@ body {
 }
 .secondary__sm {
   @apply rounded-lg bg-none text-gray-600 border border-gray-600 duration-200 transition 
-  hover:border-[var(--btn-primary-hover)] hover:bg-[var(--btn-primary-hover)] hover:text-white  
+   hover:border-[var(--btn-primary-hover)] hover:bg-[var(--btn-primary-hover)] hover:text-white  
    active:bg-[var(--btn-primary-hover)] active:text-white py-3 px-6  hover:cursor-pointer;
 }
 .btn-google {
   @apply shadow-sm rounded-lg duration-50 py-4 transition hover:bg-gray-50
    active:bg-gray-100 border border-[#d9d9d9] active:text-blue-600 flex w-full items-center 
-   justify-center gap-3;
+    justify-center gap-3;
 }
 /* @theme inline {
   --color-background: var(--background);

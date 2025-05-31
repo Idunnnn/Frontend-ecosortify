@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import { useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
 // import { isUserLogIn } from "@/firebase/firebaseClient"; // Komentari atau hapus jika tidak digunakan
-import Header from "../components/templates/Web component/Header";
-import Footer from "../components/templates/Web component/Footer";
+import Header from '../components/templates/Web component/Header';
+import Footer from '../components/templates/Web component/Footer';
 import Button from "@/components/Button"; // Import your Button component
 // ==============================================================
 
@@ -24,16 +24,11 @@ const geistMono = Geist_Mono({
 // ===============================================
 
 // === Komponen halaman utama (Chatbot Page)
-export default function Chatbot() {
-  // Ubah nama komponen dari Scan menjadi Chatbot
+export default function Chatbot() { // Ubah nama komponen dari Scan menjadi Chatbot
   const router = useRouter();
 
   const [chatMessages, setChatMessages] = useState([
-    {
-      sender: "ai",
-      message:
-        "Selamat Datang! Di Chatbot edukasi sampah.\n\nTemukan cara mudah dan interaktif untuk belajar tentang pengelolaan sampah bersama chatbot. Kami siap membantu Anda menjadi agen perubahan untuk bumi yang lebih bersih!",
-    },
+    { sender: 'ai', message: 'Selamat Datang! Di Chatbot edukasi sampah.\n\nTemukan cara mudah dan interaktif untuk belajar tentang pengelolaan sampah bersama chatbot. Kami siap membantu Anda menjadi agen perubahan untuk bumi yang lebih bersih!' }
   ]);
   const [currentMessage, setCurrentMessage] = useState("");
   const [isLoadingAI, setIsLoadingAI] = useState(false);
@@ -53,7 +48,7 @@ export default function Chatbot() {
     if (currentMessage.trim() === "") return;
 
     const userMessage = currentMessage.trim();
-    setChatMessages((prevMessages) => [...prevMessages, { sender: "user", message: userMessage }]);
+    setChatMessages((prevMessages) => [...prevMessages, { sender: 'user', message: userMessage }]);
     setCurrentMessage(""); // Bersihkan input setelah mengirim
 
     setIsLoadingAI(true);
@@ -65,36 +60,29 @@ export default function Chatbot() {
     const lowerCaseMessage = userMessage.toLowerCase();
 
     if (lowerCaseMessage.includes("sampah organik")) {
-      aiResponseText =
-        "Sampah organik adalah sampah yang dapat membusuk secara alami, seperti sisa makanan, daun, dan ranting. Sampah ini bisa diolah menjadi kompos atau biogas.";
+      aiResponseText = "Sampah organik adalah sampah yang dapat membusuk secara alami, seperti sisa makanan, daun, dan ranting. Sampah ini bisa diolah menjadi kompos atau biogas.";
     } else if (lowerCaseMessage.includes("plastik")) {
-      aiResponseText =
-        "Sampah plastik membutuhkan waktu sangat lama untuk terurai. Sebaiknya pisahkan plastik untuk didaur ulang atau hindari penggunaannya jika memungkinkan.";
+      aiResponseText = "Sampah plastik membutuhkan waktu sangat lama untuk terurai. Sebaiknya pisahkan plastik untuk didaur ulang atau hindari penggunaannya jika memungkinkan.";
     } else if (lowerCaseMessage.includes("daur ulang")) {
-      aiResponseText =
-        "Daur ulang adalah proses mengubah sampah menjadi produk baru. Ini membantu mengurangi sampah di TPA dan menghemat sumber daya alam.";
+      aiResponseText = "Daur ulang adalah proses mengubah sampah menjadi produk baru. Ini membantu mengurangi sampah di TPA dan menghemat sumber daya alam.";
     } else if (lowerCaseMessage.includes("cara mengelola sampah")) {
-      aiResponseText =
-        "Pengelolaan sampah yang baik meliputi 3R: Reduce (mengurangi), Reuse (menggunakan kembali), dan Recycle (mendaur ulang).";
+        aiResponseText = "Pengelolaan sampah yang baik meliputi 3R: Reduce (mengurangi), Reuse (menggunakan kembali), dan Recycle (mendaur ulang).";
     } else if (lowerCaseMessage.includes("terima kasih")) {
-      aiResponseText = "Sama-sama! Ada hal lain yang bisa saya bantu?";
+        aiResponseText = "Sama-sama! Ada hal lain yang bisa saya bantu?";
     } else if (lowerCaseMessage.includes("halo") || lowerCaseMessage.includes("hai")) {
-      aiResponseText = "Halo juga! Ada yang ingin Anda tanyakan tentang sampah?";
+        aiResponseText = "Halo juga! Ada yang ingin Anda tanyakan tentang sampah?";
     } else if (lowerCaseMessage.includes("contoh sampah organik")) {
-      aiResponseText =
-        "Contoh sampah organik meliputi sisa makanan (kulit buah, sayuran), daun kering, ranting pohon, dan ampas kopi/teh.";
+        aiResponseText = "Contoh sampah organik meliputi sisa makanan (kulit buah, sayuran), daun kering, ranting pohon, dan ampas kopi/teh.";
     } else if (lowerCaseMessage.includes("bahaya sampah elektronik")) {
-      aiResponseText =
-        "Sampah elektronik (e-waste) bisa sangat berbahaya karena mengandung bahan kimia beracun seperti timbal, merkuri, dan kadmium. Penting untuk mendaur ulangnya di fasilitas khusus.";
+        aiResponseText = "Sampah elektronik (e-waste) bisa sangat berbahaya karena mengandung bahan kimia beracun seperti timbal, merkuri, dan kadmium. Penting untuk mendaur ulangnya di fasilitas khusus.";
     } else if (lowerCaseMessage.includes("kompos")) {
-      aiResponseText =
-        "Kompos adalah pupuk alami yang dibuat dari dekomposisi sampah organik. Ini sangat baik untuk menyuburkan tanah.";
+        aiResponseText = "Kompos adalah pupuk alami yang dibuat dari dekomposisi sampah organik. Ini sangat baik untuk menyuburkan tanah.";
     } else if (lowerCaseMessage.includes("jenis sampah")) {
-      aiResponseText =
-        "Secara umum, jenis sampah dibagi menjadi organik, anorganik (plastik, kaca, logam), dan B3 (Bahan Berbahaya dan Beracun).";
+        aiResponseText = "Secara umum, jenis sampah dibagi menjadi organik, anorganik (plastik, kaca, logam), dan B3 (Bahan Berbahaya dan Beracun).";
     }
 
-    setChatMessages((prevMessages) => [...prevMessages, { sender: "ai", message: aiResponseText }]);
+
+    setChatMessages((prevMessages) => [...prevMessages, { sender: 'ai', message: aiResponseText }]);
     setIsLoadingAI(false);
   }, [currentMessage]);
 
@@ -113,23 +101,17 @@ export default function Chatbot() {
       {/* --- */}
       {/* === Hero Section (Chat Interface) */}
       <section className="flex-grow flex flex-col items-center justify-between text-center px-4 pt-24 pb-16 relative">
-        <div className="flex-grow w-full max-w-2xl overflow-y-auto p-4 mb-4" style={{ maxHeight: "calc(100vh - 250px)" }}>
-          {" "}
-          {/* Batasi tinggi area chat */}
+        <div className="flex-grow w-full max-w-2xl overflow-y-auto p-4 mb-4" style={{ maxHeight: 'calc(100vh - 250px)' }}> {/* Batasi tinggi area chat */}
           {chatMessages.map((msg, index) => (
-            <div key={index} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"} mb-4`}>
-              {msg.sender === "ai" && (
-                <Image
-                  src="/images/assets/white-robot-hello.png"
-                  alt="AI Avatar"
-                  width={40}
-                  height={40}
-                  className="rounded-full mr-2 self-start"
-                />
+            <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} mb-4`}>
+              {msg.sender === 'ai' && (
+                <Image src="/images/assets/white-robot-hello.png" alt="AI Avatar" width={40} height={40} className="rounded-full mr-2 self-start" />
               )}
               <div
                 className={`max-w-[70%] p-3 rounded-xl ${
-                  msg.sender === "user" ? "bg-green-600 text-white rounded-br-none" : "bg-gray-200 text-gray-800 rounded-bl-none"
+                  msg.sender === 'user'
+                    ? 'bg-green-600 text-white rounded-br-none'
+                    : 'bg-gray-200 text-gray-800 rounded-bl-none'
                 } text-left whitespace-pre-wrap`}
               >
                 {msg.message}
@@ -145,7 +127,7 @@ export default function Chatbot() {
             value={currentMessage}
             onChange={(e) => setCurrentMessage(e.target.value)}
             onKeyPress={(e) => {
-              if (e.key === "Enter" && !isLoadingAI) {
+              if (e.key === 'Enter' && !isLoadingAI) {
                 handleSendMessage();
               }
             }}
@@ -158,17 +140,9 @@ export default function Chatbot() {
             variant="primary_sm"
             onClick={handleSendMessage}
             disabled={isLoadingAI || currentMessage.trim() === ""}
-            className={`!py-2 !px-4 ${
-              isLoadingAI || currentMessage.trim() === "" ? "bg-gray-300 text-gray-500 cursor-not-allowed" : ""
-            }`}
+            className={`!py-2 !px-4 ${isLoadingAI || currentMessage.trim() === "" ? "bg-gray-300 text-gray-500 cursor-not-allowed" : ""}`}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 rotate-90"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
           </Button>

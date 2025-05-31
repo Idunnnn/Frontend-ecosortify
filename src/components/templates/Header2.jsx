@@ -41,8 +41,8 @@ export default function Header2({ className, ...props }) {
   return (
     <>
       <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
-      <header className="hidden xl:block">
-        <div className="flex justify-between px-[100px] relative py-5 shadow-[0_1px_2px_rgba(0,0,0,0.1)] items-center">
+      <header className={clsx("hidden xl:block z-2", className)}>
+        <div className="flex justify-between px-[100px] relative py-5 border-b-1 border-b-gray-200 items-center">
           <Link href="/" className="flex items-start max-w-[188px]">
             <img src="/images/logo.png" alt="logo" />
           </Link>
@@ -95,8 +95,8 @@ export default function Header2({ className, ...props }) {
                 <ul
                   className={
                     showProfile
-                      ? "opacity-100 transition duration-75 flex flex-col rounded-lg  border-gray-300 border shadow-lg mt-3 absolute top-full z-1 bg-white w-[250px] left-0 dan -translate-x-1/2"
-                      : "opacity-0 transition duration-75 flex flex-col rounded-lg  border-gray-300 border shadow-lg mt-3 absolute top-full z-1 bg-white w-[250px] left-0 dan -translate-x-1/2"
+                      ? "opacity-100 transition duration-75 flex flex-col rounded-lg  border-gray-300 border shadow-lg mt-3 absolute top-full z-10 bg-white w-[250px] left-0 dan -translate-x-1/2"
+                      : "opacity-0 transition duration-75 flex flex-col rounded-lg  border-gray-300 border shadow-lg mt-3 absolute top-full z-10 bg-white w-[250px] left-0 dan -translate-x-1/2"
                   }
                 >
                   <h2 className="px-4 py-4 font-semibold text-lg truncate border-b-gray-300 border-b-1 mb-2">Profile </h2>
@@ -136,8 +136,8 @@ export default function Header2({ className, ...props }) {
         </div>
       </header>
 
-      <header className="block xl:hidden relative">
-        <div className="flex justify-between px-5 relative py-5 shadow-[0_1px_2px_rgba(0,0,0,0.1)] items-center">
+      <header className={clsx("block xl:hidden z-2", className)}>
+        <div className="flex justify-between px-5 relative py-5  border-b-1 border-b-gray-200 items-center">
           <Link href="/" className="flex items-start max-w-[150px]">
             <img src="/images/logo.png" alt="logo" />
           </Link>
@@ -145,8 +145,8 @@ export default function Header2({ className, ...props }) {
           <ul
             className={
               show
-                ? "opacity-100 transition duration-75 flex flex-col body-6 absolute top-full bg-white w-full z-2 left-0 right-0  shadow"
-                : "opacity-0 transition duration-75 flex flex-col body-6 absolute top-full bg-white w-full z-2 left-0 right-0  shadow"
+                ? "transition-all duration-75 flex flex-col body-6 absolute top-full bg-white w-full z-2 left-0 right-0  shadow"
+                : "hidden transition-all  duration-75  flex-col body-6 absolute top-full bg-white w-full left-0 right-0  shadow -z-10"
             }
           >
             {}
