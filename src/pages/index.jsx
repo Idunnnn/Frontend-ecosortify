@@ -55,7 +55,7 @@ export default function Home() {
           <Image src="/images/logo.png" alt="Ecosortify Logo" width={100} height={100} />
         </div>
         <nav className="flex gap-8">
-          <a href="src/pages/index.jsx" className="hover:text-green-300 transition">Home</a>
+          <Link href="/index" className="hover:text-green-300 transition">Home</Link>
           <Link href="/scan" className="hover:text-green-300 transition">Scan</Link>
           <Link href="/guide" className="hover:text-green-300 transition">Guide</Link>
           <Link href="/chatbot" className="hover:text-green-300 transition">Chatbot</Link>
