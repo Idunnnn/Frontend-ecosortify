@@ -26,7 +26,7 @@ export default function about() {
             Tentang Kami
           </h1>
 
-          <div className="xl:px-[150px] px-5 md:px-[52px] flex justify-between w-full ">
+          <div className="xl:px-[150px] px-8 md:px-[52px] flex justify-between w-full ">
             <div data-aos="zoom-in" className="flex flex-col xl:gap-9 gap-5 lg:max-w-[550px] ">
               <div className="flex flex-col gap-3">
                 <h2 className="subheading-3 ">Tujuan Website</h2>
@@ -63,7 +63,7 @@ export default function about() {
             ></Image>
           </div>
 
-          <div className="flex flex-col xl:px-[150px] md:px-[52px] px-5 w-full bg-gray-100">
+          <div className="flex flex-col xl:px-[150px] md:px-[52px] px-8 w-full bg-gray-100">
             <div data-aos="fade-up" className="flex flex-col gap-3 py-15">
               <h2 className="subheading-3 ">
                 Meet Our Super <br />

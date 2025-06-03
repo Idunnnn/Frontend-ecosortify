@@ -1,6 +1,9 @@
+
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 const ENDPOINT = {
     LOGIN: `${BACKEND_URL}/login`,
+
+    SEND_CHAT_HISTORY: `${BACKEND_URL}/chatbot`,
 }
 
 export async function sendLoginRequest({ token }) {
@@ -20,4 +23,24 @@ export async function sendLoginRequest({ token }) {
         ...response
     }
 
+}
+
+export async function sendChatHistory(message, uid, token) {
+
+    const data = JSON.stringify(message);
+    const fetchResponse = await fetch(`${ENDPOINT.SEND_CHAT_HISTORY}/${uid}`, {
+        method: "POST",
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        },
+        body: data
+    });
+
+    const response = await fetchResponse.json();
+
+    return {
+        ok: fetchResponse.ok,
+        ...response
+    }
 }

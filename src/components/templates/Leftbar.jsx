@@ -10,7 +10,7 @@ export default function Leftbar({ className, children, ...props }) {
     <>
       <aside
         className={clsx(
-          "hidden text-gray-800 lg:flex flex-col fixed top-21 left-0 w-[350px] f h-[calc(100vh-4.1rem)] bg-white overflow-y-auto p-6 border-r-1 border-t-1 border-gray-200 z-1 overflow-x-hidden",
+          "hidden text-gray-800 lg:flex flex-col fixed top-20 left-0 w-[350px] f h-[calc(100vh-4.1rem)] bg-white overflow-y-auto p-6 border-r-1 border-t-1 border-gray-200 z-1 overflow-x-hidden",
           className
         )}
         {...props}
