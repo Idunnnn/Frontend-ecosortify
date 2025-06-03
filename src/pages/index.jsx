@@ -1,16 +1,16 @@
 // === Bagian import semua modul dan aset yang dibutuhkan
-import Image from "next/image";
+import Image from "next/image"; // Diperlukan untuk logo
 import { Geist, Geist_Mono } from "next/font/google";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import Link from "next/link";
+import { useRouter } from "next/router"; // Meskipun tidak langsung digunakan di header ini, tetap penting jika ada logika router di tempat lain
+import { useEffect } from "react"; // Sama seperti useRouter
+import Link from "next/link"; // Diperlukan untuk navigasi
+import Button from "@/components/Button"; // Diperlukan untuk tombol Register/Login
+import { Montserrat } from "next/font/google"; // Untuk font konten utama
+import Header from "@/components/templates/Web component/Header";
+// Asumsi ini masih diperlukan untuk bagian lain aplikasi atau untuk footer
 import { isUserLogIn } from "@/firebase/firebaseClient";
-
 import { sendLoginRequest } from "@/api/user";
-
 import Footer from '../components/templates/Web component/Footer';
-import Button from "@/components/Button"; // Import your Button component
-import { Montserrat } from "next/font/google";
 // ===========================================================
 
 // === Bagian inisialisasi font custom menggunakan next/font
@@ -52,33 +52,9 @@ export default function Home() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* === Bagian Header (Navigation Bar) */}
-      <header className="flex justify-between items-center p-8 z-10 relative text-white">
-        <div className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="Ecosortify Logo" width={100} height={100} />
-        </div>
-        <nav className="flex gap-8">
-          <a href="src/pages/index.jsx" className="hover:text-green-300 transition">Home</a>
-          <Link href="/scan" className="hover:text-green-300 transition">Scan</Link>
-          <Link href="/guide" className="hover:text-green-300 transition">Guide</Link>
-          <Link href="/chatbot" className="hover:text-green-300 transition">Chatbot</Link>
-          <Link href="/about" className="hover:text-green-300 transition">About us</Link>
-        </nav>
-        <div className="flex gap-4">
-          {/* Using Button component for Register */}
-          <Button variant="rounded_secondary_sm" className="!py-2 !px-6">
-            {" "}
-            {/* Override default padding to match original */}
-            Register
-          </Button>
-          {/* Using Button component for Login */}
-          <Button variant="primary_sm" className="!py-2 !px-6">
-            {" "}
-            {/* Override default padding to match original */}
-            Login
-          </Button>
-        </div>
-      </header>
+      {/* === Bagian Header (Navigation Bar) - Disini kode header Anda yang asli === */}
+      <Header />
+
 
       {/* === Bagian konten utama (main hero section) */}
       <main
@@ -223,8 +199,6 @@ export default function Home() {
       <section
         className="relative overflow-hidden text-white flex" /* Added flex to section to control direct children layout */
         style={{
-          width: "1442px" /* Full page width */,
-          height: "658px" /* Full page height */,
           backgroundColor: "#003419" /* New background color: Sea-Green-950 */,
         }}
       >
@@ -695,54 +669,86 @@ export default function Home() {
 
       {/* === Bagian baru: Biarkan AI membantu mu Section */}
       <section
-        className="py-20 px-[100px] text-white"
-        style={{
-          background: "linear-gradient(96.9deg, #30382F 13.09%, #41583E 59.96%, #317C27 68.32%, #35AA25 94.84%, #5ABE4D 105.34%)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto relative">
-          {/* Removed overflow-hidden from this div to allow the absolute image to extend outside */}
-          <div
-            className="relative bg-white rounded-[20px] border border-[#E8E8E8] py-6 px-10 flex flex-col md:flex-row items-center justify-between"
-            style={{ width: "1065px", height: "358.6387634277344px", gap: "80px" }}
-          >
-            <div className="relative z-10 w-full md:w-1/2 text-gray-800" style={{ width: "585px", height: "104px", gap: "28px" }}>
-              <h2
-                className="font-bold mb-4 text-black"
+          className="py-20 px-[100px] text-white"
+          style={{
+            background:
+              "linear-gradient(96.9deg, #30382F 13.09%, #41583E 59.96%, #317C27 68.32%, #35AA25 94.84%, #5ABE4D 105.34%)",
+          }}
+        >
+          <div className="max-w-6xl mx-auto relative">
+            <div
+              className="relative bg-white rounded-[20px] border border-[#E8E8E8] flex flex-col md:flex-row items-center justify-between px-10 py-6"
+              style={{
+                width: "1065px",
+                height: "358.64px",
+                paddingTop: "24px",
+                paddingRight: "40px",
+                paddingBottom: "24px",
+                paddingLeft: "40px",
+                gap: "80px",
+              }}
+            >
+              {/* Konten kiri: teks + tombol */}
+              <div
+                className="relative z-10 w-full md:w-1/2 text-gray-800"
                 style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "20px",
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
                   width: "585px",
-                  height: "24px",
+                  height: "104px",
                 }}
               >
-                Biarkan AI membantu mu dalam hal pengelolaan sampah
-              </h2>
-              {/* Using Button component for Chatbot */}
-              <Button variant="rounded_secondary_lg" className="!text-lg !px-8 !py-4">
-                {" "}
-                {/* !py-4 for vertical padding */}
-                Chatbot
-              </Button>
-            </div>
-            {/* Changed position to absolute and adjusted positioning */}
-            <div
-              className="absolute right-[-53.5px] top-1/2 -translate-y-1/2 flex justify-center md:justify-end"
-              style={{ width: "394px", height: "406px" }}
-            >
-              <Image
-                src="/images/assets/image-removebg-preview (6).png"
-                alt="Blue Robot"
-                width={300}
-                height={300}
-                className="max-w-full h-auto"
-              />
+                <h2
+                  className="font-normal text-black mb-7"
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    width: "585px",
+                    height: "24px",
+                  }}
+                >
+                  Biarkan AI membantu mu dalam hal pengelolaan sampah
+                </h2>
+
+                  <Button
+                    variant="rounded_secondary_lg"
+                    className="!text-lg !px-8 !py-4 "
+                    style={{
+                      width: "130px",
+                      height: "52px",
+                      borderRadius: "50px",
+                      border: "1px solid var(--Sea-Green-800, #0A7139)",
+                    }}
+                    onClick={() => {
+                      window.location.href = "#Chatbot-1";
+                    }}
+                  >
+                    Chatbot
+                  </Button>
+              </div>
+
+              {/* Gambar robot */}
+              <div
+                className="absolute right-[-53.5px] top-1/2 -translate-y-1/2"
+                style={{
+                  width: "394px",
+                  height: "406px",
+                }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/assets/image-removebg-preview (6).png"
+                    alt="Blue Robot"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
 
       {/* === Bagian footer (Re-structured) */}
       <Footer />
