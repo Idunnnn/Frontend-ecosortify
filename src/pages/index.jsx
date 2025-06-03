@@ -94,13 +94,17 @@ export default function Home() {
             {" "}
             {/* gap-5 = 20px horizontal gap */}
             {/* Using Button component for Guide */}
-            <Button variant="figma_green_solid">
-              Guide
-            </Button>
+           <Link href="/guide">
+              <Button variant="figma_green_solid">
+                Guide
+              </Button>
+            </Link>            
             {/* Using Button component for Chatbot */}
+            <Link href="/chatbot">
             <Button variant="figma_green_reversed" onClick={() => window.location.href = "#Chatbot-1"}>
               Chatbot
             </Button>
+            </Link>
           </div>
         </div>
       </main>
@@ -705,12 +709,11 @@ export default function Home() {
                 >
                   Biarkan AI membantu mu dalam hal pengelolaan sampah
                 </h2>
-
+                <Link href="/chatbot#Chatbot-1">
                   <Button variant="figma_white_outline_pill" >
-              {" "}
-              {/* !py-4 for vertical padding */}
-              Chatbot
-            </Button>
+                    Chatbot
+                  </Button>
+                </Link>
               </div>
 
               {/* Gambar robot */}
