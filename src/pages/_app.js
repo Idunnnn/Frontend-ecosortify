@@ -1,6 +1,10 @@
+import { UserProvider } from "@/contexts/UserContext";
 import "@/styles/globals.css";
-import { ParallaxProvider } from 'react-scroll-parallax';
+
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <UserProvider>
+      <Component {...pageProps} />
+    </UserProvider>);
 
 }

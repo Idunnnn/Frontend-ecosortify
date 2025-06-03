@@ -5,10 +5,11 @@ import Header from "@/components/templates/Register-LoginHeader";
 import BaseInput from "@/components/BaseInput";
 import Button from "@/components/Button";
 import Link from "next/link";
-import { continueWithGoogle, login } from "@/firebase/firebaseClient";
+import { continueWithGoogle, loginWithEmailAndPassword } from "@/firebase/firebaseClient";
 import ToastAlert from "@/components/ToastAlert";
 import { getFirebaseErrorMessage } from "@/utils/utils";
 import { useRouter } from "next/router";
+import { useUser } from "@/contexts/UserContext";
 
 export default function Login() {
   const router = useRouter();
@@ -19,6 +20,8 @@ export default function Login() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [toastType, setToastType] = useState("success");
+
+  const { login } = useUser();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -31,15 +34,13 @@ export default function Login() {
 
     try {
       setLoading(true);
-      const result = await login(email, password);
-      console.log(result.message);
-      router.push('/');
-
+      const result = await loginWithEmailAndPassword(email, password);
+      login(result.data.user);
+      router.push("/");
     } catch (err) {
-      setToastMessage(`${err.message}`);
+      setToastMessage(getFirebaseErrorMessage(err));
       setToastType("danger");
       setShowToast(true);
-      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -47,8 +48,13 @@ export default function Login() {
 
   const handleContinueWithGoogle = async (e) => {
     e.preventDefault();
-    const result = await continueWithGoogle();
-    console.log(result.message);
+    try {
+      const result = await continueWithGoogle();
+      login(result.data.user);
+      router.push("/");
+    } catch (err) {
+      console.error(err.message);
+    }
   };
   return (
     <div className="flex min-h-screen h-fit relative justify-center lg:justify-end">
@@ -56,7 +62,7 @@ export default function Login() {
 
       <form
         onSubmit={handleLogin}
-        className="flex flex-col p-8 max-w-[550px] lg:max-w-[40%] lg:w-[40%] items-center justify-center"
+        className="flex flex-col p-8 sm:max-w-[550px]  w-full lg:max-w-[40%] lg:w-[40%] items-center justify-center"
       >
         <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
         <Header title="Welcome Back" subTitle={"Glad to see you again \nLogin to your account below"} />

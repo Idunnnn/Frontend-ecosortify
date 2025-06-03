@@ -9,29 +9,21 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useUser } from "@/contexts/UserContext";
 
 export const continueWithGoogle = async () => {
-  try {
     const result = await signInWithPopup(auth, provider);
     const user = result?.user;
 
-    if (!user.emailVerified) {
-      await logout();
-    }
+  
     const token = await user.getIdToken();
     const response = await sendLoginRequest({ token });
 
-    if (!response.ok) {
-      throw new Error("Login request failed");
-    }
-
     document.cookie = `firebase_id_token=${token}; path=/; max-age=86400; Secure; SameSite=Strict`;
     return response;
-  } catch (err) {
-    return err;
-  }
 };
-export const login = async (email, password) => {
+
+export const loginWithEmailAndPassword = async (email, password) => {
   const result = await signInWithEmailAndPassword(auth, email, password);
   const user = result.user;
 
@@ -61,6 +53,18 @@ export const logout = async () => {
   document.cookie = "firebase_id_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; SameSite=Strict";
   await signOut(auth);
 };
+
+export function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (const cookie of cookies) {
+    const [key, value] = cookie.split("=");
+    if (key === name) {
+      return decodeURIComponent(value);
+    }
+  }
+  return null;
+}
+
 
 export const isUserLogIn = () => {
   const auth = getAuth();

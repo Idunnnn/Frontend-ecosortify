@@ -9,6 +9,8 @@ import { continueWithGoogle, registerUser } from "@/firebase/firebaseClient";
 import ToastAlert from "@/components/ToastAlert";
 import { getFirebaseErrorMessage } from "@/utils/utils";
 import { useRouter } from "next/router";
+import { useUser } from "@/contexts/UserContext";
+
 
 function passwordValidator(value) {
   const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -27,6 +29,7 @@ export default function register() {
   const [toastType, setToastType] = useState("success");
   const [error, setError] = useState(false);
 
+  const { login } = useUser();
   const handleFullName = (e) => {
     setFullName(e.target.value);
   };
@@ -68,11 +71,16 @@ export default function register() {
     }
   };
 
-  const handleContinueWithGoogle = async (e) => {
-    e.preventDefault();
-    await continueWithGoogle();
-    router.push("/");
-  };
+   const handleContinueWithGoogle = async (e) => {
+     e.preventDefault();
+     try {
+       const result = await continueWithGoogle();
+       login(result.data.user);
+       router.push("/");
+     } catch (err) {
+       console.error(err.message);
+     }
+   };
 
   return (
     <div className="flex min-h-screen h-fit relative justify-center lg:justify-end">
@@ -81,7 +89,7 @@ export default function register() {
       <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
       <form
         onSubmit={handleRegister}
-        className="flex flex-col p-8 max-w-[550px] lg:max-w-[40%] lg:w-[40%] items-center justify-center"
+        className="flex flex-col p-8 max-w-[550px] lg:max-w-[40%] w-full lg:w-[40%] items-center justify-center"
       >
         <Header title="Sign Up" subTitle={"Enter your detail below to create your account and get started"} />
 

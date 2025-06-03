@@ -9,7 +9,6 @@ export function middleware(request) {
     const protedtedPaths = ['/chatbot', '/scan'];
     const authPaths = ['/login', '/register'];
 
-
     // Kalau token ada, artinya sudah login
     if (token) {
         if (authPaths.includes(path)) {

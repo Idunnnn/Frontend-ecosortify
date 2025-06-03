@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@iconify/react": "^6.0.0",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "firebase": "^11.8.0",
     "iconify": "^1.4.0",
