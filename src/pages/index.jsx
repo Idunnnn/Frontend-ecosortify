@@ -58,57 +58,90 @@ export default function Home() {
 
       {/* === Bagian konten utama (main hero section) */}
       <main
-        className={`flex flex-col items-center justify-center min-h-[calc(100vh-100px)] text-center px-4 text-white ${montserrat.className}`}
+      className={`flex flex-col items-start /* Default (Phone) rata kiri */
+        justify-center min-h-[calc(100vh-100px)] text-white ${montserrat.className}
+        px-4 /* Memberikan padding horizontal untuk semua ukuran layar */
+        md:items-center /* Tablet & Web: rata tengah */
+      `}
+    >
+      {/*
+        Layout 1: Container utama untuk teks dan tombol
+        Phone: width: 380px, gap: 40px, content starts from left
+        Tablet: width: 650px, gap: 40px, content centered
+        Web: width: 650px, gap: 40px, content centered
+      */}
+      <div
+        className="
+          flex flex-col items-start /* Default (Phone) rata kiri */
+          w-full /* Gunakan lebar penuh yang tersedia dalam padding main */
+          max-w-[380px] /* Phone: max-width 380px */
+          md:max-w-[650px] /* Tablet & Web: max-width 650px */
+          md:items-center /* Tablet & Web: rata tengah */
+        "
       >
-        {/* This div acts as a container for the text and buttons to control their collective width and vertical gaps */}
-        <div
-          className="flex flex-col items-center"
-          style={{
-            width: "650px" /* Explicitly setting width as requested for the main content block */,
-            /* Height (298px) is achieved through content and vertical spacing (mt-5 and mt-10) */
-          }}
+        {/*
+          Layout 3: h1
+          Phone: font-size: 40px, line-height: 100%, text-left
+          Tablet: font-size: 52px, line-height: 100%, text-center
+          Web: font-size: 52px, line-height: 100%, text-center
+        */}
+        <h1
+          className="
+            font-bold leading-none
+            text-[40px] text-left /* Default (Phone) rata kiri, font size 40px */
+            md:text-[52px] md:text-center /* Tablet & Web: font size 52px, rata tengah */
+          "
         >
-          <h1
-            className="text-center font-bold mx-auto"
-            style={{
-              fontSize: "52px",
-              lineHeight: "100%",
-              /* width: "650px" is already handled by the parent div */
-            }}
-          >
-            Untuk Bumi yang Lebih Bersih
-          </h1>
-          {/* The gap of 20px between h1 and p is handled by mt-5 */}
-          <p
-            className="text-center mx-auto text-[20px] font-normal mt-5 max-w-[650px]" /* mt-5 = 20px gap */
-            style={{
-              lineHeight: "100%",
-            }}
-          >
-            Satu artikel bisa mengubah cara kita melihat dan mengelola sampah
-          </p>
-          {/* The gap of 40px between the text block (h1+p) and the buttons is handled by mt-10 */}
-          <div className="mt-10"></div> {/* mt-10 = 40px gap */}
-          {/* The gap of 20px between the two buttons is handled by gap-5 */}
-          <div className="flex gap-5">
-            {" "}
-            {/* gap-5 = 20px horizontal gap */}
-            {/* Using Button component for Guide */}
-           <Link href="/guide">
-              <Button variant="figma_green_solid">
-                Guide
-              </Button>
-            </Link>            
-            {/* Using Button component for Chatbot */}
-            <Link href="/chatbot">
+          Untuk Bumi yang Lebih Bersih
+        </h1>
+
+        {/*
+          Layout 4: p
+          Phone: font-size: 20px, line-height: 100%, mt-5, text-left
+          Tablet: font-size: 20px, line-height: 100%, mt-5, text-center
+          Web: font-size: 20px, line-height: 100%, mt-5, text-center
+        */}
+        <p
+          className="
+            font-normal mt-5 leading-none
+            text-[20px] text-left /* Default (Phone) rata kiri */
+            max-w-[380px] /* Phone: max-width 380px */
+            md:max-w-[650px] /* Tablet & Web: max-width 650px */
+            md:text-center /* Tablet & Web: rata tengah */
+          "
+        >
+          Satu artikel bisa mengubah cara kita melihat dan mengelola sampah
+        </p>
+
+        {/*
+          Layout 5: Container untuk tombol
+          Phone: width: 320px, gap: 20px, mt-10, align-start
+          Tablet: width: 420px, gap: 20px, mt-10, centered
+          Web: width: auto, gap: 20px, mt-10, centered
+        */}
+        <div
+          className="
+            flex gap-5 mt-10 /* mt-10 = 40px gap dari p */
+            w-[320px] /* Phone: width 320px */
+            self-start /* Phone: rata kiri */
+            md:w-[420px] /* Tablet: width 420px */
+            md:self-center /* Tablet & Web: rata tengah */
+            lg:w-auto /* Web: width auto */
+          "
+        >
+          <Link href="/guide">
+            <Button variant="figma_green_solid">
+              Guide
+            </Button>
+          </Link>
+          <Link href="/chatbot">
             <Button variant="figma_green_reversed" onClick={() => window.location.href = "#Chatbot-1"}>
               Chatbot
             </Button>
-            </Link>
-          </div>
+          </Link>
         </div>
-      </main>
-
+      </div>
+    </main>
       {/* === Bagian: Realita Sampah Section */}
       <section className="bg-white py-16 md:py-24 text-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 md:gap-20">
