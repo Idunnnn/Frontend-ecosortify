@@ -123,12 +123,12 @@ export default function Header({ className, ...props }) {
             ) : (
               <>
                 <Link href="/register">
-                  <Button variant="rounded_secondary_lg" className="text-black border-black">
+                  <Button variant="figma_green_outline_pill">
                     Register
                   </Button>
                 </Link>
                 <Link href="/login">
-                  <Button variant="rounded_primary_lg">Login</Button>
+                  <Button variant="figma_green_pill">Login</Button>
                 </Link>
               </>
             )}

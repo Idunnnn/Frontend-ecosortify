@@ -94,15 +94,11 @@ export default function Home() {
             {" "}
             {/* gap-5 = 20px horizontal gap */}
             {/* Using Button component for Guide */}
-            <Button variant="rounded_primary_lg" className="!text-lg !px-8 !py-4">
-              {" "}
-              {/* !py-4 for vertical padding, contributing to approximate 64px height */}
+            <Button variant="figma_green_solid">
               Guide
             </Button>
             {/* Using Button component for Chatbot */}
-            <Button variant="rounded_secondary_lg" className="!text-lg !px-8 !py-4">
-              {" "}
-              {/* !py-4 for vertical padding */}
+            <Button variant="figma_green_reversed" onClick={() => window.location.href = "#Chatbot-1"}>
               Chatbot
             </Button>
           </div>
@@ -710,21 +706,11 @@ export default function Home() {
                   Biarkan AI membantu mu dalam hal pengelolaan sampah
                 </h2>
 
-                  <Button
-                    variant="rounded_secondary_lg"
-                    className="!text-lg !px-8 !py-4 "
-                    style={{
-                      width: "130px",
-                      height: "52px",
-                      borderRadius: "50px",
-                      border: "1px solid var(--Sea-Green-800, #0A7139)",
-                    }}
-                    onClick={() => {
-                      window.location.href = "#Chatbot-1";
-                    }}
-                  >
-                    Chatbot
-                  </Button>
+                  <Button variant="figma_white_outline_pill" >
+              {" "}
+              {/* !py-4 for vertical padding */}
+              Chatbot
+            </Button>
               </div>
 
               {/* Gambar robot */}
