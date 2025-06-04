@@ -143,90 +143,145 @@ export default function Home() {
       </div>
     </main>
       {/* === Bagian: Realita Sampah Section */}
-      <section className="bg-white py-16 md:py-24 text-gray-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 md:gap-20">
-          {/* Image Section - Revised based on previous request */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div
-              style={{
-                width: "519px",
-                height: "475px",
-                borderRadius: "8px",
-                overflow: "hidden" /* Crucial for border-radius */,
-                position: "relative" /* Required for Next.js Image fill */,
-              }}
-              className="relative shadow-lg border border-gray-200" /* Keep existing Tailwind classes for styling */
-            >
-              <Image
-                src="/images/assets/istockphoto-1171440648-612x612.jpg"
-                alt="Tangan memegang kantong sampah"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          </div>
+        <section
+      className="bg-white text-gray-800
+        py-[60px] px-4 /* Phone: padding-top/bottom 60px, padding-left/right 16px */
+        md:py-[60px] md:px-[52px] /* Tablet: padding-top/bottom 60px, padding-left/right 52px */
+        lg:py-24 lg:px-8 /* Web: padding-top/bottom 24 (96px), padding-left/right 32px */
+      "
+    >
+      <div
+        className="
+          max-w-[412px] mx-auto /* Phone: max-width 412px, center */
+          flex flex-col items-start /* Phone: stacked, items-start (rata kiri) */
+          gap-8 /* Phone: gap 32px between image and text */
 
-          {/* Text Content Section */}
+          md:max-w-[1023px] /* Tablet: max-width 1023px */
+          md:flex-row md:items-center /* Tablet: side-by-side, items-center */
+          md:gap-20 /* Tablet: gap 80px between image and text */
+
+          lg:max-w-6xl /* Web: max-width 6xl */
+          lg:gap-20 /* Web: gap 80px */
+          lg:flex-row lg:items-center /* Web: side-by-side, items-center */
+        "
+      >
+        {/* Image Section */}
+        {/* Defaultnya hidden untuk phone */}
+        {/* Untuk web, kita ingin ukuran 519x475. Untuk tablet, 351x333 */}
+        <div
+          className="
+            hidden /* Phone: Gambar disembunyikan */
+            md:block /* Tablet & Web: Gambar ditampilkan */
+            flex justify-center /* Untuk memusatkan gambar dalam kolomnya */
+            
+            /* ---- Dimensi Gambar ---- */
+            /* Web (Default): Ukuran asli 519x475px */
+            w-[519px] h-[475px] 
+
+            /* Tablet: Menimpa ukuran gambar untuk tablet */
+            md:w-[351px] md:h-[333px]
+            
+            /* Kolom lebar untuk tablet dan web */
+            md:w-1/2 /* Gambar mengambil setengah lebar di tablet dan web */
+          "
+        >
           <div
-            className="w-full md:w-1/2 text-center md:text-left flex flex-col"
-            style={{
-              width: "572px" /* Explicitly setting width for the text block as requested */,
-              /* Height (284px) and gap (8px) will be managed by margins on child elements */
-            }}
+            className="
+              relative shadow-lg border border-gray-200 rounded-lg overflow-hidden
+              w-full h-full /* Pastikan div ini mengisi parent-nya */
+            "
           >
-            {/* "REALITA SAMPAH DI SEKITAR KITA" Paragraph */}
-            <p
-              className="text-sm font-semibold text-blue-600 uppercase tracking-wide"
-              style={{
-                fontFamily: "Montserrat" /* Ensure Montserrat is loaded globally or imported */,
-                fontWeight: "400" /* Changed from font-semibold (600) to 400 as per your typograph */,
-                fontSize: "16px" /* Changed from text-sm (14px) to 16px as per your typograph */,
-                lineHeight: "100%" /* Equivalent to leading-none or custom value */,
-                letterSpacing: "0%" /* Tracking-normal or custom value */,
-                marginBottom: "8px" /* Explicit 8px gap below this element */,
-                color: "#0B5C31" /* Specified background color, using it as text color for p */,
-              }}
-            >
-              REALITA SAMPAH DI SEKITAR KITA
-            </p>
-
-            {/* "Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!" Heading */}
-            <h2
-              className="font-bold leading-tight" /* Removed mb-6 to control gap directly */
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "600" /* Already font-bold in Tailwind, which is 700. Use 600 explicitly if needed */,
-                fontSize: "36px" /* Changed from text-4xl/5xl to 36px as per your typograph */,
-                lineHeight: "100%" /* Equivalent to leading-none or custom value */,
-                letterSpacing: "0%",
-                marginBottom: "20px" /* This creates the 20px gap from h2 to the next p */,
-                color: "black" /* Specified black color */,
-              }}
-            >
-              Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!
-            </h2>
-
-            {/* Long Paragraph */}
-            <p
-              className="text-lg text-gray-700 leading-relaxed"
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "400" /* Already font-normal in Tailwind, which is 400 */,
-                fontSize: "16px" /* Changed from text-lg (18px) to 16px as per your typograph */,
-                lineHeight: "100%" /* Changed from leading-relaxed (1.625) to 100% as per your typograph */,
-                letterSpacing: "0%",
-                color: "black" /* Specified black color */,
-              }}
-            >
-              Menurut United Nations Programme (UNEP), sekitar 33% sampah yang dihasilkan diseluruh dunia tidak dikelola dengan
-              baik, sampah-sampah ini berakhir menumpuk di Tempat Pembuangan Akhir (TPA). Beberapa sumber menyebutkan alasan tidak
-              terkelola dengan baik adalah pemisahan sampah yang buruk, kesadaran masyarakat yang rendah dan sampah yang
-              terkontaminasi.
-            </p>
+            <Image
+              src="/images/assets/istockphoto-1171440648-612x612.jpg"
+              alt="Tangan memegang kantong sampah"
+              fill
+              sizes="(max-width: 768px) 0vw, (max-width: 1024px) 351px, 519px" /* Updated for specific widths */
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
-      </section>
+
+        {/* Text Content Section */}
+        <div
+          className="
+            w-full /* Phone: width full */
+            max-w-[380px] /* Phone: max-width 380px */
+            flex flex-col items-start /* Phone: text-left, flex-col */
+            gap-2 /* Phone: gap 8px between text elements */
+
+            md:w-1/2 /* Tablet & Web: width 1/2 */
+            md:max-w-[488px] /* Tablet: max-width 488px */
+            md:items-start /* Tablet: text-left */
+            md:gap-2 /* Tablet: gap 8px */
+
+            lg:max-w-[572px] /* Web: max-w 572px (kembali ke nilai awal) */
+            lg:items-start /* Web: text-left (sudah default md:items-start) */
+          "
+        >
+          {/* "REALITA SAMPAH DI SEKITAR KITA" Paragraph */}
+          <p
+            className="
+              font-normal uppercase tracking-normal leading-none
+              text-[14px] text-[#0B5C31] /* Phone: font size 14px, color */
+              mb-2 /* 8px gap below this element */
+              w-auto max-w-[245px] /* Phone: width 245px */
+              text-left /* Phone: text-left */
+
+              md:text-[16px] /* Tablet & Web: font size 16px */
+              md:max-w-[280px] /* Tablet: max-width 280px */
+              md:text-left /* Tablet: text-left */
+
+              lg:max-w-none /* Web: hilangkan max-width jika tidak ada batasan */
+              lg:text-left /* Web: text-left */
+            "
+          >
+            REALITA SAMPAH DI SEKITAR KITA
+          </p>
+
+          {/* "Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!" Heading */}
+          <h2
+            className="
+              font-semibold leading-none text-black
+              text-[28px] /* Phone: font size 28px */
+              mb-5 /* 20px gap below this element */
+              w-full max-w-[380px] /* Phone: width 380px */
+              text-left /* Phone: text-left */
+
+              md:text-[32px] /* Tablet: font size 32px */
+              md:max-w-[488px] /* Tablet: max-width 488px */
+              md:text-left /* Tablet: text-left */
+
+              lg:text-[36px] /* Web: font size 36px */
+              lg:max-w-none /* Web: hilangkan max-width jika tidak ada batasan */
+              lg:text-left /* Web: text-left */
+            "
+          >
+            Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!
+          </h2>
+
+          {/* Long Paragraph */}
+          <p
+            className="
+              font-normal leading-none text-black
+              text-[16px] /* Phone: font size 16px */
+              w-full max-w-[380px] /* Phone: width 380px */
+              text-left /* Phone: text-left */
+
+              md:max-w-[488px] /* Tablet: max-width 488px */
+              md:text-left /* Tablet: text-left */
+
+              lg:max-w-none /* Web: hilangkan max-width jika tidak ada batasan */
+              lg:text-left /* Web: text-left */
+            "
+          >
+            Menurut United Nations Programme (UNEP), sekitar 33% sampah yang dihasilkan diseluruh dunia tidak dikelola dengan
+            baik, sampah-sampah ini berakhir menumpuk di Tempat Pembuangan Akhir (TPA). Beberapa sumber menyebutkan alasan tidak
+            terkelola dengan baik adalah pemisahan sampah yang buruk, kesadaran masyarakat yang rendah dan sampah yang
+            terkontaminasi.
+          </p>
+        </div>
+      </div>
+    </section>
 
       {/* === Bagian: Mengapa Edukasi Sampah Itu Penting? Section */}
       <section
