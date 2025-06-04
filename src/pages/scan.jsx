@@ -1,3 +1,4 @@
+
 import Header2 from "@/components/templates/Header2";
 import Scan from "@/components/layout/Scan";
 

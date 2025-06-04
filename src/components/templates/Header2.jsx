@@ -135,9 +135,8 @@ export default function Header2({ className, ...props }) {
           </div>
         </div>
       </header>
-
-      <header className={clsx("block xl:hidden z-2", className)}>
-        <div className="flex justify-between px-5 relative py-5  border-b-1 border-b-gray-200 items-center">
+        <header className={clsx("block xl:hidden z-2 bg-white ", className)}>
+          <div className="flex justify-between px-5 relative py-5 border-b-1 border-b-gray-200 items-center bg-white">
           <Link href="/" className="flex items-start max-w-[150px]">
             <img src="/images/logo.png" alt="logo" />
           </Link>
