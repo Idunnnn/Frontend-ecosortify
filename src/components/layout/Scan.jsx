@@ -2,29 +2,59 @@ import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
 import Image from "next/image";
+import CameraCapture from "../CameraCapture";
+import { getScanModel } from "@/api/user";
+import { useUser } from "@/contexts/UserContext";
 
 export default function Scan() {
+  const { user } = useUser();
   const [active, setActive] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [showCamera, setShowCamera] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [file, setFile] = useState(null);
 
   const handleActive = () => {
     setActive(!active);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!selectedFile) return;
-    console.log("Uploading file:", selectedFile);
-    // Upload logic here...
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "user",
+        type: "image",
+        content: URL.createObjectURL(selectedFile),
+      },
+    ]);
+    try {
+      const result = await getScanModel(selectedFile, user.token);
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "bot",
+          type: "text",
+          content: result.data.response, // ini dari backend kamu
+        },
+      ]);
+
+      setSelectedFile(null);
+      setPreviewUrl(null);
+    } catch (err) {
+      console.error(err.message);
+    }
   };
 
   const handleFileChange = (event) => {
+    setActive(false);
     const file = event.target.files[0];
     if (!file) return;
 
-    // Validasi apakah file adalah gambar
     if (!file.type.startsWith("image/")) {
       setErrorMessage("File yang diunggah harus berupa gambar (jpg, png, webp, dll).");
       setSelectedFile(null);
@@ -36,7 +66,7 @@ export default function Scan() {
     }
 
     setSelectedFile(file);
-    setErrorMessage(""); // Bersihkan error
+    setErrorMessage("");
   };
 
   const handleClearFile = () => {
@@ -61,19 +91,51 @@ export default function Scan() {
 
   return (
     <>
-      <main
-        className="mx-auto flex flex-col justify-center items-center max-w-[700px] mb-10 max-h-[calc(100vh-80px)] w-full mt-5 gap-8 p-8 lg:p-0 overflow-y-auto"
-        style={{ maxHeight: "calc(100vh - 225px)" }}
-      >
-        <div className="text-center text-gray-700 mt-20">
-          <Image src="/images/scan.png" alt="Welcome" width={200} height={200} quality={30} className="w-44 h-44 mx-auto mb-4" />
-          <p className="text-lg">
-            Hai, aku <strong>SortiBot</strong>! 🌱
-          </p>
-          <p className="text-sm text-gray-600 max-w-[400px]">
-            Yuk, bantu bumi dengan mengenali sampahmu. Scan sekarang dan temukan cara mengelolanya!
-          </p>
-        </div>
+      <main className="mx-auto flex flex-col justify-center items-center max-w-[700px] mb-30 w-full mt-5 gap-8 p-8 lg:p-0 ">
+        {showCamera ? (
+          <div className="mt-10 w-full">
+            <CameraCapture
+              onCapture={(capturedFile) => {
+                setSelectedFile(capturedFile);
+                setShowCamera(false); // hide camera after capture
+              }}
+            />
+          </div>
+        ) : messages.length > 0 ? (
+          messages.map((msg, i) => (
+            <div
+              key={i}
+              className={`mb-2  rounded-xl  ${
+                msg.role === "user"
+                  ? " text-white self-end max-w-[55%] border border-gray-300 "
+                  : "bg-gray-100 border-gray-300 border shadow text-black self-start p-3  max-w-[70%]"
+              }`}
+            >
+              {msg.type === "image" ? (
+                <img src={msg.content} alt="User upload" className="rounded-xl max-w-full" />
+              ) : (
+                <p>{msg.content}</p>
+              )}
+            </div>
+          ))
+        ) : (
+          <div className="text-center text-gray-700 mt-20">
+            <Image
+              src="/images/scan.png"
+              alt="Welcome"
+              width={200}
+              height={200}
+              quality={30}
+              className="w-44 h-44 mx-auto mb-4"
+            />
+            <p className="text-lg">
+              Hai, aku <strong>SortiBot</strong>!
+            </p>
+            <p className="text-sm text-gray-600 max-w-[400px]">
+              Yuk, bantu bumi dengan mengenali sampahmu. Scan sekarang dan temukan cara mengelolanya!
+            </p>
+          </div>
+        )}
       </main>
 
       <form
@@ -82,8 +144,8 @@ export default function Scan() {
       >
         {/* Tampilkan error message */}
         {errorMessage && (
-          <div className="text-red-600 text-sm mb-2 px-2">
-            <Icon icon="material-symbols:warning" className="inline mr-1" />
+          <div className="text-red-600 text-sm absolute bottom-full w-full md:max-w-[550px] mb-4 py-3 px-5 rounded-2xl border border-red-300 items-center flex gap-2 -translate-x-1/2 left-1/2">
+            <Icon icon="material-symbols:warning" className="inline mr-1 h-6 w-6" />
             {errorMessage}
           </div>
         )}
@@ -126,7 +188,13 @@ export default function Scan() {
                 <span>Upload File</span>
                 <input type="file" onChange={handleFileChange} className="hidden" />
               </label>
-              <div className="flex flex-row gap-3 py-3 px-4 hover:cursor-pointer text-sm w-full hover:bg-gray-100 rounded-lg">
+              <div
+                onClick={() => {
+                  setShowCamera(true);
+                  setActive(false);
+                }}
+                className="flex flex-row gap-3 py-3 px-4 hover:cursor-pointer text-sm w-full hover:bg-gray-100 rounded-lg"
+              >
                 <Icon icon="material-symbols:camera-rounded" className="h-5 w-5 text-gray-700" />
                 <p>Open Camera</p>
               </div>
