@@ -55,13 +55,7 @@ export default function pengenalan() {
             <p>Tanpa berlama-lagi, mari kita ke pembahasannya!</p>
 
             <div className="flex justify-between mt-14">
-              <Link
-                href="/guide/the-great-pacific-garbage-patch"
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <Icon icon="icon-park-solid:back" />
-                <p>Kembali</p>
-              </Link>
+              <div className="flex-grow"></div>
               <Link
                 href="/guide/sampah-organik/jenis-sampah-organik"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"

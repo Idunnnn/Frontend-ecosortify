@@ -33,15 +33,9 @@ export default function medicWastePengenalan() {
             <br />
 
             <div className="flex justify-between mt-14">
+               <div className="flex-grow"></div>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/other" // Ini asumsi halaman terakhir plastik
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <Icon icon="icon-park-solid:back" />
-                <p>Sebelumnya</p>
-              </Link>
-              <Link
-                href="/guide/sampah-medis/jenis-sampah-medis" // Link ini perlu disesuaikan ke halaman selanjutnya dari limbah medis
+                href="/guide/sampah-medis/jenis-sampah-medis/infeksius" // Link ini perlu disesuaikan ke halaman selanjutnya dari limbah medis
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

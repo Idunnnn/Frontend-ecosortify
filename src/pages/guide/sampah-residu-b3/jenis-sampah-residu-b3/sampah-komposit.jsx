@@ -59,7 +59,7 @@ export default function SampahKomposit() {
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/jenis-lain-sampah-residu-b3" // Sesuaikan dengan halaman selanjutnya jika ada
+                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/plastik-tipe-6-7" // Sesuaikan dengan halaman selanjutnya jika ada
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

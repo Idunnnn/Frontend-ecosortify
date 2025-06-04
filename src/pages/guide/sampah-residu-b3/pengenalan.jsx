@@ -37,16 +37,9 @@ export default function ResiduDanB3() {
 
             {/* Link navigasi. Anda bisa sesuaikan href sesuai struktur folder Anda. */}
             <div className="flex justify-between mt-14">
+              <div className="flex-grow"></div>
               <Link
-                href="/guide/jenis-sampah/organik-dan-anorganik"
-                // Contoh: Asumsi halaman sebelumnya adalah organik-dan-anorganik
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <Icon icon="icon-park-solid:back" />
-                <p>Sebelumnya</p>
-              </Link>
-              <Link
-                href="/guide/jenis-sampah/detail-residu"
+                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/sampah-terkontaminasi"
                 // Contoh: Asumsi halaman selanjutnya adalah detail untuk sampah residu
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >

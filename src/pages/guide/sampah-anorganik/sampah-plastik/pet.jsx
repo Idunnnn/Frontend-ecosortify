@@ -74,7 +74,7 @@ export default function pet() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/jenis-sampah-anorganik" // Kembali ke halaman Jenis-Jenis Sampah Anorganik
+                href="/guide/sampah-anorganik/pengenalan" // Kembali ke halaman Jenis-Jenis Sampah Anorganik
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />

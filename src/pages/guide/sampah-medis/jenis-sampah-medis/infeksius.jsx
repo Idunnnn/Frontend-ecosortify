@@ -65,7 +65,7 @@ export default function infeksius() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-medis/jenis-sampah-medis"
+                href="/guide/sampah-medis/pengenalan"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />

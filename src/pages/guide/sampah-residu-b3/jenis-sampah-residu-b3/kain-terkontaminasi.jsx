@@ -61,13 +61,7 @@ export default function KainTerkontaminasi() {
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
-              <Link
-                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/limbah-elektronik" // Sesuaikan dengan halaman selanjutnya jika ada
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <p>Selanjutnya</p>
-                <Icon icon="icon-park-solid:next" />
-              </Link>
+             
             </div>
             <div className="h-[40px]"></div>
           </article>

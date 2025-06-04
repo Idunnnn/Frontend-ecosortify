@@ -90,7 +90,7 @@ export default function PlastikTipe67() {
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/limbah-elektronik" // Sesuaikan dengan halaman selanjutnya jika ada
+                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/kain-terkontaminasi" // Sesuaikan dengan halaman selanjutnya jika ada
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

@@ -65,13 +65,7 @@ export default function radioaktif() {
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
-              <Link
-                href="/guide/sampah-medis/jenis-sampah-medis"
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <p>Kembali ke Daftar Jenis</p>
-                <Icon icon="icon-park-solid:next" />
-              </Link>
+              
             </div>
             <div className="h-[40px]"></div>
           </article>

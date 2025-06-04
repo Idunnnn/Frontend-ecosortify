@@ -44,15 +44,9 @@ export default function pengenalan() {
             <p>Tanpa berlama-lagi, mari kita ke pembahasannya!</p>
 
             <div className="flex justify-between mt-14">
+              <div className="flex-grow"></div>
               <Link
-                href="/guide/sampah-organik/pengenalan" // Ini kembali ke pengenalan sampah organik, sesuaikan jika ada halaman sebelumnya yang lebih relevan
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <Icon icon="icon-park-solid:back" />
-                <p>Kembali</p>
-              </Link>
-              <Link
-                href="/guide/sampah-anorganik/jenis-sampah-anorganik" // Sesuaikan dengan path ke halaman jenis sampah anorganik
+                href="/guide/sampah-anorganik/sampah-plastik/pet" // Sesuaikan dengan path ke halaman jenis sampah anorganik
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

@@ -54,7 +54,7 @@ export default function SampahTerkontaminasi() {
             {/* Link navigasi. Anda bisa sesuaikan href sesuai struktur folder Anda. */}
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/jenis-sampah-residu-b3/pengenalan" 
+                href="/guide/sampah-residu-b3/pengenalan" 
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
