@@ -18,7 +18,7 @@ export default function ps() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               PS (Polystyrene) - Kode 6
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik Si PS Ini:</h2>
             <p>
               PS itu plastik yang kaku, gampang pecah (getas), dan sangat ringan. Dia paling sering kita temui dalam bentuk busa, yang kita kenal sebagai styrofoam. PS lumayan bagus buat insulasi panas, tapi karena rapuh, dia gampang banget pecah jadi remahan kecil. Nah, ini yang bahaya: PS bisa ngeluarin zat styrene yang diduga karsinogenik (pemicu kanker) dan bisa ganggu otak atau hormon, apalagi kalau kena makanan panas atau berminyak.
@@ -27,17 +27,16 @@ export default function ps() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/ps3.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/ps3.jpg"
                   alt="Gambar Plastik PS (Kode 6)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Wadah styrofoam buat makanan dan minuman (gelas, piring, mangkuk sekali pakai)</li>
@@ -47,7 +46,6 @@ export default function ps() {
             </ul>
             <br />
 
-            {/* CARA KITA MENANGANINYA */}
             <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Saran paling penting: hindari penggunaan PS, terutama styrofoam, buat makanan dan minuman!</li>
@@ -58,7 +56,6 @@ export default function ps() {
             </ol>
             <br />
 
-            {/* PROSES DAUR ULANGNYA DI PABRIK */}
             <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Daur Ulangnya di Pabrik:</h2>
             <p className="text-gray-700 mb-2">(Daur ulang PS sangat terbatas dan kurang umum.)</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -79,14 +76,14 @@ export default function ps() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/pp" // Kembali ke PP
+                href="/guide/sampah-anorganik/sampah-plastik/pp"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/other" // Lanjut ke OTHER
+                href="/guide/sampah-anorganik/sampah-plastik/other"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -98,7 +95,6 @@ export default function ps() {
         </main>
 
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si PS Ini</Link>

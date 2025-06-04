@@ -18,7 +18,7 @@ export default function sampahKaret() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Mengenal Lebih Dalam Sampah Karet: Elastisitas yang Abadi di Lingkungan
             </h1>
-            {/* PENDAHULUAN */}
+
             <h2 id="pendahuluan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Pendahuluan</h2>
             <p>
               Karet adalah polimer elastis yang berasal dari getah pohon karet (Hevea brasiliensis) yang disebut karet alam, atau diproduksi secara sintetis dari produk sampingan minyak bumi yang disebut karet sintetis. Material ini sangat dihargai karena sifatnya yang elastis, tahan air, tahan abrasi, dan memiliki daya cengkeram yang baik. Keunggulan ini membuat karet menjadi bahan penting dalam berbagai industri, mulai dari ban kendaraan, sol sepatu, hingga peralatan rumah tangga dan medis.
@@ -38,17 +38,16 @@ export default function sampahKaret() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/karet1.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/karet1.jpg"
                   alt="Contoh Produk Karet"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS SAMPAH KARET YANG UMUM DITEMUI */}
             <h2 id="jenis-umum" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Sampah Karet yang Umum Ditemui</h2>
             <p className="text-gray-700 mb-2">Mayoritas sampah karet berasal dari produk-produk berikut:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -72,17 +71,16 @@ export default function sampahKaret() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/karet2.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/karet2.jpg"
                   alt="Contoh Produk karet"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS KARET YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}
             <h2 id="tidak-didaur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Karet yang Tidak Dapat Didaur Ulang Melalui Program Standar</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>
@@ -97,7 +95,6 @@ export default function sampahKaret() {
             </ol>
             <br />
 
-            {/* CARA PENANGANAN SAMPAH KARET OLEH INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Sampah Karet oleh Individu</h2>
             <p className="text-gray-700 mb-2">Meskipun daur ulang karet, terutama ban, lebih bersifat industri, ada beberapa hal yang bisa kita lakukan sebagai individu:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -118,7 +115,6 @@ export default function sampahKaret() {
             </ol>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG KARET INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Karet Industri</h2>
             <p className="text-gray-700 mb-2">Daur ulang karet, terutama ban, adalah proses yang kompleks karena komposisi campurannya. Ada beberapa metode utama:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -155,21 +151,18 @@ export default function sampahKaret() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-kain-tekstil" // Kembali ke Sampah Kain/Tekstil
+                href="/guide/sampah-anorganik/sampah-kain-tekstil"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
-            
             </div>
             <div className="h-[40px]"></div>
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK SAMPAH KARET */}
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#pendahuluan" className="hover:font-semibold">Pendahuluan</Link>

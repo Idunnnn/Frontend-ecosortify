@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-export default function hdpe() { // Perhatikan nama fungsi harus konsisten dengan nama file
+export default function hdpe() {
   return (
     <>
       <Header2 className={"fixed w-full bg-white"} />
@@ -18,26 +18,25 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               HDPE (High-Density Polyethylene) - Kode 2
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik Si HDPE Ini:</h2>
             <p>
               Kalau HDPE ini saudaranya PET, tapi dia lebih kuat, kaku, dan enggak bening alias agak buram. Dia punya kepadatan tinggi, tahan benturan, tahan bahan kimia, dan kuat di suhu tinggi. Uniknya, HDPE ini dianggap salah satu plastik paling aman buat dipakai berulang kali karena zat kimianya minim yang keluar.
             </p>
             <br />
-             <div className="flex justify-center my-6">
+            <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/hdpe1.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/hdpe1.jpg"
                   alt="Gambar Plastik HDPE (Kode 2)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Botol susu</li>
@@ -48,20 +47,19 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
               <li>Beberapa kantong belanja yang tebal.</li>
             </ul>
             <br />
-             <div className="flex justify-center my-6">
+            <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/hdpe2.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/hdpe2.jpg"
                   alt="Gambar Plastik HDPE (Kode 2)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA KITA MENANGANINYA */}
             <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Sama seperti PET, botol HDPE perlu dikosongkan dan dibilas bersih.</li>
@@ -71,7 +69,6 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
             </ol>
             <br />
 
-            {/* PROSES DAUR ULANGNYA DI PABRIK */}
             <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Daur Ulangnya di Pabrik:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>
@@ -94,14 +91,14 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/pet" // Kembali ke PET
+                href="/guide/sampah-anorganik/sampah-plastik/pet"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/pvc" // Lanjut ke PVC
+                href="/guide/sampah-anorganik/sampah-plastik/pvc"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -112,9 +109,7 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK HDPE - HANYA MENAMPILKAN JUDUL DAN SUB-HEADING */}
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini jika sudah ada di komponen Rightbar global */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si HDPE Ini</Link>
@@ -129,7 +124,6 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
               <Link href="#proses-daur-ulang" className="hover:font-semibold">Proses Daur Ulangnya di Pabrik</Link>
             </li>
           </ul>
-          {/* Tidak ada lagi bagian "Jenis Sampah Anorganik Lainnya" atau navigasi global di sini */}
         </Rightbar>
       </div>
     </>

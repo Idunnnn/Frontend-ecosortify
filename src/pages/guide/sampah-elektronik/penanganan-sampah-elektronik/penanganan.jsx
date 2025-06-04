@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image"; 
 import { Icon } from "@iconify/react";
 
 export default function PenangananEwaste() {
@@ -18,8 +19,21 @@ export default function PenangananEwaste() {
               Panduan Lengkap Penanganan Sampah Elektronik (E-Waste)
             </h1>
             <p>
-              Penanganan sampah elektronik atau <strong>e-waste</strong> membutuhkan pendekatan khusus yang berbeda dari sampah rumah tangga pada umumnya. Ini karena e-waste mengandung berbagai material berharga yang bisa didaur ulang, sekaligus zat berbahaya yang bisa mencemari lingkungan jika tidak ditangani dengan benar. Tahapan-tahapan ini dirancang untuk memaksimalkan pemulihan material dan meminimalkan pelepasan zat berbahaya.
+              Penanganan sampah elektronik atau **e-waste** membutuhkan pendekatan khusus yang berbeda dari sampah rumah tangga pada umumnya. Ini karena e-waste mengandung berbagai material berharga yang bisa didaur ulang, sekaligus zat berbahaya yang bisa mencemari lingkungan jika tidak ditangani dengan benar. Tahapan-tahapan ini dirancang untuk memaksimalkan pemulihan material dan meminimalkan pelepasan zat berbahaya.
             </p>
+            <br />
+
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/elektronik3.jpg" // Path: public/images/guide/elektronik1.jpg
+                  alt="Contoh Produk Plastik Pengenalan"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="tahapan-kunci" className="text-xl font-bold mt-8 mb-3 text-gray-800">
@@ -81,7 +95,7 @@ export default function PenangananEwaste() {
 
             <h3 id="pemusnahan-akhir-residu" className="text-lg font-semibold mt-6 mb-2 text-green-700">5. Pemusnahan Akhir Residu Berbahaya (Final Disposal of Hazardous Residues)</h3>
             <p>
-              Meskipun sebagian besar material dapat dipulihkan, akan selalu ada residu berbahaya yang tidak bisa didaur ulang secara ekonomis atau teknis. Residu ini harus dibuang di fasilitas pengolahan limbah berbahaya yang dirancang khusus (<strong>hazardous waste landfill</strong>) untuk mencegah pencemaran lingkungan yang serius.
+              Meskipun sebagian besar material dapat dipulihkan, akan selalu ada residu berbahaya yang tidak bisa didaur ulang secara ekonomis atau teknis. Residu ini harus dibuang di fasilitas pengolahan limbah berbahaya yang dirancang khusus (**hazardous waste landfill**) untuk mencegah pencemaran lingkungan yang serius.
             </p>
             <br />
             <p>

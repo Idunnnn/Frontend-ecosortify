@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-export default function otherPlastic() { // Nama fungsi diubah
+export default function otherPlastic() { 
   return (
     <>
       <Header2 className={"fixed w-full bg-white"} />
@@ -29,14 +29,14 @@ export default function otherPlastic() { // Nama fungsi diubah
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/ps" // Kembali ke PS
+                href="/guide/sampah-anorganik/sampah-plastik/ps" 
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Kembali</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/aluminium" // Lanjut ke jenis logam pertama
+                href="/guide/sampah-anorganik/sampah-logam/aluminium" 
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

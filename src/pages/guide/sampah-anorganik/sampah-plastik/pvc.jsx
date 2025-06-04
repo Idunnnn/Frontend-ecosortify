@@ -18,14 +18,13 @@ export default function pvc() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               PVC (Polyvinyl Chloride) - Kode 3
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik Si PVC Ini:</h2>
             <p>
               PVC ini bisa kaku atau lentur, tahan bahan kimia, dan harganya lumayan murah. Tapi, hati-hati! PVC ini sering disebut "plastik bermasalah" karena produksinya pakai klorin. Kalau dibakar atau ditimbun sembarangan, dia bisa ngeluarin dioksin, racun yang bahaya banget buat lingkungan dan kesehatan kita. PVC juga bisa melepas ftalat yang ganggu hormon.
             </p>
             <br />
 
-            {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Pipa air (paralon)</li>
@@ -38,17 +37,16 @@ export default function pvc() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/pvc1.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/pvc1.jpg"
                   alt="Gambar Plastik pvc (Kode 3)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA KITA MENANGANINYA */}
             <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Sebisa mungkin, hindari PVC, apalagi buat makanan dan minuman!</li>
@@ -58,7 +56,6 @@ export default function pvc() {
             </ol>
             <br />
 
-            {/* PROSES DAUR ULANGNYA DI PABRIK */}
             <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Daur Ulangnya di Pabrik:</h2>
             <p className="text-gray-700 mb-2">(Daur ulang PVC jauh lebih kompleks dan kurang umum dibandingkan PET atau HDPE.)</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -79,14 +76,14 @@ export default function pvc() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/hdpe" // Kembali ke HDPE
+                href="/guide/sampah-anorganik/sampah-plastik/hdpe"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/ldpe" // Lanjut ke LDPE
+                href="/guide/sampah-anorganik/sampah-plastik/ldpe"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -98,7 +95,6 @@ export default function pvc() {
         </main>
 
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si PVC Ini</Link>

@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image"; 
 import { Icon } from "@iconify/react";
 
 export default function PenangananIndividuEwaste() {
@@ -21,6 +22,19 @@ export default function PenangananIndividuEwaste() {
               Sampah elektronik (<strong>e-waste</strong>) adalah masalah serius yang terus berkembang. Berbeda dengan sampah rumah tangga biasa, e-waste mengandung berbagai bahan berbahaya seperti timbal, merkuri, dan kadmium, yang bisa mencemari lingkungan dan membahayakan kesehatan jika tidak dikelola dengan benar. Di sisi lain, e-waste juga menyimpan material berharga seperti emas, perak, dan tembaga, yang bisa didaur ulang. Karena itu, sangat penting bagi kita sebagai individu untuk tahu cara membuang e-waste dengan tepat.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/elektronik4.jpg" // Path: public/images/guide/elektronik1.jpg
+                  alt="Contoh Produk Plastik Pengenalan"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
+            
 
             <h2 id="cara-membuang-ewaste-individu" className="text-xl font-bold mt-8 mb-3 text-gray-800">
               Cara Membuang Sampah Elektronik yang Benar sebagai Individu

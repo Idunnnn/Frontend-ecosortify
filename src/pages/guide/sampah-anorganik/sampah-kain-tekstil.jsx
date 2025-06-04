@@ -18,7 +18,7 @@ export default function sampahKainTekstil() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Mengenal Lebih Dalam Sampah Kain/Tekstil: Dari Lemari ke Lingkungan
             </h1>
-            {/* PENDAHULUAN */}
+
             <h2 id="pendahuluan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Pendahuluan</h2>
             <p>
               Sampah kain atau tekstil adalah segala jenis material berupa serat (alami maupun sintetis) yang tidak lagi digunakan, rusak, atau sisa dari proses produksi. Industri fesyen dan tekstil adalah salah satu industri terbesar di dunia, namun juga salah satu penghasil limbah terbesar dan paling mencemari. Pakaian, sprei, handuk, karpet, hingga sisa potongan kain dari garmen, semuanya berkontribusi pada timbulan sampah tekstil yang terus meningkat.
@@ -31,11 +31,11 @@ export default function sampahKainTekstil() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/kain1.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/kain1.jpg"
                   alt="Contoh Produk kain"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -51,7 +51,6 @@ export default function sampahKainTekstil() {
             </ul>
             <br />
 
-            {/* JENIS-JENIS SAMPAH TEKSTIL: NATURAL VS. SINTETIS */}
             <h2 id="jenis-tekstil" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis-Jenis Sampah Tekstil: Natural vs. Sintetis</h2>
             <p className="text-gray-700 mb-2">Memahami jenis serat sangat penting karena memengaruhi cara penanganan dan potensi daur ulangnya:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -75,17 +74,16 @@ export default function sampahKainTekstil() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/kain2.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/kain2.jpg"
                   alt="Contoh Produk kain"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS TEKSTIL YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}
             <h2 id="tidak-didaur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Tekstil yang Tidak Dapat Didaur Ulang Melalui Program Standar</h2>
             <p className="text-gray-700 mb-2">Tidak semua tekstil bisa didaur ulang dengan mudah, terutama jika sudah terkontaminasi atau memiliki komposisi yang kompleks:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -104,7 +102,6 @@ export default function sampahKainTekstil() {
             </ol>
             <br />
 
-            {/* CARA PENANGANAN SAMPAH KAIN/TEKSTIL OLEH INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Sampah Kain/Tekstil oleh Individu</h2>
             <p className="text-gray-700 mb-2">Sebagai individu, kita memiliki peran penting dalam memperpanjang usia pakai tekstil dan memastikan penanganannya yang benar:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -127,7 +124,6 @@ export default function sampahKainTekstil() {
             <p className="mt-2 text-gray-700"><strong>Penting:</strong> Selalu cuci bersih dan keringkan pakaian atau kain sebelum didonasikan atau diserahkan untuk didaur ulang. Ini membantu menjaga kebersihan dan mencegah kerusakan material.</p>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG TEKSTIL INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Tekstil Industri</h2>
             <p className="text-gray-700 mb-2">Daur ulang tekstil adalah proses kompleks yang melibatkan beberapa tahapan, tergantung pada jenis serat dan kondisi material:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -161,14 +157,14 @@ export default function sampahKainTekstil() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-kertas" // Kembali ke Sampah Kertas
+                href="/guide/sampah-anorganik/sampah-kertas"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-karet" // Lanjut ke Sampah Karet
+                href="/guide/sampah-anorganik/sampah-karet"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -179,9 +175,7 @@ export default function sampahKainTekstil() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK SAMPAH KAIN/TEKSTIL */}
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#pendahuluan" className="hover:font-semibold">Pendahuluan</Link>

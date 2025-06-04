@@ -18,7 +18,7 @@ export default function aluminium() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Aluminium
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik</h2>
             <p>
               Aluminium adalah logam yang sangat ringan namun kuat, memiliki ketahanan korosi yang sangat baik, serta merupakan konduktor panas dan listrik yang efisien. Sifatnya yang tidak beracun dan mudah dibentuk menjadikannya pilihan populer untuk kemasan makanan dan minuman.
@@ -27,17 +27,16 @@ export default function aluminium() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/aluminium1.jpg" // Path: public/images/guide/pet2.jpg
-                  alt="Contoh Produk Aluminimun"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  src="/images/guide/aluminium1.jpg"
+                  alt="Contoh Produk Aluminium"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CONTOH UMUM SAMPAH */}
             <h2 id="contoh-sampah" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Umum Sampah</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Kaleng minuman (soda, bir).</li>
@@ -48,17 +47,16 @@ export default function aluminium() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '500px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/aluminium2.jpg" // Path: public/images/guide/pet2.jpg
-                  alt="Contoh Produk PAluminium"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  src="/images/guide/aluminium2.jpg"
+                  alt="Contoh Produk Aluminium"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA PENANGANAN INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Individu</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Untuk kaleng minuman, pastikan kosong sepenuhnya dan bilas bersih dari sisa minuman atau makanan.</li>
@@ -67,7 +65,6 @@ export default function aluminium() {
             </ol>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Industri</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>
@@ -93,14 +90,14 @@ export default function aluminium() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/other" // Kembali ke plastik OTHER
+                href="/guide/sampah-anorganik/sampah-plastik/other"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/besi-baja" // Lanjut ke Besi dan Baja
+                href="/guide/sampah-anorganik/sampah-logam/besi-baja"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -111,7 +108,6 @@ export default function aluminium() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK ALUMINIUM */}
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>

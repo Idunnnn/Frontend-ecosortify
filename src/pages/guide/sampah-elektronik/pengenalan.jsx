@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image"; 
 import { Icon } from "@iconify/react";
 
 export default function PengenalanEwaste() {
@@ -18,20 +19,43 @@ export default function PengenalanEwaste() {
               Sampah Elektronik (E-Waste): Pengenalan
             </h1>
             <p>
-              Sampah elektronik atau yang dikenal juga dengan <strong>e-waste</strong>, merujuk pada definisi The International Telecommunication Union (yang mengacu pada Step Initiative, 2014) sebagai berbagai item yang berkaitan dengan peralatan listrik dan elektronik (electrical and electronic equipment/EEE) yang telah dibuang oleh pemiliknya dan tidak ada maksud untuk digunakan kembali. Oleh karena itu, sampah elektronik atau e-waste sering juga disebut sebagai <strong>WEEE (Waste Electrical and Electronic Equipment)</strong>.
+              Sampah elektronik atau yang dikenal juga dengan **e-waste**, merujuk pada definisi The International Telecommunication Union (yang mengacu pada Step Initiative, 2014) sebagai berbagai item yang berkaitan dengan peralatan listrik dan elektronik (electrical and electronic equipment/EEE) yang telah dibuang oleh pemiliknya dan tidak ada maksud untuk digunakan kembali. Oleh karena itu, sampah elektronik atau e-waste sering juga disebut sebagai **WEEE (Waste Electrical and Electronic Equipment)**.
             </p>
             <br />
             <p>
-              Di samping itu, berdasarkan pada <strong>PP No. 27 Tahun 2020 tentang Pengelolaan Sampah Spesifik</strong>, sampah elektronik termasuk ke dalam golongan sampah yang mengandung <strong>B3 (Bahan Berbahaya dan Beracun)</strong>. Jenis sampah B3 ini memiliki dampak negatif terhadap lingkungan dan manusia apabila tidak dikelola dengan baik dan benar.
+              Di samping itu, berdasarkan pada **PP No. 27 Tahun 2020 tentang Pengelolaan Sampah Spesifik**, sampah elektronik termasuk ke dalam golongan sampah yang mengandung **B3 (Bahan Berbahaya dan Beracun)**. Jenis sampah B3 ini memiliki dampak negatif terhadap lingkungan dan manusia apabila tidak dikelola dengan baik dan benar.
             </p>
             <br />
-
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '550px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/elektronik1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk Pengenalan"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
             <h2 id="contoh-e-waste-kategori" className="text-xl font-bold mt-8 mb-3 text-gray-800">
               Contoh Sampah Elektronik (E-Waste) Berdasarkan Kategorinya
             </h2>
             <p>
               Sampah elektronik atau e-waste hadir dalam berbagai bentuk di sekitar kita. Untuk memudahkan pemahaman, berikut adalah pengelompokan jenis-jenis e-waste beserta contohnya:
             </p>
+            <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/elektronik2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk Pengenalan"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             <h3 id="peralatan-rumah-tangga" className="text-lg font-semibold mt-6 mb-2 text-green-700">1. Peralatan Rumah Tangga</h3>
@@ -104,19 +128,8 @@ export default function PengenalanEwaste() {
             </p>
             <br />
 
-
             <div className="flex justify-between mt-14">
-              {/* Karena ini pengenalan, tidak ada "Sebelumnya" kecuali ada halaman pengantar yang lebih umum */}
-              {/* Jika ada halaman pengantar umum, Anda bisa aktifkan link ini:
-              <Link
-                href="/guide/sampah-medis/jenis-sampah-medis/radioaktif" // Contoh, sesuaikan dengan halaman terakhir sebelum e-waste
-                className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
-              >
-                <Icon icon="icon-park-solid:back" />
-                <p>Sebelumnya</p>
-              </Link>
-              */}
-              <div className="flex-grow"></div> {/* Untuk mendorong tombol 'Selanjutnya' ke kanan jika 'Sebelumnya' tidak ada */}
+              <div className="flex-grow"></div>
               <Link
                 href="/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan" // Navigasi selanjutnya
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
@@ -129,7 +142,6 @@ export default function PengenalanEwaste() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK PENGENALAN E-WASTE - Hanya menampilkan sub-heading halaman ini */}
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>

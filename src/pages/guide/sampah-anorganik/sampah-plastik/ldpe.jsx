@@ -18,14 +18,13 @@ export default function ldpe() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               LDPE (Low-Density Polyethylene) - Kode 4
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik Si LDPE Ini:</h2>
             <p>
               LDPE ini plastik yang fleksibel banget, ringan, dan transparan. Dia juga awet dan tahan air. Meskipun lentur, dia lumayan kuat kok buat menahan robekan dalam penggunaan sehari-hari.
             </p>
             <br />
 
-            {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Kantong plastik (kresek)</li>
@@ -39,17 +38,16 @@ export default function ldpe() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '300px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/ldpe2.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/ldpe2.jpg"
                   alt="Gambar Plastik LDPE (Kode 4)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA KITA MENANGANINYA */}
             <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Sampah LDPE kayak kantong kresek sebaiknya dibersihkan dari sisa makanan dan dikeringkan.</li>
@@ -59,7 +57,6 @@ export default function ldpe() {
             </ol>
             <br />
 
-            {/* PROSES DAUR ULANGNYA DI PABRIK */}
             <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Daur Ulangnya di Pabrik:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>
@@ -82,14 +79,14 @@ export default function ldpe() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/pvc" // Kembali ke PVC
+                href="/guide/sampah-anorganik/sampah-plastik/pvc"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/pp" // Lanjut ke PP
+                href="/guide/sampah-anorganik/sampah-plastik/pp"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -101,7 +98,6 @@ export default function ldpe() {
         </main>
 
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si LDPE Ini</Link>
