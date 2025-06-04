@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function infeksius() {
@@ -20,6 +21,18 @@ export default function infeksius() {
             <p>
               Limbah ini adalah yang paling sering menjadi sorotan karena risikonya yang langsung. Limbah infeksius adalah semua limbah yang terkontaminasi atau diduga terkontaminasi mikroorganisme patogen (virus, bakteri, jamur, parasit) dalam konsentrasi yang cukup tinggi untuk menimbulkan risiko penularan penyakit. Potensi penularan ini bisa terjadi melalui kontak langsung, pernapasan, atau paparan luka.
             </p>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/infeksius1.jpg"
+                  alt="Contoh limbah infeksius"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
             <h2 id="risiko-utama" className="text-xl font-semibold mt-8 mb-3 text-green-700">Risiko Utama:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
@@ -40,26 +53,38 @@ export default function infeksius() {
 
             <h2 id="cara-penanganan-individu-fasilitas" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan oleh Individu (Fasilitas Kesehatan):</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
-                <li><strong>Pemisahan di Sumber:</strong> Buang limbah infeksius langsung ke kantong plastik berwarna kuning di tempat sampah berpedal (non-manual) yang dekat dengan area perawatan pasien.</li>
-                <li><strong>Tidak Memadatkan:</strong> Jangan pernah memadatkan limbah infeksius untuk menghindari keluarnya cairan atau penyebaran patogen.</li>
-                <li><strong>Penggunaan APD:</strong> Petugas harus selalu menggunakan Alat Pelindung Diri (APD) lengkap (sarung tangan, masker, gaun) saat menangani limbah ini.</li>
-                <li><strong>Penutupan Rapat:</strong> Kantong harus ditutup rapat saat volume sudah mencapai 3/4 penuh atau sebelum pengangkutan.</li>
-                <li><strong>Pelabelan:</strong> Pastikan kantong limbah memiliki label "Limbah Infeksius" atau simbol biohazard.</li>
+              <li><strong>Pemisahan di Sumber:</strong> Buang limbah infeksius langsung ke kantong plastik berwarna kuning di tempat sampah berpedal (non-manual) yang dekat dengan area perawatan pasien.</li>
+              <li><strong>Tidak Memadatkan:</strong> Jangan pernah memadatkan limbah infeksius untuk menghindari keluarnya cairan atau penyebaran patogen.</li>
+              <li><strong>Penggunaan APD:</strong> Petugas harus selalu menggunakan Alat Pelindung Diri (APD) lengkap (sarung tangan, masker, gaun) saat menangani limbah ini.</li>
+              <li><strong>Penutupan Rapat:</strong> Kantong harus ditutup rapat saat volume sudah mencapai 3/4 penuh atau sebelum pengangkutan.</li>
+              <li><strong>Pelabelan:</strong> Pastikan kantong limbah memiliki label "Limbah Infeksius" atau simbol biohazard.</li>
             </ul>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/infeksius2.jpg"
+                  alt="Contoh limbah infeksius"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="proses-pengolahan-pemusnahan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Pemusnahan (Fasilitas Khusus):</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
-                <li><strong>Pengangkutan Aman:</strong> Limbah diangkut menggunakan troli khusus yang tertutup dan mudah dibersihkan ke tempat penyimpanan sementara.</li>
-                <li><strong>Sterilisasi/Desinfeksi:</strong>
-                    <ul className="list-circle list-inside ml-5 mt-2">
-                        <li><strong>Autoklaf:</strong> Limbah disterilkan menggunakan uap panas bertekanan tinggi (121°C, 15 psi selama 30-60 menit) untuk membunuh mikroorganisme. Hasilnya menjadi limbah non-infeksius yang bisa dibuang ke TPA atau didaur ulang (jika materialnya memungkinkan).</li>
-                        <li><strong>Mikrowave:</strong> Menggunakan gelombang mikro untuk memanaskan dan mendisinfeksi limbah.</li>
-                        <li><strong>Kimia:</strong> Menggunakan bahan kimia desinfektan kuat (misalnya larutan klorin 0.5%) untuk menonaktifkan patogen.</li>
-                    </ul>
-                </li>
-                <li><strong>Insinerasi (jika diizinkan):</strong> Beberapa jenis limbah infeksius, terutama yang tidak bisa disterilkan atau mengandung material yang sulit terurai, dapat dibakar pada suhu sangat tinggi (minimal 850°C) dalam insinerator khusus untuk mengurangi volume dan menghancurkan patogen. (Perlu izin ketat dan kontrol emisi).</li>
-                <li><strong>Pengolahan Lanjut:</strong> Setelah sterilisasi, material yang sudah aman bisa dipadatkan lalu dibuang ke TPA, atau jika memungkinkan dan sesuai standar, dipilah lebih lanjut untuk daur ulang material non-patogennya.</li>
+              <li><strong>Pengangkutan Aman:</strong> Limbah diangkut menggunakan troli khusus yang tertutup dan mudah dibersihkan ke tempat penyimpanan sementara.</li>
+              <li><strong>Sterilisasi/Desinfeksi:</strong>
+                <ul className="list-circle list-inside ml-5 mt-2">
+                  <li><strong>Autoklaf:</strong> Limbah disterilkan menggunakan uap panas bertekanan tinggi (121°C, 15 psi selama 30-60 menit) untuk membunuh mikroorganisme. Hasilnya menjadi limbah non-infeksius yang bisa dibuang ke TPA atau didaur ulang (jika materialnya memungkinkan).</li>
+                  <li><strong>Mikrowave:</strong> Menggunakan gelombang mikro untuk memanaskan dan mendisinfeksi limbah.</li>
+                  <li><strong>Kimia:</strong> Menggunakan bahan kimia desinfektan kuat (misalnya larutan klorin 0.5%) untuk menonaktifkan patogen.</li>
+                </ul>
+              </li>
+              <li><strong>Insinerasi (jika diizinkan):</strong> Beberapa jenis limbah infeksius, terutama yang tidak bisa disterilkan atau mengandung material yang sulit terurai, dapat dibakar pada suhu sangat tinggi (minimal 850°C) dalam insinerator khusus untuk mengurangi volume dan menghancurkan patogen. (Perlu izin ketat dan kontrol emisi).</li>
+              <li><strong>Pengolahan Lanjut:</strong> Setelah sterilisasi, material yang sudah aman bisa dipadatkan lalu dibuang ke TPA, atau jika memungkinkan dan sesuai standar, dipilah lebih lanjut untuk daur ulang material non-patogennya.</li>
             </ul>
             <br />
 

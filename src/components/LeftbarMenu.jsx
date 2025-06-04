@@ -123,15 +123,7 @@ const menuData = [
           },
         ],
       },
-      {
-        id: "others",
-        title: "Others",
-        links: [
-          { name: "Apa itu Sampah?", href: "/guide/apa-itu-sampah" },
-          { name: "Apa itu Bank Sampah?", href: "/guide/apa-itu-bank-sampah" },
-          { name: "The Great Pacific Garbage Patch", href: "/guide/the-great-pacific-garbage-patch" },
-        ],
-      },
+     
     ],
   },
 ];
