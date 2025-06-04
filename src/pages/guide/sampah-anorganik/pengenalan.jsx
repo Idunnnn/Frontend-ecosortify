@@ -22,6 +22,18 @@ export default function pengenalan() {
               Ketika kita berbicara tentang sampah, fokus kita sering tertuju pada sisa makanan atau dedaunan yang mudah terurai. Namun, ada kategori limbah lain yang jauh lebih mengkhawatirkan karena sifatnya yang sulit terurai dan berpotensi mencemari lingkungan dalam jangka panjang: <strong>limbah anorganik</strong>. Berbeda dengan limbah organik yang berasal dari makhluk hidup, limbah anorganik meliputi material yang tidak dapat membusuk secara alami dalam waktu singkat, membutuhkan ratusan bahkan ribuan tahun untuk benar-benar lenyap dari permukaan bumi.
             </p>
             <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/anorganik-pengenalan.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk Plastik Pengenalan"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
             <p>
               Di era modern, gaya hidup konsumtif telah meningkatkan volume sampah plastik, kaca, logam, dan material sintetik lainnya secara eksponensial. Dari kemasan makanan hingga barang elektronik usang, limbah anorganik kini mendominasi timbunan sampah di berbagai belahan dunia. Tanpa penanganan yang tepat, akumulasi limbah ini tidak hanya merusak estetika lingkungan, tetapi juga berkontribusi pada masalah yang lebih besar seperti pencemaran tanah dan air, mikroplastik, serta ancaman terhadap ekosistem. Oleh karena itu, memahami apa itu limbah anorganik, karakteristiknya, dan bagaimana kita harus menanganinya menjadi langkah awal yang esensial dalam menjaga keberlanjutan bumi kita.
             </p>

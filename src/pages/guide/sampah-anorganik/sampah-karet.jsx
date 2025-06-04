@@ -35,6 +35,18 @@ export default function sampahKaret() {
             </ul>
             <p className="mt-2">Oleh karena itu, daur ulang karet menjadi solusi yang sangat penting untuk mengurangi dampak negatif ini.</p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/karet1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk Karet"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* JENIS SAMPAH KARET YANG UMUM DITEMUI */}
             <h2 id="jenis-umum" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Sampah Karet yang Umum Ditemui</h2>
@@ -56,6 +68,18 @@ export default function sampahKaret() {
                 <strong>Komponen Karet dari Peralatan:</strong> Misalnya gasket atau seal dari mesin cuci atau kulkas yang sudah tidak terpakai.
               </li>
             </ol>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/karet2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk karet"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* JENIS KARET YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}

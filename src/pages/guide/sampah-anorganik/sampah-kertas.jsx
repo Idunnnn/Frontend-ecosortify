@@ -28,6 +28,18 @@ export default function sampahKertas() {
               Meskipun kertas berasal dari bahan alami, penumpukan sampah kertas yang tidak terkelola dengan baik tetap menimbulkan masalah lingkungan. Produksi kertas baru membutuhkan penebangan pohon dalam jumlah besar dan konsumsi energi yang signifikan. Namun, kabar baiknya adalah kertas sangat mudah didaur ulang dan dapat diubah kembali menjadi produk kertas baru. Daur ulang kertas secara drastis mengurangi deforestasi, menghemat energi, mengurangi konsumsi air, dan meminimalkan volume sampah di TPA.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kertas1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk kertas"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* JENIS KERTAS YANG UMUM DITEMUI DALAM SAMPAH */}
             <h2 id="jenis-umum" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Kertas yang Umum Ditemui dalam Sampah</h2>
@@ -49,6 +61,18 @@ export default function sampahKertas() {
                 <strong>Kertas Campuran:</strong> Berbagai jenis kertas lain yang tidak termasuk kategori di atas, seperti kertas kado (tanpa lapisan plastik/foil), selebaran, atau amplop (tanpa jendela plastik).
               </li>
             </ol>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kertas2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk kertas"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* JENIS KERTAS YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}

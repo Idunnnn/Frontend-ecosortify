@@ -24,6 +24,18 @@ export default function besiDanBaja() {
               Besi dan baja adalah logam kuat, kokoh, dan magnetis. Baja adalah paduan besi dengan karbon dan elemen lainnya, dikenal karena kekuatan tarik dan ketahanannya. Keduanya adalah material dasar dalam konstruksi dan manufaktur.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/besibaja1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk besibaja"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CONTOH UMUM SAMPAH */}
             <h2 id="contoh-sampah" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Umum Sampah</h2>
@@ -32,6 +44,18 @@ export default function besiDanBaja() {
               <li>Paku, sekrup, besi tua dari bangunan atau kendaraan.</li>
               <li>Peralatan dapur dari besi/baja (panci, wajan), dan rangka barang elektronik rusak.</li>
             </ol>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/besibaja2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk besibaja"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* CARA PENANGANAN INDIVIDU */}

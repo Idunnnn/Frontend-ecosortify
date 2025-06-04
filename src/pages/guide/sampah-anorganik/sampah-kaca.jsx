@@ -28,6 +28,18 @@ export default function sampahKaca() {
               Salah satu sifat paling penting dari kaca adalah kemampuannya untuk didaur ulang 100% tanpa batas waktu dan tanpa penurunan kualitas. Berbeda dengan plastik yang kualitasnya bisa menurun setelah beberapa kali daur ulang, kaca dapat dilebur ulang dan dibentuk menjadi produk baru berkali-kali. Ini menjadikan daur ulang kaca sangat penting untuk keberlanjutan lingkungan, karena dapat menghemat energi secara signifikan (peleburan kaca daur ulang membutuhkan suhu lebih rendah), mengurangi emisi gas rumah kaca, dan melestarikan sumber daya alam yang dibutuhkan untuk pembuatan kaca baru.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kaca1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk kaca"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* JENIS KACA YANG UMUM DITEMUI DALAM SAMPAH */}
             <h2 id="jenis-umum" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Kaca yang Umum Ditemui dalam Sampah</h2>
@@ -46,6 +58,18 @@ export default function sampahKaca() {
                 <strong>Kaca Warna Lain/Campuran:</strong> Beberapa produk mungkin menggunakan kaca dengan warna lain seperti biru atau hitam. Kaca-kaca ini seringkali didaur ulang bersama kaca hijau atau sebagai campuran kaca berwarna lainnya, tergantung pada fasilitas daur ulang.
               </li>
             </ol>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kaca2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk kaca"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* JENIS KACA YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}

@@ -24,6 +24,18 @@ export default function aluminium() {
               Aluminium adalah logam yang sangat ringan namun kuat, memiliki ketahanan korosi yang sangat baik, serta merupakan konduktor panas dan listrik yang efisien. Sifatnya yang tidak beracun dan mudah dibentuk menjadikannya pilihan populer untuk kemasan makanan dan minuman.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/aluminium1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk Aluminimun"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CONTOH UMUM SAMPAH */}
             <h2 id="contoh-sampah" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Umum Sampah</h2>
@@ -32,6 +44,18 @@ export default function aluminium() {
               <li>Kaleng makanan (misalnya kaleng sarden, kornet), aluminium foil.</li>
               <li>Wadah makanan take-away dari aluminium, dan beberapa komponen furnitur atau kendaraan.</li>
             </ol>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '500px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/aluminium2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk PAluminium"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* CARA PENANGANAN INDIVIDU */}

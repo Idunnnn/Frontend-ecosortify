@@ -28,6 +28,19 @@ export default function sampahKainTekstil() {
               Meskipun terbuat dari serat, tidak semua tekstil mudah terurai secara alami, terutama yang berbahan sintetis. Produksi tekstil juga membutuhkan sumber daya yang besar, seperti air, energi, dan bahan kimia. Oleh karena itu, pengelolaan sampah tekstil yang tepat sangat krusial untuk mengurangi jejak lingkungan kita, mulai dari mengurangi konsumsi air dan energi, hingga meminimalkan pencemaran lahan dan air akibat timbunan sampah.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kain1.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk kain"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
+
             <p className="font-semibold text-green-700">Limbah tekstil ini menimbulkan masalah lingkungan serius:</p>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Memakan banyak ruang di TPA dan membutuhkan waktu sangat lama untuk terurai, terutama serat sintetis yang bisa bertahan ratusan tahun.</li>
@@ -58,6 +71,18 @@ export default function sampahKainTekstil() {
                 <strong>Serat Campuran (Blends):</strong> Banyak produk tekstil modern merupakan campuran dari serat alami dan sintetis (misalnya katun-poliester). Jenis ini menjadi tantangan terbesar dalam daur ulang karena sulit memisahkan serat-seratnya.
               </li>
             </ol>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kain2.jpg" // Path: public/images/guide/pet2.jpg
+                  alt="Contoh Produk kain"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* JENIS TEKSTIL YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}
