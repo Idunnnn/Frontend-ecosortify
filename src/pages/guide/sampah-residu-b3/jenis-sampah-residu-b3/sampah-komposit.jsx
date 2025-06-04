@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function SampahKomposit() {
@@ -20,6 +21,18 @@ export default function SampahKomposit() {
             <p>
               Sampah komposit adalah jenis sampah yang terdiri dari beberapa bahan berbeda yang disatukan dan tidak dapat dipisahkan dengan mudah secara manual atau mekanis. Karena kompleksitas materialnya, sampah ini memerlukan proses daur ulang yang sangat rumit dan mahal, atau bahkan tidak ada teknologinya untuk skala besar.
             </p>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/komposit1.jpg"
+                  alt="Contoh Produk sampah komposit"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="contoh-spesifik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Spesifik:</h2>
@@ -49,17 +62,16 @@ export default function SampahKomposit() {
             </ul>
             <br />
 
-            {/* Link navigasi. Anda bisa sesuaikan href sesuai struktur folder Anda. */}
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/sampah-terkontaminasi" // Asumsi halaman sebelumnya adalah sampah terkontaminasi
+                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/sampah-terkontaminasi"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/plastik-tipe-6-7" // Sesuaikan dengan halaman selanjutnya jika ada
+                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/plastik-tipe-6-7"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function farmasi() {
@@ -26,6 +27,18 @@ export default function farmasi() {
               <li>Mencemari lingkungan (tanah, air) jika dibuang sembarangan, menimbulkan resistensi antibiotik jika dibuang ke saluran air, atau disalahgunakan jika jatuh ke tangan yang salah.</li>
             </ul>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/limbahfarmasi1.jpg"
+                  alt="Contoh limbah farmasi"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+            <br />
             <h2 id="contoh-spesifik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Spesifik:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Obat-obatan kedaluwarsa (tablet, kapsul, sirup, injeksi).</li>
@@ -43,6 +56,18 @@ export default function farmasi() {
               <li><strong>Hancurkan Kemasan:</strong> Untuk obat-obatan yang berpotensi disalahgunakan, kemasan atau identitas obat harus dihancurkan sebelum dibuang.</li>
               <li><strong>Cairan Jangan Dibuang ke Saluran Air:</strong> Cairan obat tidak boleh dibuang ke saluran air biasa.</li>
             </ul>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/limbahfarmasi2.jpg"
+                  alt="Contoh limbah farmasi"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="proses-pengolahan-pemusnahan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Pemusnahan (Fasilitas Khusus):</h2>

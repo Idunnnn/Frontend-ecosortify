@@ -18,7 +18,7 @@ export default function sampahKaca() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Mengenal Lebih Dalam Sampah Kaca: Material Abadi yang Penuh Potensi
             </h1>
-            {/* PENDAHULUAN */}
+
             <h2 id="pendahuluan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Pendahuluan</h2>
             <p>
               Kaca adalah jenis material anorganik yang terbuat dari bahan-bahan alami seperti pasir silika, soda ash (natrium karbonat), dan batu kapur, yang dilebur pada suhu sangat tinggi. Kaca memiliki karakteristik unik: ia transparan, kedap air, tidak berpori, dan sangat inert (tidak bereaksi dengan bahan lain). Sifat-sifat ini menjadikannya pilihan ideal untuk kemasan makanan dan minuman, jendela, hingga peralatan laboratorium.
@@ -31,17 +31,16 @@ export default function sampahKaca() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/kaca1.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/kaca1.jpg"
                   alt="Contoh Produk kaca"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS KACA YANG UMUM DITEMUI DALAM SAMPAH */}
             <h2 id="jenis-umum" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Kaca yang Umum Ditemui dalam Sampah</h2>
             <p className="text-gray-700 mb-2">Secara umum, kaca dibagi berdasarkan warnanya, karena warna kaca tidak dapat diubah selama proses daur ulang. Pemisahan warna sangat penting untuk menghasilkan produk daur ulang yang sesuai standar.</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -62,17 +61,16 @@ export default function sampahKaca() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/kaca2.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/kaca2.jpg"
                   alt="Contoh Produk kaca"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS KACA YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}
             <h2 id="jenis-tidak-didaur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Kaca yang Tidak Dapat Didaur Ulang Melalui Program Standar</h2>
             <p className="text-gray-700 mb-2">Penting untuk diingat bahwa tidak semua benda berbahan dasar kaca bisa didaur ulang dengan proses yang sama karena perbedaan komposisi kimia atau titik lebur:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -94,7 +92,6 @@ export default function sampahKaca() {
             </ol>
             <br />
 
-            {/* CARA PENANGANAN SAMPAH KACA OLEH INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Sampah Kaca oleh Individu</h2>
             <p className="text-gray-700 mb-2">Penanganan yang benar di tingkat rumah tangga adalah kunci keberhasilan daur ulang kaca:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -116,7 +113,6 @@ export default function sampahKaca() {
             </ol>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG KACA INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Kaca Industri</h2>
             <p className="text-gray-700 mb-2">Proses daur ulang kaca di industri melibatkan beberapa tahapan untuk mengubah pecahan kaca menjadi material baru:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -147,14 +143,14 @@ export default function sampahKaca() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/seng-timah" // Kembali ke Seng dan Timah
+                href="/guide/sampah-anorganik/sampah-logam/seng-timah"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-kertas" // Lanjut ke Sampah Kertas
+                href="/guide/sampah-anorganik/sampah-kertas"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -165,9 +161,7 @@ export default function sampahKaca() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK SAMPAH KACA */}
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#pendahuluan" className="hover:font-semibold">Pendahuluan</Link>

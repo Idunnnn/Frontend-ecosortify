@@ -2,7 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
-import Image from "next/image"; // Belum digunakan, tapi biarkan jika suatu saat perlu
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function pet() {
@@ -18,26 +18,25 @@ export default function pet() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               PET atau PETE (Polyethylene Terephthalate) - Kode 1
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik Si PET Ini:</h2>
             <p>
               Si PET ini paling akrab di mata kita. Dia itu jernih, ringan, kuat, dan bening kayak air. Karena sifatnya yang jago menahan gas dan kelembapan, PET jadi idola buat kemasan minuman. Tapi ingat, PET ini bukan buat dipakai berkali-kali, ya! Kalau dipakai terus, apalagi kena air panas, dia bisa jadi sarang bakteri atau malah melepas zat yang kurang baik, seperti antimoni trioksida.
             </p>
             <br />
-              <div className="flex justify-center my-6">
+            <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/pet1.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/pet1.jpg"
                   alt="Gambar Plastik PET (Kode 1)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Botol air mineral</li>
@@ -47,20 +46,19 @@ export default function pet() {
               <li>Beberapa jenis kemasan makanan sekali pakai lainnya.</li>
             </ul>
             <br />
-             <div className="flex justify-center my-6">
+            <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/pet2.jpg" // Path: public/images/guide/pet1.jpg
+                  src="/images/guide/pet2.jpg"
                   alt="Gambar Plastik PET (Kode 1)"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA KITA MENANGANINYA */}
             <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Pastikan botol PET dikosongkan sepenuhnya.</li>
@@ -71,7 +69,6 @@ export default function pet() {
             </ol>
             <br />
 
-            {/* PROSES DAUR ULANGNYA DI PABRIK */}
             <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Daur Ulangnya di Pabrik:</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>
@@ -95,17 +92,16 @@ export default function pet() {
             </ol>
             <br />
 
-
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/pengenalan" // Kembali ke halaman Jenis-Jenis Sampah Anorganik
+                href="/guide/sampah-anorganik/pengenalan"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Kembali</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/hdpe" // Lanjut ke halaman HDPE
+                href="/guide/sampah-anorganik/sampah-plastik/hdpe"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -116,7 +112,6 @@ export default function pet() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR - HANYA MENAMPILKAN JUDUL DAN SUB-HEADING */}
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>

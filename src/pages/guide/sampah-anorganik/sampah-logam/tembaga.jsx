@@ -18,7 +18,7 @@ export default function tembaga() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Tembaga
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik</h2>
             <p>
               Tembaga dikenal karena konduktivitas listrik dan termalnya yang sangat tinggi, serta ketahanan korosinya yang baik. Warnanya khas kemerahan-coklat dan bisa membentuk lapisan patina hijau seiring waktu. Tembaga adalah logam yang sangat ulet dan mudah dibentuk.
@@ -27,17 +27,16 @@ export default function tembaga() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/tembaga1.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/tembaga1.jpg"
                   alt="Contoh Produk Tembaga"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CONTOH UMUM SAMPAH */}
             <h2 id="contoh-sampah" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Umum Sampah</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Kabel listrik bekas (dengan atau tanpa insulasi).</li>
@@ -48,17 +47,16 @@ export default function tembaga() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/tembaga3.jpg" // Path: public/images/guide/pet2.jpg
-                  alt="Contoh Produk Temabaga"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  src="/images/guide/tembaga3.jpg"
+                  alt="Contoh Produk Tembaga"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA PENANGANAN INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Individu</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Untuk kabel, jika memungkinkan, pisahkan bagian tembaganya dari insulasi plastik. Tembaga yang bersih dan tanpa insulasi memiliki nilai jual yang lebih tinggi.</li>
@@ -67,7 +65,6 @@ export default function tembaga() {
             </ol>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Industri</h2>
             <p className="text-gray-700 mb-2">Tembaga adalah salah satu logam yang paling banyak dan mudah didaur ulang.</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -91,14 +88,14 @@ export default function tembaga() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/besi-baja" // Kembali ke Besi dan Baja
+                href="/guide/sampah-anorganik/sampah-logam/besi-baja"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/seng-timah" // Lanjut ke Seng dan Timah
+                href="/guide/sampah-anorganik/sampah-logam/seng-timah"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -109,7 +106,6 @@ export default function tembaga() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK TEMBAGA */}
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>

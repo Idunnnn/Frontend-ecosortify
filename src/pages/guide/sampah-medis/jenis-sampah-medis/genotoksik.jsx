@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function genotoksik() {
@@ -20,6 +21,18 @@ export default function genotoksik() {
             <p>
               Limbah ini sangat berbahaya karena dampaknya pada tingkat sel. Limbah genotoksik (sitotoksik) adalah limbah yang mengandung zat-zat yang bersifat karsinogenik (menyebabkan kanker), mutagenik (menyebabkan perubahan genetik), atau teratogenik (menyebabkan cacat lahir). Ini paling sering terkait dengan pengobatan kanker.
             </p>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/genotoksik1.jpg"
+                  alt="Contoh limbah genostoksik"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
             <h2 id="risiko-utama" className="text-xl font-semibold mt-8 mb-3 text-green-700">Risiko Utama:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
@@ -43,6 +56,18 @@ export default function genotoksik() {
               <li><strong>Penggunaan APD Maksimal:</strong> Petugas harus menggunakan APD lengkap dengan standar tertinggi (masker N95, sarung tangan ganda, gown antitembus, pelindung mata) saat menyiapkan atau menangani limbah ini.</li>
               <li><strong>Prosedur Khusus:</strong> Pengenceran atau penghancuran dilakukan dalam biological safety cabinet.</li>
             </ul>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/genotoksik2.jpg"
+                  alt="Contoh limbah genostoksik"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="proses-pengolahan-pemusnahan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Pemusnahan (Fasilitas Khusus):</h2>

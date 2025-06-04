@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function medicWastePengenalan() {
@@ -17,7 +18,7 @@ export default function medicWastePengenalan() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Medic Waste - Pengenalan
             </h1>
-            {/* PENGENALAN LIMBAH MEDIS */}
+           
             <h2 id="pengenalan-limbah-medis" className="text-xl font-semibold mt-8 mb-3 text-green-700">Pengenalan Limbah Medis</h2>
             <p>
               Limbah medis adalah segala jenis limbah yang dihasilkan dari kegiatan pelayanan kesehatan, seperti rumah sakit, klinik, laboratorium, apotek, puskesmas, dan fasilitas kesehatan lainnya. Limbah ini bisa berupa benda tajam, bahan kimia, sisa obat, darah, jaringan tubuh, hingga alat pelindung diri (APD) yang sudah terpakai.
@@ -35,7 +36,7 @@ export default function medicWastePengenalan() {
             <div className="flex justify-between mt-14">
                <div className="flex-grow"></div>
               <Link
-                href="/guide/sampah-medis/jenis-sampah-medis/infeksius" // Link ini perlu disesuaikan ke halaman selanjutnya dari limbah medis
+                href="/guide/sampah-medis/jenis-sampah-medis/infeksius" 
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

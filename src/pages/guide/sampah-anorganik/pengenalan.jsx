@@ -22,14 +22,14 @@ export default function pengenalan() {
               Ketika kita berbicara tentang sampah, fokus kita sering tertuju pada sisa makanan atau dedaunan yang mudah terurai. Namun, ada kategori limbah lain yang jauh lebih mengkhawatirkan karena sifatnya yang sulit terurai dan berpotensi mencemari lingkungan dalam jangka panjang: <strong>limbah anorganik</strong>. Berbeda dengan limbah organik yang berasal dari makhluk hidup, limbah anorganik meliputi material yang tidak dapat membusuk secara alami dalam waktu singkat, membutuhkan ratusan bahkan ribuan tahun untuk benar-benar lenyap dari permukaan bumi.
             </p>
             <br />
-             <div className="flex justify-center my-6">
+            <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/anorganik-pengenalan.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/anorganik-pengenalan.jpg"
                   alt="Contoh Produk Plastik Pengenalan"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function pengenalan() {
             <div className="flex justify-between mt-14">
               <div className="flex-grow"></div>
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/pet" // Sesuaikan dengan path ke halaman jenis sampah anorganik
+                href="/guide/sampah-anorganik/sampah-plastik/pet"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

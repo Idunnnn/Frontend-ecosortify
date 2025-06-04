@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-export default function otherPlastic() { // Nama fungsi diubah
+export default function otherPlastic() { 
   return (
     <>
       <Header2 className={"fixed w-full bg-white"} />
@@ -29,14 +29,14 @@ export default function otherPlastic() { // Nama fungsi diubah
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-plastik/ps" // Kembali ke PS
+                href="/guide/sampah-anorganik/sampah-plastik/ps" 
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Kembali</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/aluminium" // Lanjut ke jenis logam pertama
+                href="/guide/sampah-anorganik/sampah-logam/aluminium" 
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -50,25 +50,9 @@ export default function otherPlastic() { // Nama fungsi diubah
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="/guide/sampah-anorganik/jenis-sampah-anorganik">Jenis-Jenis Sampah Anorganik</Link>
+              <Link href="#">other</Link>
             </li>
-            <ul className="list-disc list-inside ml-4 space-y-2">
-              <li><Link href="#" className="font-bold">Sampah Plastik</Link></li>
-              <ul className="list-circle list-inside ml-4 space-y-2">
-                <li><Link href="/guide/sampah-anorganik/sampah-plastik/pet">PET (Kode 1)</Link></li>
-                <li><Link href="/guide/sampah-anorganik/sampah-plastik/hdpe">HDPE (Kode 2)</Link></li>
-                <li><Link href="/guide/sampah-anorganik/sampah-plastik/pvc">PVC (Kode 3)</Link></li>
-                <li><Link href="/guide/sampah-anorganik/sampah-plastik/ldpe">LDPE (Kode 4)</Link></li>
-                <li><Link href="/guide/sampah-anorganik/sampah-plastik/pp">PP (Kode 5)</Link></li>
-                <li><Link href="/guide/sampah-anorganik/sampah-plastik/ps">PS (Kode 6)</Link></li>
-                <li><Link href="#" className="font-bold">OTHER (Kode 7)</Link></li>
-              </ul>
-              <li><Link href="/guide/sampah-anorganik/sampah-logam/aluminium">Sampah Logam</Link></li>
-              <li><Link href="/guide/sampah-anorganik/sampah-kaca">Sampah Kaca</Link></li>
-              <li><Link href="/guide/sampah-anorganik/sampah-kertas">Sampah Kertas</Link></li>
-              <li><Link href="/guide/sampah-anorganik/sampah-kain-tekstil">Sampah Kain/Tekstil</Link></li>
-              <li><Link href="/guide/sampah-anorganik/sampah-karet">Sampah Karet</Link></li>
-            </ul>
+            
           </ul>
         </Rightbar>
       </div>

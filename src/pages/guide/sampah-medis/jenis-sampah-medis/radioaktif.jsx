@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function radioaktif() {
@@ -21,6 +22,18 @@ export default function radioaktif() {
               Limbah ini memiliki bahaya radiasi. Limbah radioaktif adalah limbah yang mengandung atau terkontaminasi bahan radioaktif yang berasal dari prosedur diagnostik (misalnya scanning), terapi nuklir, atau penelitian yang menggunakan isotop radioaktif.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/radioaktif1.jpg"
+                  alt="Contoh limbah radioaktif"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+            <br />
             <h2 id="risiko-utama" className="text-xl font-semibold mt-8 mb-3 text-green-700">Risiko Utama:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Paparan radiasi dapat menyebabkan kerusakan sel, jaringan, organ, dan meningkatkan risiko kanker atau cacat genetik. Membutuhkan penanganan dan penyimpanan khusus dalam jangka waktu sangat lama.</li>
@@ -39,21 +52,33 @@ export default function radioaktif() {
 
             <h2 id="cara-penanganan-individu-fasilitas" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan oleh Individu (Fasilitas Kesehatan):</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
-                <li><strong>Wadah Khusus & Berlapis Timbal:</strong> Buang limbah radioaktif ke dalam wadah berlapis timbal atau material pelindung radiasi lainnya yang diberi label "Limbah Radioaktif" dan simbol radiasi (trefoil).</li>
-                <li><strong>Pemisahan Berdasarkan Paruh Waktu:</strong> Pisahkan limbah berdasarkan paruh waktu isotop radioaktif (misalnya paruh waktu pendek vs. paruh waktu panjang) untuk penanganan yang tepat.</li>
-                <li><strong>Penyimpanan di Area Terisolasi:</strong> Simpan di area khusus yang terisolasi, terkunci, terlindung dari radiasi (ruang berpelindung beton atau timbal), dan memiliki akses terbatas.</li>
-                <li><strong>Pengukuran Radiasi:</strong> Tingkat radiasi limbah harus diukur secara berkala menggunakan alat detektor radiasi untuk memantau peluruhan dan memastikan keamanan.</li>
-                <li><strong>Penggunaan APD Khusus:</strong> Petugas harus menggunakan APD khusus yang dirancang untuk perlindungan radiasi (misalnya apron timbal, dosimeter) dan mematuhi batas dosis yang diizinkan.</li>
+              <li><strong>Wadah Khusus & Berlapis Timbal:</strong> Buang limbah radioaktif ke dalam wadah berlapis timbal atau material pelindung radiasi lainnya yang diberi label "Limbah Radioaktif" dan simbol radiasi (trefoil).</li>
+              <li><strong>Pemisahan Berdasarkan Paruh Waktu:</strong> Pisahkan limbah berdasarkan paruh waktu isotop radioaktif (misalnya paruh waktu pendek vs. paruh waktu panjang) untuk penanganan yang tepat.</li>
+              <li><strong>Penyimpanan di Area Terisolasi:</strong> Simpan di area khusus yang terisolasi, terkunci, terlindung dari radiasi (ruang berpelindung beton atau timbal), dan memiliki akses terbatas.</li>
+              <li><strong>Pengukuran Radiasi:</strong> Tingkat radiasi limbah harus diukur secara berkala menggunakan alat detektor radiasi untuk memantau peluruhan dan memastikan keamanan.</li>
+              <li><strong>Penggunaan APD Khusus:</strong> Petugas harus menggunakan APD khusus yang dirancang untuk perlindungan radiasi (misalnya apron timbal, dosimeter) dan mematuhi batas dosis yang diizinkan.</li>
             </ul>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/radioaktif2.jpg"
+                  alt="Contoh limbah radioaktif"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="proses-pengolahan-pemusnahan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Pemusnahan (Fasilitas Khusus):</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
-                <li><strong>Peluruhan (Decay-in-Storage):</strong> Untuk isotop dengan paruh waktu pendek (biasanya kurang dari 90 hari), limbah disimpan dalam fasilitas khusus yang aman hingga tingkat radiasinya menurun ke ambang batas aman (misalnya 10 kali background radiation). Setelah itu, limbah dapat dibuang sebagai limbah biasa atau diolah lebih lanjut.</li>
-                <li><strong>Pemadatan (Compaction) & Solidifikasi:</strong> Limbah radioaktif padat dapat dipadatkan untuk mengurangi volume, atau dicampur dengan semen/polimer untuk mengunci zat radioaktif dalam matriks yang stabil.</li>
-                <li><strong>Penguburan Jangka Panjang:</strong> Limbah radioaktif dengan paruh waktu panjang atau tingkat aktivitas tinggi harus disimpan dalam fasilitas penyimpanan geologis bawah tanah yang aman dan terisolasi untuk jangka waktu ribuan hingga ratusan ribu tahun, menjauhkannya dari biosfer.</li>
-                <li><strong>Pembakaran (untuk Material Tertentu):</strong> Beberapa limbah radioaktif dengan aktivitas rendah dan mudah terbakar (misalnya kertas, plastik) dapat diinsinerasi di insinerator khusus yang dilengkapi filter radiasi untuk mengurangi volume dan mengkonsentrasikan radioaktivitas.</li>
-                <li><strong>Pengiriman ke Badan Nasional:</strong> Di Indonesia, limbah radioaktif harus diserahkan kepada Badan Tenaga Nuklir Nasional (BATAN) atau lembaga yang berwenang (misalnya BAPETEN) untuk penanganan, penyimpanan, dan pemusnahan akhir sesuai dengan peraturan perundang-undangan yang berlaku.</li>
+              <li><strong>Peluruhan (Decay-in-Storage):</strong> Untuk isotop dengan paruh waktu pendek (biasanya kurang dari 90 hari), limbah disimpan dalam fasilitas khusus yang aman hingga tingkat radiasinya menurun ke ambang batas aman (misalnya 10 kali background radiation). Setelah itu, limbah dapat dibuang sebagai limbah biasa atau diolah lebih lanjut.</li>
+              <li><strong>Pemadatan (Compaction) & Solidifikasi:</strong> Limbah radioaktif padat dapat dipadatkan untuk mengurangi volume, atau dicampur dengan semen/polimer untuk mengunci zat radioaktif dalam matriks yang stabil.</li>
+              <li><strong>Penguburan Jangka Panjang:</strong> Limbah radioaktif dengan paruh waktu panjang atau tingkat aktivitas tinggi harus disimpan dalam fasilitas penyimpanan geologis bawah tanah yang aman dan terisolasi untuk jangka waktu ribuan hingga ratusan ribu tahun, menjauhkannya dari biosfer.</li>
+              <li><strong>Pembakaran (untuk Material Tertentu):</strong> Beberapa limbah radioaktif dengan aktivitas rendah dan mudah terbakar (misalnya kertas, plastik) dapat diinsinerasi di insinerator khusus yang dilengkapi filter radiasi untuk mengurangi volume dan mengkonsentrasikan radioaktivitas.</li>
+              <li><strong>Pengiriman ke Badan Nasional:</strong> Di Indonesia, limbah radioaktif harus diserahkan kepada Badan Tenaga Nuklir Nasional (BATAN) atau lembaga yang berwenang (misalnya BAPETEN) untuk penanganan, penyimpanan, dan pemusnahan akhir sesuai dengan peraturan perundang-undangan yang berlaku.</li>
             </ul>
             <br />
 
@@ -65,7 +90,7 @@ export default function radioaktif() {
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
-              
+
             </div>
             <div className="h-[40px]"></div>
           </article>

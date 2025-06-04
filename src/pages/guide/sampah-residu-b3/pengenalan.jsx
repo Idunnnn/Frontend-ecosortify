@@ -35,12 +35,10 @@ export default function ResiduDanB3() {
               Membedakan dan mengelola sampah residu serta sampah B3 dengan benar adalah langkah fundamental dalam menciptakan sistem pengelolaan limbah yang bertanggung jawab dan berkelanjutan.
             </p>
 
-            {/* Link navigasi. Anda bisa sesuaikan href sesuai struktur folder Anda. */}
             <div className="flex justify-between mt-14">
               <div className="flex-grow"></div>
               <Link
                 href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/sampah-terkontaminasi"
-                // Contoh: Asumsi halaman selanjutnya adalah detail untuk sampah residu
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

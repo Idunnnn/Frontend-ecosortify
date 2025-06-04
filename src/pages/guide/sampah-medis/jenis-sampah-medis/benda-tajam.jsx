@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function bendaTajam() {
@@ -20,6 +21,18 @@ export default function bendaTajam() {
             <p>
               Limbah ini berpotensi menusuk, melukai, atau menularkan penyakit jika tidak ditangani dengan hati-hati. Limbah benda tajam adalah semua material yang dapat menyebabkan tusukan, goresan, atau luka potong dan berpotensi menjadi jalur penularan infeksi jika terkontaminasi darah atau cairan tubuh.
             </p>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/limbahtajam1.jpg"
+                  alt="Contoh Produk benda tajam"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
             <h2 id="risiko-utama" className="text-xl font-semibold mt-8 mb-3 text-green-700">Risiko Utama:</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
@@ -45,6 +58,18 @@ export default function bendaTajam() {
               <li><strong>Tidak Penuh:</strong> Isi wadah benda tajam hanya sampai batas 3/4 penuh.</li>
               <li><strong>Penutupan Rapat:</strong> Tutup wadah rapat-rapat setelah penuh atau sebelum pengangkutan.</li>
             </ul>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/limbahtajam2.jpg"
+                  alt="Contoh Produk benda tajam"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="proses-pengolahan-pemusnahan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Pemusnahan (Fasilitas Khusus):</h2>

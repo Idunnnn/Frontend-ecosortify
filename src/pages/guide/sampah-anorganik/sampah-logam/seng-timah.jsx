@@ -18,7 +18,7 @@ export default function sengDanTimah() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Seng dan Timah
             </h1>
-            {/* KARAKTERISTIK */}
+
             <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik</h2>
             <p>
               <strong>Timah:</strong> Logam lunak, ulet, dan tahan korosi, sering digunakan sebagai lapisan pelindung pada kaleng baja untuk mencegah karat (sehingga disebut "kaleng timah" meskipun sebagian besar isinya baja).<br />
@@ -28,17 +28,16 @@ export default function sengDanTimah() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/sengtimah1.jpg" // Path: public/images/guide/pet2.jpg
-                  alt="Contoh Produk Sengtimah"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  src="/images/guide/sengtimah1.jpg"
+                  alt="Contoh Produk Seng dan Timah"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CONTOH UMUM SAMPAH */}
             <h2 id="contoh-sampah" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Umum Sampah</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Sebagian besar kaleng makanan dan minuman yang bukan aluminium (misalnya kaleng sarden, susu kental manis, minuman ringan merek tertentu) sebenarnya adalah kaleng baja berlapis timah (tinplate steel).</li>
@@ -48,17 +47,16 @@ export default function sengDanTimah() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/sengtimah2.jpg" // Path: public/images/guide/pet2.jpg
-                  alt="Contoh Produk sengtimah"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  src="/images/guide/sengtimah2.jpg"
+                  alt="Contoh Produk Seng dan Timah"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* CARA PENANGANAN INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Individu</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Untuk kaleng baja berlapis timah, pastikan kosong, bilas bersih, dan keringkan. Jika memungkinkan, pipihkan.</li>
@@ -67,7 +65,6 @@ export default function sengDanTimah() {
             </ol>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Industri</h2>
             <p className="text-gray-700 mb-2">Daur ulang seng dan timah seringkali terkait dengan daur ulang baja, atau sebagai proses pemulihan sampingan dari logam lain.</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -91,14 +88,14 @@ export default function sengDanTimah() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-logam/tembaga" // Kembali ke Tembaga
+                href="/guide/sampah-anorganik/sampah-logam/tembaga"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-kaca" // Lanjut ke Sampah Kaca
+                href="/guide/sampah-anorganik/sampah-kaca"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -109,7 +106,6 @@ export default function sengDanTimah() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK SENG DAN TIMAH */}
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>

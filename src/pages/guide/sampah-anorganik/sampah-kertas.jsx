@@ -18,7 +18,7 @@ export default function sampahKertas() {
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Mengenal Lebih Dalam Sampah Kertas: Jejak Hutan di Sekitar Kita
             </h1>
-            {/* PENDAHULUAN */}
+
             <h2 id="pendahuluan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Pendahuluan</h2>
             <p>
               Kertas adalah material yang terbuat dari serat selulosa, umumnya dari pulp kayu, meskipun bisa juga dari serat tanaman lain seperti bambu, kapas, atau jerami. Kertas menjadi bagian tak terpisahkan dari kehidupan sehari-hari kita, digunakan untuk menulis, mencetak, mengemas, hingga kebutuhan sanitasi. Sifatnya yang ringan, mudah dibentuk, dan dapat menyerap membuatnya sangat fleksibel.
@@ -31,17 +31,16 @@ export default function sampahKertas() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/kertas1.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/kertas1.jpg"
                   alt="Contoh Produk kertas"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS KERTAS YANG UMUM DITEMUI DALAM SAMPAH */}
             <h2 id="jenis-umum" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Kertas yang Umum Ditemui dalam Sampah</h2>
             <p className="text-gray-700 mb-2">Kertas memiliki banyak variasi, dan tidak semua jenis dapat didaur ulang dengan cara yang sama. Pemisahan yang tepat membantu proses daur ulang menjadi lebih efisien.</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -65,17 +64,16 @@ export default function sampahKertas() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/kertas2.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/kertas2.jpg"
                   alt="Contoh Produk kertas"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
             <br />
 
-            {/* JENIS KERTAS YANG TIDAK DAPAT DIDAUR ULANG MELALUI PROGRAM STANDAR */}
             <h2 id="tidak-didaur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Jenis Kertas yang Tidak Dapat Didaur Ulang Melalui Program Standar</h2>
             <p className="text-gray-700 mb-2">Beberapa jenis kertas tidak bisa didaur ulang dengan metode umum karena kontaminasi atau lapisan tambahan:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -97,7 +95,6 @@ export default function sampahKertas() {
             </ol>
             <br />
 
-            {/* CARA PENANGANAN SAMPAH KERTAS OLEH INDIVIDU */}
             <h2 id="cara-penanganan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Penanganan Sampah Kertas oleh Individu</h2>
             <p className="text-gray-700 mb-2">Peran kita sebagai individu sangat penting dalam memastikan sampah kertas dapat didaur ulang secara efektif:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -119,7 +116,6 @@ export default function sampahKertas() {
             </ol>
             <br />
 
-            {/* PROSES PENGOLAHAN/DAUR ULANG KERTAS INDUSTRI */}
             <h2 id="proses-daur-ulang-industri" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Pengolahan/Daur Ulang Kertas Industri</h2>
             <p className="text-gray-700 mb-2">Proses daur ulang kertas mengubah limbah kertas menjadi pulp baru yang siap diolah menjadi produk kertas lainnya:</p>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -153,14 +149,14 @@ export default function sampahKertas() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-anorganik/sampah-kaca" // Kembali ke Sampah Kaca
+                href="/guide/sampah-anorganik/sampah-kaca"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/sampah-kain-tekstil" // Lanjut ke Sampah Kain/Tekstil
+                href="/guide/sampah-anorganik/sampah-kain-tekstil"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>
@@ -171,9 +167,7 @@ export default function sampahKertas() {
           </article>
         </main>
 
-        {/* REVISI RIGHTBAR UNTUK SAMPAH KERTAS */}
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> di sini */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#pendahuluan" className="hover:font-semibold">Pendahuluan</Link>

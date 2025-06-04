@@ -2,6 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 export default function KainTerkontaminasi() {
@@ -20,6 +21,18 @@ export default function KainTerkontaminasi() {
             <p>
               Meskipun tekstil bisa didaur ulang menjadi serat baru atau lap, kain yang terkontaminasi oleh bahan berbahaya atau limbah organik menjadi sangat sulit atau tidak mungkin untuk didaur ulang. Kontaminasi tersebut dapat menimbulkan risiko kesehatan, mencemari proses daur ulang (misalnya mesin atau air), atau menghasilkan produk daur ulang yang tidak aman.
             </p>
+            <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/kainterkontaminasi.jpg"
+                  alt="Contoh Produk kain terkontaminasi"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 687px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <br />
 
             <h2 id="contoh-spesifik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Spesifik:</h2>
@@ -52,16 +65,14 @@ export default function KainTerkontaminasi() {
             </ul>
             <br />
 
-            {/* Link navigasi. Anda bisa sesuaikan href sesuai struktur folder Anda. */}
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/plastik-tipe-6-7" // Asumsi halaman sebelumnya adalah plastik tipe 6 dan 7
+                href="/guide/sampah-residu-b3/jenis-sampah-residu-b3/plastik-tipe-6-7"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
-             
             </div>
             <div className="h-[40px]"></div>
           </article>
