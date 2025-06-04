@@ -194,7 +194,7 @@ export default function Header2({ className, ...props }) {
                   <Button variant="primary_sm">Login</Button>
                 </Link>
                 <Link href="/register">
-                  <Button variant="secondary_sm">Register</Button>
+                  <Button variant="secondary_sm" className="text-gray-600 border-gray-600 border">Register</Button>
                 </Link>
               </li>
             )}

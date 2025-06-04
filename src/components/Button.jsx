@@ -18,12 +18,10 @@ export default function Button({ variant = "primary_lg", children, className, ..
     google: "btn-google",
 
     figma_green_reversed: clsx(
-      "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-                // Jika tidak, tambahkan kelas berikut:
-      "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base",       // Untuk font-size: 16px (default Tailwind)
-      "font-normal",     // Untuk font-weight: 400
-      "leading-none",    // Untuk line-height: 100% (atau 'leading-[1]')
+      "body-6",
+      "text-base",
+      "font-normal",
+      "leading-none",
       "tracking-normal",
       "w-[200px] h-[64px]",
       "px-10 py-5",
@@ -35,12 +33,11 @@ export default function Button({ variant = "primary_lg", children, className, ..
     ),
 
     figma_green_solid: clsx(
-      "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-              // Jika tidak, tambahkan kelas berikut:
-      "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base",       // Untuk font-size: 16px (default Tailwind)
-      "font-normal",     // Untuk font-weight: 400
-      "leading-none",    // Untuk line-height: 100% (atau 'leading-[1]')
+      "body-6",
+      "font-montserrat", 
+      "text-base", // Untuk font-size: 16px (default Tailwind)
+      "font-normal", // Untuk font-weight: 400
+      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
       "tracking-normal",
       "w-[200px] h-[64px]",
       "px-10 py-5",
@@ -53,11 +50,11 @@ export default function Button({ variant = "primary_lg", children, className, ..
     // ✅ Varian baru (rounded pill, Login button)
     figma_green_pill: clsx(
       "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-              // Jika tidak, tambahkan kelas berikut:
+      // Jika tidak, tambahkan kelas berikut:
       "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base",       // Untuk font-size: 16px (default Tailwind)
-      "font-normal",     // Untuk font-weight: 400
-      "leading-none",    // Untuk line-height: 100% (atau 'leading-[1]')
+      "text-base", // Untuk font-size: 16px (default Tailwind)
+      "font-normal", // Untuk font-weight: 400
+      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
       "tracking-normal",
       "w-[131px] h-[52px]",
       "px-8 py-4",
@@ -69,11 +66,11 @@ export default function Button({ variant = "primary_lg", children, className, ..
 
     figma_green_outline_pill: clsx(
       "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-              // Jika tidak, tambahkan kelas berikut:
+      // Jika tidak, tambahkan kelas berikut:
       "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base",       // Untuk font-size: 16px (default Tailwind)
-      "font-normal",     // Untuk font-weight: 400
-      "leading-none",    // Untuk line-height: 100% (atau 'leading-[1]')
+      "text-base", // Untuk font-size: 16px (default Tailwind)
+      "font-normal", // Untuk font-weight: 400
+      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
       "tracking-normal",
       "w-[131px] h-[52px]",
       "px-8 py-4",
@@ -85,23 +82,23 @@ export default function Button({ variant = "primary_lg", children, className, ..
     ),
 
     figma_white_outline_pill: clsx(
-    "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-              // Jika tidak, tambahkan kelas berikut:
-    "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-    "text-base",       // Untuk font-size: 16px (default Tailwind)
-    "font-normal",     // Untuk font-weight: 400
-    "leading-none",    // Untuk line-height: 100% (atau 'leading-[1]')
-    "tracking-normal", // Untuk letter-spacing: 0%
+      "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
+      // Jika tidak, tambahkan kelas berikut:
+      "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
+      "text-base", // Untuk font-size: 16px (default Tailwind)
+      "font-normal", // Untuk font-weight: 400
+      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
+      "tracking-normal", // Untuk letter-spacing: 0%
 
-    // Properti layout, border, hover, active yang sudah ada
-    "w-[131px] h-[52px]",
-    "px-8 py-4",
-    "rounded-full",
-    "border border-[#088D43] text-[#088D43]",
-    "hover:border-[#0C6F39] hover:text-[#0C6F39]",
-    "active:border-[#0C6F39] active:text-[#0C6F39]",
-    "transition-colors duration-200 ease-out"
-  ),
+      // Properti layout, border, hover, active yang sudah ada
+      "w-[131px] h-[52px]",
+      "px-8 py-4",
+      "rounded-full",
+      "border border-[#088D43] text-[#088D43]",
+      "hover:border-[#0C6F39] hover:text-[#0C6F39]",
+      "active:border-[#0C6F39] active:text-[#0C6F39]",
+      "transition-colors duration-200 ease-out"
+    ),
   };
 
   return (

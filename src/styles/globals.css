@@ -84,7 +84,7 @@ body {
    rounded-lg py-4 min-w-[170px];
 }
 .secondary__sm {
-  @apply rounded-lg bg-none text-gray-600 border border-gray-600 duration-200 transition 
+  @apply rounded-lg bg-none duration-200 transition 
    hover:border-[var(--btn-primary-hover)] hover:bg-[var(--btn-primary-hover)] hover:text-white  
    active:bg-[var(--btn-primary-hover)] active:text-white py-3 px-6  hover:cursor-pointer;
 }

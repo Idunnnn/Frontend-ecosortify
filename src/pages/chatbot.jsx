@@ -5,7 +5,7 @@ import Header2 from "@/components/templates/Header2";
 
 import Chat from "@/components/layout/Chat";
 
-export default function Chatbot() {
+export default function ChatbotPage() {
   return (
     <>
       <Header2 />

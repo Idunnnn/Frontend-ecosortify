@@ -42,7 +42,7 @@ export default function Header({ className, ...props }) {
     <>
       <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
       <header className={clsx("hidden xl:block z-2", className)}>
-        <div className="flex justify-between px-[100px] relative py-5 border-b-gray-200 items-center">
+        <div className="flex justify-between px-[100px] relative py-5 items-center">
           <Link href="/" className="flex items-start max-w-[188px]">
             <img src="/images/logo.png" alt="logo" />
           </Link>
@@ -123,9 +123,7 @@ export default function Header({ className, ...props }) {
             ) : (
               <>
                 <Link href="/register">
-                  <Button variant="figma_green_outline_pill">
-                    Register
-                  </Button>
+                  <Button variant="figma_green_outline_pill">Register</Button>
                 </Link>
                 <Link href="/login">
                   <Button variant="figma_green_pill">Login</Button>
@@ -137,7 +135,7 @@ export default function Header({ className, ...props }) {
       </header>
 
       <header className={clsx("block xl:hidden z-2", className)}>
-        <div className="flex justify-between px-5 relative py-5  border-b-1 border-b-gray-200 items-center">
+        <div className="flex justify-between px-5 relative py-5  items-center">
           <Link href="/" className="flex items-start max-w-[150px]">
             <img src="/images/logo.png" alt="logo" />
           </Link>
@@ -145,22 +143,22 @@ export default function Header({ className, ...props }) {
           <ul
             className={
               show
-                ? "transition-all duration-75 flex flex-col body-6 absolute top-full bg-white w-full z-2 left-0 right-0  shadow"
-                : "hidden transition-all  duration-75  flex-col body-6 absolute top-full bg-white w-full left-0 right-0  shadow -z-10"
+                ? "text-white transition-all duration-75 flex flex-col body-6 absolute top-full bg-white/10 backdrop-blur-sm w-full z-2 left-0 right-0  shadow"
+                : "hidden transition-all  duration-75  flex-col body-6 absolute top-full bg-white/10 backdrop-blur-sm w-full left-0 right-0  shadow -z-10"
             }
           >
             {}
             <Link
               href="/"
-              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100/5 active:bg-gray-100/5 transition duration-75 flex justify-between items-center"
             >
               <p>Home</p>
-              <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
+              <Icon icon="mdi:arrow-top-right" className="w-4 h-4 "></Icon>
             </Link>
 
             <Link
               href="/scan"
-              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100/5 active:bg-gray-100/5 transition duration-75 flex justify-between items-center"
             >
               <p>Scan</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
@@ -168,7 +166,7 @@ export default function Header({ className, ...props }) {
 
             <Link
               href="/guide"
-              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center text-wg"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100/5 active:bg-gray-100/5 transition duration-75 flex justify-between items-center text-wg"
             >
               <p>Guide</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4 text-white"></Icon>
@@ -176,14 +174,14 @@ export default function Header({ className, ...props }) {
 
             <Link
               href="/chatbot"
-              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100/5 active:bg-gray-100/5 transition duration-75 flex justify-between items-center"
             >
               <p>Chatbot</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
             </Link>
             <Link
               href="/about"
-              className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
+              className="p-5 hover:cursor-pointer hover:bg-gray-100/5 active:bg-gray-100/5 transition duration-75 flex justify-between items-center"
             >
               <p>About Us</p>
               <Icon icon="mdi:arrow-top-right" className="w-4 h-4"></Icon>
@@ -195,7 +193,9 @@ export default function Header({ className, ...props }) {
                   <Button variant="primary_sm">Login</Button>
                 </Link>
                 <Link href="/register">
-                  <Button variant="secondary_sm">Register</Button>
+                  <Button variant="secondary_sm" className={"text-white border-white border"}>
+                    Register
+                  </Button>
                 </Link>
               </li>
             )}
@@ -247,7 +247,11 @@ export default function Header({ className, ...props }) {
               </Link>
             )}
 
-            <Icon icon="icon-park-outline:hamburger-button" className="h-10 w-10 hover:cursor-pointer" onClick={navbarHander} />
+            <Icon
+              icon="icon-park-outline:hamburger-button"
+              className="h-10 w-10 hover:cursor-pointer text-white"
+              onClick={navbarHander}
+            />
           </div>
         </div>
       </header>

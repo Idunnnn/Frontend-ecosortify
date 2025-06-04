@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-export default function AboutProfileImage({ className, src, ...props }) {
+export default function AboutProfileImage({ name, role, text = "", className, src, ...props }) {
   return (
     <section {...props} className="lg:max-w-[300px] ">
       <div className="lg:h-[300px] lg:w-[300px] h-[200px]  lg:rounded-2xl rounded-lg relative">

@@ -1,4 +1,4 @@
-export default function Header({ title, subTitle, ...props }) {
+export default function FormHeader({ title, subTitle, ...props }) {
   return (
     <div className="flex flex-col justify-center w-full">
       <div className="flex items-start max-w-[188px]">
