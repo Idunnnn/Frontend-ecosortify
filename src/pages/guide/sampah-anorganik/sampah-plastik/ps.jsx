@@ -24,6 +24,18 @@ export default function ps() {
               PS itu plastik yang kaku, gampang pecah (getas), dan sangat ringan. Dia paling sering kita temui dalam bentuk busa, yang kita kenal sebagai styrofoam. PS lumayan bagus buat insulasi panas, tapi karena rapuh, dia gampang banget pecah jadi remahan kecil. Nah, ini yang bahaya: PS bisa ngeluarin zat styrene yang diduga karsinogenik (pemicu kanker) dan bisa ganggu otak atau hormon, apalagi kalau kena makanan panas atau berminyak.
             </p>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/ps3.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik PS (Kode 6)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>

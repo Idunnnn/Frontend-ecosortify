@@ -24,6 +24,18 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
               Kalau HDPE ini saudaranya PET, tapi dia lebih kuat, kaku, dan enggak bening alias agak buram. Dia punya kepadatan tinggi, tahan benturan, tahan bahan kimia, dan kuat di suhu tinggi. Uniknya, HDPE ini dianggap salah satu plastik paling aman buat dipakai berulang kali karena zat kimianya minim yang keluar.
             </p>
             <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/hdpe1.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik HDPE (Kode 2)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
@@ -35,6 +47,18 @@ export default function hdpe() { // Perhatikan nama fungsi harus konsisten denga
               <li>Pipa</li>
               <li>Beberapa kantong belanja yang tebal.</li>
             </ul>
+            <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/hdpe2.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik HDPE (Kode 2)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* CARA KITA MENANGANINYA */}

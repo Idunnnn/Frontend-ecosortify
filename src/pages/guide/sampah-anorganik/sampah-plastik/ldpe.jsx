@@ -36,6 +36,18 @@ export default function ldpe() {
               <li>Lining pada beberapa kemasan.</li>
             </ul>
             <br />
+            <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '300px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/ldpe2.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik LDPE (Kode 4)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CARA KITA MENANGANINYA */}
             <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>

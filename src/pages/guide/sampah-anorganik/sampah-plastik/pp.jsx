@@ -24,6 +24,18 @@ export default function pp() {
               PP itu plastik yang kuat, ringan, dan tahan panas, makanya cocok buat barang yang butuh sterilisasi suhu tinggi. Dia juga tahan lembab, minyak, dan bahan kimia. PP ini dianggap salah satu plastik paling aman buat kontak langsung sama makanan dan minuman, bahkan pas panas sekalipun.
             </p>
             <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/pp1.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik PP (Kode 5)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
@@ -36,6 +48,18 @@ export default function pp() {
               <li>Tupperware</li>
               <li>Beberapa kotak makanan siap saji atau kemasan microwave-safe.</li>
             </ul>
+            <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '400px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/pp2.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik PP (Kode 5)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* CARA KITA MENANGANINYA */}

@@ -24,6 +24,18 @@ export default function pet() {
               Si PET ini paling akrab di mata kita. Dia itu jernih, ringan, kuat, dan bening kayak air. Karena sifatnya yang jago menahan gas dan kelembapan, PET jadi idola buat kemasan minuman. Tapi ingat, PET ini bukan buat dipakai berkali-kali, ya! Kalau dipakai terus, apalagi kena air panas, dia bisa jadi sarang bakteri atau malah melepas zat yang kurang baik, seperti antimoni trioksida.
             </p>
             <br />
+              <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/pet1.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik PET (Kode 1)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
+            <br />
 
             {/* CONTOH GAMPANG DITEMUKAN */}
             <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
@@ -34,6 +46,18 @@ export default function pet() {
               <li>Wadah selai kacang</li>
               <li>Beberapa jenis kemasan makanan sekali pakai lainnya.</li>
             </ul>
+            <br />
+             <div className="flex justify-center my-6">
+              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src="/images/guide/pet2.jpg" // Path: public/images/guide/pet1.jpg
+                  alt="Gambar Plastik PET (Kode 1)"
+                  fill // Mengisi parent container
+                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
+                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                />
+              </div>
+            </div>
             <br />
 
             {/* CARA KITA MENANGANINYA */}
@@ -94,12 +118,6 @@ export default function pet() {
 
         {/* REVISI RIGHTBAR - HANYA MENAMPILKAN JUDUL DAN SUB-HEADING */}
         <Rightbar>
-          {/* Hapus <h2>Daftar Isi</h2> yang terduplikasi di sini jika sudah ada di komponen Rightbar global */}
-          {/* Jika komponen Rightbar Anda sudah memiliki <h2>Daftar Isi</h2> secara otomatis,
-              maka bagian ini cukup dimulai dengan <ul> langsung.
-              Jika belum ada, biarkan <h2> ini.
-              Berdasarkan gambar, sepertinya Rightbar itu sendiri sudah menyertakan 'Daftar Isi'.
-              Jadi, saya akan menghapus yang ada di sini. */}
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
               <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si PET Ini</Link>
