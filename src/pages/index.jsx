@@ -143,150 +143,215 @@ export default function Home() {
       </div>
     </main>
       {/* === Bagian: Realita Sampah Section */}
-      <section className="bg-white py-16 md:py-24 text-gray-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 md:gap-20">
-          {/* Image Section - Revised based on previous request */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div
-              style={{
-                width: "519px",
-                height: "475px",
-                borderRadius: "8px",
-                overflow: "hidden" /* Crucial for border-radius */,
-                position: "relative" /* Required for Next.js Image fill */,
-              }}
-              className="relative shadow-lg border border-gray-200" /* Keep existing Tailwind classes for styling */
-            >
-              <Image
-                src="/images/assets/istockphoto-1171440648-612x612.jpg"
-                alt="Tangan memegang kantong sampah"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          </div>
+        <section
+      className="bg-white text-gray-800
+        py-[60px] px-4 /* Phone: padding-top/bottom 60px, padding-left/right 16px */
+        md:py-[60px] md:px-[52px] /* Tablet: padding-top/bottom 60px, padding-left/right 52px */
+        lg:py-24 lg:px-8 /* Web: padding-top/bottom 24 (96px), padding-left/right 32px */
+      "
+    >
+      <div
+        className="
+          max-w-[412px] mx-auto /* Phone: max-width 412px, center */
+          flex flex-col items-start /* Phone: stacked, items-start (rata kiri) */
+          gap-8 /* Phone: gap 32px between image and text */
 
-          {/* Text Content Section */}
+          md:max-w-[1023px] /* Tablet: max-width 1023px */
+          md:flex-row md:items-center /* Tablet: side-by-side, items-center */
+          md:gap-20 /* Tablet: gap 80px between image and text */
+
+          lg:max-w-6xl /* Web: max-width 6xl */
+          lg:gap-20 /* Web: gap 80px */
+          lg:flex-row lg:items-center /* Web: side-by-side, items-center */
+        "
+      >
+        {/* Image Section */}
+        {/* Defaultnya hidden untuk phone */}
+        {/* Untuk web, kita ingin ukuran 519x475. Untuk tablet, 351x333 */}
+        <div
+          className="
+            hidden /* Phone: Gambar disembunyikan */
+            md:block /* Tablet & Web: Gambar ditampilkan */
+            flex justify-center /* Untuk memusatkan gambar dalam kolomnya */
+            
+            /* ---- Dimensi Gambar ---- */
+            /* Web (Default): Ukuran asli 519x475px */
+            w-[519px] h-[475px] 
+
+            /* Tablet: Menimpa ukuran gambar untuk tablet */
+            md:w-[351px] md:h-[333px]
+            
+            /* Kolom lebar untuk tablet dan web */
+            md:w-1/2 /* Gambar mengambil setengah lebar di tablet dan web */
+          "
+        >
           <div
-            className="w-full md:w-1/2 text-center md:text-left flex flex-col"
-            style={{
-              width: "572px" /* Explicitly setting width for the text block as requested */,
-              /* Height (284px) and gap (8px) will be managed by margins on child elements */
-            }}
+            className="
+              relative shadow-lg border border-gray-200 rounded-lg overflow-hidden
+              w-full h-full /* Pastikan div ini mengisi parent-nya */
+            "
           >
-            {/* "REALITA SAMPAH DI SEKITAR KITA" Paragraph */}
-            <p
-              className="text-sm font-semibold text-blue-600 uppercase tracking-wide"
-              style={{
-                fontFamily: "Montserrat" /* Ensure Montserrat is loaded globally or imported */,
-                fontWeight: "400" /* Changed from font-semibold (600) to 400 as per your typograph */,
-                fontSize: "16px" /* Changed from text-sm (14px) to 16px as per your typograph */,
-                lineHeight: "100%" /* Equivalent to leading-none or custom value */,
-                letterSpacing: "0%" /* Tracking-normal or custom value */,
-                marginBottom: "8px" /* Explicit 8px gap below this element */,
-                color: "#0B5C31" /* Specified background color, using it as text color for p */,
-              }}
-            >
-              REALITA SAMPAH DI SEKITAR KITA
-            </p>
-
-            {/* "Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!" Heading */}
-            <h2
-              className="font-bold leading-tight" /* Removed mb-6 to control gap directly */
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "600" /* Already font-bold in Tailwind, which is 700. Use 600 explicitly if needed */,
-                fontSize: "36px" /* Changed from text-4xl/5xl to 36px as per your typograph */,
-                lineHeight: "100%" /* Equivalent to leading-none or custom value */,
-                letterSpacing: "0%",
-                marginBottom: "20px" /* This creates the 20px gap from h2 to the next p */,
-                color: "black" /* Specified black color */,
-              }}
-            >
-              Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!
-            </h2>
-
-            {/* Long Paragraph */}
-            <p
-              className="text-lg text-gray-700 leading-relaxed"
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "400" /* Already font-normal in Tailwind, which is 400 */,
-                fontSize: "16px" /* Changed from text-lg (18px) to 16px as per your typograph */,
-                lineHeight: "100%" /* Changed from leading-relaxed (1.625) to 100% as per your typograph */,
-                letterSpacing: "0%",
-                color: "black" /* Specified black color */,
-              }}
-            >
-              Menurut United Nations Programme (UNEP), sekitar 33% sampah yang dihasilkan diseluruh dunia tidak dikelola dengan
-              baik, sampah-sampah ini berakhir menumpuk di Tempat Pembuangan Akhir (TPA). Beberapa sumber menyebutkan alasan tidak
-              terkelola dengan baik adalah pemisahan sampah yang buruk, kesadaran masyarakat yang rendah dan sampah yang
-              terkontaminasi.
-            </p>
+            <Image
+              src="/images/assets/istockphoto-1171440648-612x612.jpg"
+              alt="Tangan memegang kantong sampah"
+              fill
+              sizes="(max-width: 768px) 0vw, (max-width: 1024px) 351px, 519px" /* Updated for specific widths */
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
-      </section>
+
+        {/* Text Content Section */}
+        <div
+          className="
+            w-full /* Phone: width full */
+            max-w-[380px] /* Phone: max-width 380px */
+            flex flex-col items-start /* Phone: text-left, flex-col */
+            gap-2 /* Phone: gap 8px between text elements */
+
+            md:w-1/2 /* Tablet & Web: width 1/2 */
+            md:max-w-[488px] /* Tablet: max-width 488px */
+            md:items-start /* Tablet: text-left */
+            md:gap-2 /* Tablet: gap 8px */
+
+            lg:max-w-[572px] /* Web: max-w 572px (kembali ke nilai awal) */
+            lg:items-start /* Web: text-left (sudah default md:items-start) */
+          "
+        >
+          {/* "REALITA SAMPAH DI SEKITAR KITA" Paragraph */}
+          <p
+            className="
+              font-normal uppercase tracking-normal leading-none
+              text-[14px] text-[#0B5C31] /* Phone: font size 14px, color */
+              mb-2 /* 8px gap below this element */
+              w-auto max-w-[245px] /* Phone: width 245px */
+              text-left /* Phone: text-left */
+
+              md:text-[16px] /* Tablet & Web: font size 16px */
+              md:max-w-[280px] /* Tablet: max-width 280px */
+              md:text-left /* Tablet: text-left */
+
+              lg:max-w-none /* Web: hilangkan max-width jika tidak ada batasan */
+              lg:text-left /* Web: text-left */
+            "
+          >
+            REALITA SAMPAH DI SEKITAR KITA
+          </p>
+
+          {/* "Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!" Heading */}
+          <h2
+            className="
+              font-semibold leading-none text-black
+              text-[28px] /* Phone: font size 28px */
+              mb-5 /* 20px gap below this element */
+              w-full max-w-[380px] /* Phone: width 380px */
+              text-left /* Phone: text-left */
+
+              md:text-[32px] /* Tablet: font size 32px */
+              md:max-w-[488px] /* Tablet: max-width 488px */
+              md:text-left /* Tablet: text-left */
+
+              lg:text-[36px] /* Web: font size 36px */
+              lg:max-w-none /* Web: hilangkan max-width jika tidak ada batasan */
+              lg:text-left /* Web: text-left */
+            "
+          >
+            Kita Menghasilkan 10 Juta Ton Sampah Setiap Harinya!
+          </h2>
+
+          {/* Long Paragraph */}
+          <p
+            className="
+              font-normal leading-none text-black
+              text-[16px] /* Phone: font size 16px */
+              w-full max-w-[380px] /* Phone: width 380px */
+              text-left /* Phone: text-left */
+
+              md:max-w-[488px] /* Tablet: max-width 488px */
+              md:text-left /* Tablet: text-left */
+
+              lg:max-w-none /* Web: hilangkan max-width jika tidak ada batasan */
+              lg:text-left /* Web: text-left */
+            "
+          >
+            Menurut United Nations Programme (UNEP), sekitar 33% sampah yang dihasilkan diseluruh dunia tidak dikelola dengan
+            baik, sampah-sampah ini berakhir menumpuk di Tempat Pembuangan Akhir (TPA). Beberapa sumber menyebutkan alasan tidak
+            terkelola dengan baik adalah pemisahan sampah yang buruk, kesadaran masyarakat yang rendah dan sampah yang
+            terkontaminasi.
+          </p>
+        </div>
+      </div>
+    </section>
 
       {/* === Bagian: Mengapa Edukasi Sampah Itu Penting? Section */}
       <section
-        className="relative overflow-hidden text-white flex" /* Added flex to section to control direct children layout */
-        style={{
-          backgroundColor: "#003419" /* New background color: Sea-Green-950 */,
-        }}
+      className="relative overflow-hidden text-white flex flex-col md:flex-row" /* Default flex-col for phone, md:flex-row for tablet/web */
+      style={{
+        backgroundColor: "#003419",
+        /* Phone: Defined directly with Tailwind classes for padding/gap */
+        /* Web: Height 636px is primarily driven by content/image heights */
+      }}
+    >
+      {/* Container utama untuk mengatur padding di setiap breakpoint */}
+      <div
+        className="
+          flex flex-col /* Phone: stacked vertically */
+          py-[52px] px-4 /* Phone: padding 52px top/bottom, 16px left/right */
+          gap-8 /* Phone: gap between image and text block */
+          
+          md:flex-row /* Tablet: side-by-side */
+          md:py-[52px] md:px-[52px] /* Tablet: padding 52px top/bottom, 52px left/right */
+          md:gap-20 /* Tablet: gap between image and text block */
+
+          lg:ml-[100px] lg:mr-[32px] /* Web: Specific margins for content area */
+          lg:py-[52px] lg:px-0 /* Web: Specific padding. px-0 because margins handle horizontal spacing */
+          lg:gap-[32px] /* Web: Gap between content and image */
+          lg:flex-row /* Web: side-by-side */
+          lg:max-w-none lg:w-auto /* Ensure no max-width from previous components */
+        "
       >
         {/* Left Content Area - Text and Benefit Cards */}
         <div
-          className="flex flex-col flex-shrink-0" /* flex-shrink-0 to ensure it respects its fixed width */
-          style={{
-            width: "714px" /* Specific width for the text content area */,
-            height: "636px" /* Specific height for the text content area */,
-            gap: "28px" /* Vertical gap between direct children (heading block, long paragraph, and benefit cards grid) */,
-            paddingTop: "52px",
-            paddingBottom: "52px",
-            marginLeft: "100px" /* Apply the 100px left padding here directly to the content block */,
-            marginRight: "32px" /* Apply the 32px gap to the right of this block */,
-            // Removed max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 from parent,
-            // as we are now directly positioning this content block.
-            // This div essentially replaces the role of the 'Main Content Wrapper' for the left side.
-          }}
+          className="
+            flex flex-col flex-shrink-0 /* flex-shrink-0 for web */
+            w-full max-w-[380px] mx-auto /* Phone: width full, max-width 380px, center */
+            gap-4 /* Phone: gap 16px between heading block, paragraph, and cards */
+
+            md:w-full md:max-w-[calc(50%-40px)] md:mx-0 /* Tablet: takes half, adjusted for gap */
+            md:gap-6 /* Tablet: adjusted gap */
+
+            lg:w-[714px] lg:h-[636px] /* Web: Specific fixed width and height */
+            lg:gap-[28px] /* Web: Specific gap */
+          "
         >
           {/* LAYANAN EDUKATIF & Mengapa Edukasi Sampah Itu Penting ? block */}
           <div
-            className="flex flex-col"
-            style={{
-              width: "662px" /* Specific width for this sub-block */,
-              height: "116px" /* Specific height for this sub-block */,
-              gap: "8px" /* Vertical gap between p and h2 */,
-            }}
+            className="flex flex-col
+              gap-2 /* Phone & Tablet: gap 8px */
+              w-full /* Phone: Takes full width of parent (380px) */
+              md:w-[488px] /* Tablet: Specific width */
+              lg:w-[662px] lg:h-[116px] /* Web: Specific width and height */
+            "
           >
             <p
-              className="uppercase tracking-wide"
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "#34F489",
-                width: "166px",
-                height: "20px",
-              }}
+              className="uppercase tracking-wide
+                text-[14px] leading-none text-[#34F489] /* Phone: font size 14px */
+                w-[145px] h-[17px] /* Phone: Specific width and height */
+
+                md:text-[16px] /* Tablet: Font size 16px */
+                lg:w-[166px] lg:h-[20px] /* Web: Specific width and height */
+              "
             >
               LAYANAN EDUKATIF
             </p>
             <h2
-              className="font-bold leading-tight"
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "600",
-                fontSize: "36px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "white",
-                width: "662px",
-                height: "88px",
-              }}
+              className="font-semibold leading-tight text-white
+                text-[32px] /* Phone: font size 32px */
+                w-full max-w-[380px] h-[78px] /* Phone: Specific width and height */
+
+                md:text-[36px] /* Tablet: Font size 36px */
+                lg:w-[662px] lg:h-[88px] /* Web: Specific width and height */
+              "
             >
               Mengapa Edukasi Sampah Itu Penting ?
             </h2>
@@ -294,15 +359,16 @@ export default function Home() {
 
           {/* Long Paragraph */}
           <p
-            className="text-gray-200"
-            style={{
-              fontFamily: "Montserrat",
-              fontWeight: "400",
-              fontSize: "16px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              marginBottom: "42px" /* Explicit 42px gap before the benefit cards grid */,
-            }}
+            className="text-gray-200
+              text-[16px] leading-none /* Phone: font size 16px */
+              w-full max-w-[380px] h-[100px] /* Phone: Specific width and height */
+              mb-[20px] /* Phone: explicit gap below */
+
+              md:mb-[30px] /* Tablet: explicit gap below */
+
+              lg:mb-[42px] /* Web: Explicit 42px gap before the benefit cards grid */
+              lg:max-w-none /* Web: Remove max-width if it should flow */
+            "
           >
             Perubahan besar dimulai dari pengetahuan yang sederhana. Dengan memahami dampak sampah terhadap lingkungan, kita bisa
             mulai membentuk kebiasaan yang lebih bertanggung jawab
@@ -310,117 +376,148 @@ export default function Home() {
 
           {/* Benefit Cards Grid */}
           <div
-            className="grid grid-cols-1 md:grid-cols-3" /* Keep existing Tailwind classes for grid */
-            style={{
-              width: "714px" /* Overall width of the grid container */,
-              height: "312px" /* Overall height of the grid container */,
-              gap: "20px" /* Horizontal and vertical gap between grid items (used for the individual cards) */,
-            }}
+            className="grid grid-cols-1 gap-5 /* Phone: single column, 20px gap */
+            md:grid-cols-2 /* Tablet: 2 columns */
+            md:gap-5 /* Tablet: 20px gap */
+            lg:grid-cols-3 /* Web: 3 columns */
+            lg:gap-5 /* Web: 20px gap */
+            w-full /* Phone: takes full width of parent */
+            md:w-full /* Tablet: takes full width of parent */
+            lg:w-[714px] lg:h-[312px] /* Web: Overall width and height of the grid container */
+            "
           >
             {/* Individual Benefit Card 1 */}
             <div
-              className="text-center"
-              style={{
-                width: "210px",
-                height: "312px",
-                paddingTop: "80px",
-                paddingRight: "20px",
-                paddingBottom: "40px",
-                paddingLeft: "16px",
-                borderRadius: "20px",
-                gap: "20px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="text-center flex flex-col items-center justify-center
+                w-full h-[312px] /* Phone: full width, 312px height */
+                p-4 /* Phone: generic padding */
+                rounded-xl /* Phone: consistent rounding */
+
+                md:w-auto md:h-[312px] /* Tablet: auto width within grid, height 312px */
+                md:p-4 /* Tablet: generic padding */
+                
+                lg:w-[210px] lg:h-[312px] /* Web: Specific width and height */
+                lg:pt-[80px] lg:pr-[20px] lg:pb-[40px] lg:pl-[16px] /* Web: Specific padding */
+                lg:rounded-[20px] /* Web: Specific border-radius */
+                lg:gap-[20px] /* Web: Specific gap */
+              "
+              style={{ backgroundColor: "#003419" }} /* Ensure background matches section for card effect */
             >
               <Image src="/images/assets/forest (1).png" alt="hutan" width={64} height={64} className="mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Meningkatkan kesadaran lingkungan</h3>
+              <h3 className="font-semibold mb-2
+                text-lg /* Phone: font size 18px */
+                md:text-xl /* Tablet & Web: font size 20px */
+                "
+              >
+                Meningkatkan kesadaran lingkungan
+              </h3>
             </div>
 
             {/* Individual Benefit Card 2 */}
             <div
-              className="text-center"
-              style={{
-                width: "210px",
-                height: "312px",
-                paddingTop: "80px",
-                paddingRight: "20px",
-                paddingBottom: "40px",
-                paddingLeft: "16px",
-                borderRadius: "20px",
-                gap: "20px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="text-center flex flex-col items-center justify-center
+                w-full h-[312px] /* Phone: full width, 312px height */
+                p-4 /* Phone: generic padding */
+                rounded-xl /* Phone: consistent rounding */
+
+                md:w-auto md:h-[312px] /* Tablet: auto width within grid, height 312px */
+                md:p-4 /* Tablet: generic padding */
+
+                lg:w-[210px] lg:h-[312px] /* Web: Specific width and height */
+                lg:pt-[80px] lg:pr-[20px] lg:pb-[40px] lg:pl-[16px] /* Web: Specific padding */
+                lg:rounded-[20px] /* Web: Specific border-radius */
+                lg:gap-[20px] /* Web: Specific gap */
+              "
+              style={{ backgroundColor: "#003419" }}
             >
               <Image src="/images/assets/planet-earth.png" alt="planet" width={64} height={64} className="mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Menghemat Sumber Daya Alam</h3>
+              <h3 className="font-semibold mb-2
+                text-lg /* Phone: font size 18px */
+                md:text-xl /* Tablet & Web: font size 20px */
+                "
+              >
+                Menghemat Sumber Daya Alam
+              </h3>
             </div>
 
             {/* Individual Benefit Card 3 */}
             <div
-              className="text-center"
-              style={{
-                width: "210px",
-                height: "312px",
-                paddingTop: "80px",
-                paddingRight: "20px",
-                paddingBottom: "40px",
-                paddingLeft: "16px",
-                borderRadius: "20px",
-                gap: "20px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="text-center flex flex-col items-center justify-center
+                w-full h-[312px] /* Phone: full width, 312px height */
+                p-4 /* Phone: generic padding */
+                rounded-xl /* Phone: consistent rounding */
+
+                md:w-auto md:h-[312px] /* Tablet: auto width within grid, height 312px */
+                md:p-4 /* Tablet: generic padding */
+                
+                lg:w-[210px] lg:h-[312px] /* Web: Specific width and height */
+                lg:pt-[80px] lg:pr-[20px] lg:pb-[40px] lg:pl-[16px] /* Web: Specific padding */
+                lg:rounded-[20px] /* Web: Specific border-radius */
+                lg:gap-[20px] /* Web: Specific gap */
+              "
+              style={{ backgroundColor: "#003419" }}
             >
               <Image src="/images/assets/law.png" alt="Law Document Icon" width={64} height={64} className="mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Mendorong Kebijakan yang Lebih Baik</h3>
+              <h3 className="font-semibold mb-2
+                text-lg /* Phone: font size 18px */
+                md:text-xl /* Tablet & Web: font size 20px */
+                "
+              >
+                Mendorong Kebijakan yang Lebih Baik
+              </h3>
             </div>
           </div>
         </div>
 
-        {/* Main Absolute Positioned Image (Desktop/Larger Screens) */}
+        {/* Main Image Section (Desktop/Larger Screens) */}
+        {/* Ini adalah gambar utama untuk tampilan web, harus tidak diutak-atik */}
         <div
-          className="relative flex-grow hidden md:block" /* relative and flex-grow to take remaining space, hidden md:block for visibility */
-          style={{
-            width: "594px" /* Specific width for the image container */,
-            height: "658px" /* Specific height for the image container, matching section height */,
-            borderRadius: "4px" /* Specific border-radius for the image container */,
-            overflow: "hidden" /* Crucial for border-radius on the image */,
-            background:
-              "linear-gradient(90.48deg, rgba(0, 0, 0, 0) 0.4%, rgba(0, 0, 0, 0.25) 49.99%, rgba(0, 0, 0, 0.375) 74.78%, rgba(0, 0, 0, 0.4375) 87.18%, rgba(0, 0, 0, 0.5) 99.57%)",
-            /* Removed absolute positioning here. Now it's a flex item. */
-          }}
+          className="
+            hidden /* Phone & Tablet: hidden */
+            lg:block /* Web: displayed */
+            relative flex-grow-0 flex-shrink-0 /* Ensure no flex-grow/shrink from parent for fixed size */
+            w-[594px] h-[658px] /* Web: Specific fixed width and height */
+            rounded-[4px] overflow-hidden
+            
+            /* Background gradient remains as it's part of the image container's style */
+            bg-gradient-to-r from-transparent via-black/25 to-black/50 /* Converted to Tailwind */
+          "
         >
           <Image
             src="/images/assets/pexels-tima-miroshnichenko-5428264.jpg"
             alt="Anak-anak belajar tentang lingkungan"
             fill
-            sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 40vw"
+            sizes="594px" /* Fixed size for desktop, not responsive */
             style={{ objectFit: "cover", objectPosition: "left center" }}
           />
         </div>
 
-        {/* Right Image Area (Mobile Fallback - hidden on md: and larger) */}
-        {/* This section appears to be a fallback for mobile and is hidden on md: and larger screens. */}
-        <div className="w-full md:w-1/2 lg:w-2/5 mt-12 md:mt-0 md:hidden">
-          <div className="relative w-full h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/children-learning.jpg" /* Check this path, might be a placeholder */
-              alt="Anak-anak belajar tentang lingkungan"
-              fill
-              sizes="(max-width: 768px) 100vw"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
+        {/* Right Image Area (Mobile & Tablet Fallback) */}
+        {/* Gambar ini hanya untuk phone dan tablet, disembunyikan di web. */}
+        <div
+          className="
+            w-full h-[220px] /* Phone: full width, specific height */
+            relative overflow-hidden rounded-xl shadow-lg /* Phone: styles */
+            block /* Phone: displayed */
+            mx-auto /* Phone: center horizontally */
+            
+            md:w-[596px] md:h-[400px] /* Tablet: specific width and height */
+            md:block /* Tablet: displayed */
+
+            lg:hidden /* Web: hidden */
+          "
+        >
+          {/* Path gambar disesuaikan jika berbeda untuk mobile/tablet */}
+          <Image
+            src="/images/assets/pexels-tima-miroshnichenko-5428264.jpg" /* Menggunakan gambar yang sama dengan desktop untuk konsistensi */
+            alt="Anak-anak belajar tentang lingkungan"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 596px" /* Updated for phone/tablet specific width */
+            style={{ objectFit: "cover" }}
+          />
         </div>
-      </section>
+      </div>
+    </section>
       {/* === Bagian: Apa Kata Mereka? (Testimoni/Kutipan) Section */}
       <section className="bg-white py-16 md:py-24 text-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
