@@ -1,15 +1,12 @@
-import Image from "next/image";
-import { useState, useRef, useCallback, useEffect } from "react";
-import Link from "next/link";
+
 import Header2 from "@/components/templates/Header2";
+import Scan from "@/components/layout/Scan";
 
-import Chat from "@/components/Chat";
-
-export default function Scan() {
+export default function ScanPage() {
   return (
     <>
       <Header2 />
-      <Chat />
+      <Scan />
     </>
   );
 }
