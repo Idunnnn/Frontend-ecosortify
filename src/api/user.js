@@ -43,9 +43,6 @@ export async function sendChatHistory(message, uid, token) {
         body: data
     });
     const response = await fetchResponse.json();
-    console.log(data);
-    console.log(response);
-
     return {
         ok: fetchResponse.ok,
         ...response
@@ -61,7 +58,6 @@ export async function getChatHistory(uid, token) {
     });
 
     const response = await fetchResponse.json();
-    console.log(response)
     return {
         ok: fetchResponse.ok,
         ...response

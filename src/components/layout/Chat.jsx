@@ -67,6 +67,7 @@ export default function Chat({ className }) {
         const response = await getChatHistory(user?.uid, user.token);
         const chatArray = response?.data?.chat ?? [];
         setSavedMessages(chatArray);
+        console.log(response.message)
       } catch (err) {
         console.error(err.message);
       } finally {
