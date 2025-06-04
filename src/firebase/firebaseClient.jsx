@@ -9,18 +9,16 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useUser } from "@/contexts/UserContext";
 
 export const continueWithGoogle = async () => {
-    const result = await signInWithPopup(auth, provider);
-    const user = result?.user;
+  const result = await signInWithPopup(auth, provider);
+  const user = result?.user;
 
-  
-    const token = await user.getIdToken();
-    const response = await sendLoginRequest({ token });
+  const token = await user.getIdToken();
+  const response = await sendLoginRequest({ token });
 
-    document.cookie = `firebase_id_token=${token}; path=/; max-age=86400; Secure; SameSite=Strict`;
-    return response;
+  document.cookie = `firebase_id_token=${token}; path=/; max-age=86400; Secure; SameSite=Strict`;
+  return response;
 };
 
 export const loginWithEmailAndPassword = async (email, password) => {
@@ -41,7 +39,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
       throw new Error("Login request failed");
     }
 
-    document.cookie = `firebase_id_token=${token}; path=/; max-age=86400; Secure; SameSite=Strict`;
+    document.cookie = `firebase_id_token=${token}; path=/; max-age=3600; Secure; SameSite=Strict`;
 
     return response;
   } catch (err) {
@@ -49,6 +47,10 @@ export const loginWithEmailAndPassword = async (email, password) => {
   }
 };
 
+export const getFreshToken = async () => {
+  const idToken = await user.getIdToken(true);
+  return idToken;
+};
 export const logout = async () => {
   document.cookie = "firebase_id_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; SameSite=Strict";
   await signOut(auth);
@@ -64,7 +66,6 @@ export function getCookie(name) {
   }
   return null;
 }
-
 
 export const isUserLogIn = () => {
   const auth = getAuth();
