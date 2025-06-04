@@ -8,6 +8,7 @@ import { getChatHistory, sendChatHistory } from "@/api/user";
 export default function Chat({ className }) {
   const { user } = useUser();
   const textareaRef = useRef(null);
+  const bottomRef = useRef(null);
 
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     keepLastMessageOnError: true,
@@ -25,6 +26,10 @@ export default function Chat({ className }) {
       }
     }
   };
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, savedMessages]);
 
   useEffect(() => {
     if (input === "" && textareaRef.current) {
@@ -82,12 +87,7 @@ export default function Chat({ className }) {
 
   return (
     <>
-      
-      <main
-        ref={chatContainer}
-        className="mx-auto flex flex-col max-w-[700px] mb-10 max-h-[calc(100vh-80px)] w-full mt-5 gap-8 p-8 lg:p-0 overflow-y-auto"
-        style={{ maxHeight: "calc(100vh - 225px)" }}
-      >
+      <main ref={chatContainer} className="mx-auto flex flex-col max-w-[700px] mb-32  w-full mt-5 gap-8 p-8 lg:p-0 ">
         {loading ? (
           <p className="text-center text-sm text-gray-500 ">Retrieves chat...</p>
         ) : savedMessages.length > 0 || messages.length > 0 ? (
@@ -129,8 +129,10 @@ export default function Chat({ className }) {
             <p className="text-sm text-gray-600">Tanya apa saja tentang edukasi sampah ya!</p>
           </div>
         ) : null}
+
+        <div ref={bottomRef} />
       </main>
-     
+
       <form
         onSubmit={handleSubmit}
         className={clsx(
