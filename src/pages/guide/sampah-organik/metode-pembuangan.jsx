@@ -2,7 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
-import Image from "next/image";
+import ImageArticle from "@/components/ImageArticle";
 import { Icon } from "@iconify/react";
 
 export default function MetodePembuangan() {
@@ -13,7 +13,7 @@ export default function MetodePembuangan() {
       <div className="flex">
         <Leftbar />
 
-        <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
+        <main className="2xl:ml-[430px] 2xl:mr-[380px]  lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 id="jenis-sampah-organik" className="text-2xl font-bold mb-5 text-gray-800">
               Metode Pembuangan
@@ -69,14 +69,9 @@ export default function MetodePembuangan() {
             <h2 id="menyetorkan-ke-bank-sampah-organik" className="text-xl font-bold mb-5 text-gray-800">
               Menyetorkan ke Bank sampah Organik
             </h2>
-            <Image
-              src="/images/guide/bank-sampah-organik.jpg"
-              alt="bank-sampah-organik"
-              width={"400"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-              quality={30}
-            />
+
+            <ImageArticle src="/images/guide/bank-sampah-organik.jpg" alt="bank-sampah-organik" />
+
             <p>
               Salah satu metode pembuangan untuk sampah organik adalah dengan menyetorkanya ke bank sampah organik, seperti yang
               dijelaskan pada{" "}
@@ -91,14 +86,9 @@ export default function MetodePembuangan() {
             <h2 id="memberikanya-ke-peternak" className="text-xl font-bold mb-5 text-gray-800">
               Memberikanya ke peternak
             </h2>
-            <Image
-              src="/images/guide/peternak.jpg"
-              alt="peternak"
-              width={"400"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-              quality={30}
-            />
+
+            <ImageArticle src="/images/guide/peternak.jpg" alt="peternak" />
+
             <p>
               Solusi lain dalam pengelolaan sampah organik adalah memberikannya kepada peternak. Namun, perlu diperhatikan bahwa
               tidak semua jenis sampah organik dapat digunakan sebagai pakan ternak. Hanya sampah organik tertentu seperti
@@ -190,7 +180,7 @@ export default function MetodePembuangan() {
                 <p>Kembali</p>
               </Link>
               <Link
-                href="/guide/sampah-anorganik/pengenalan"
+                href="/guide/sampah-anorganik/"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

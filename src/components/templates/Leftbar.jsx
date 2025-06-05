@@ -10,7 +10,7 @@ export default function Leftbar({ className, children, ...props }) {
     <>
       <aside
         className={clsx(
-          "hidden text-gray-800 lg:flex flex-col fixed top-20 left-0 w-[350px] f h-[calc(100vh-4.1rem)] bg-white overflow-y-auto p-6 border-r-1 border-t-1 border-gray-200 z-1 overflow-x-hidden",
+          "hidden text-gray-800 2xl:left-[80px] lg:flex flex-col fixed top-20 left-0 w-[350px]  h-[calc(100vh-4.1rem)] bg-white overflow-y-auto p-6 border-r-1 border-t-1 border-gray-200 z-1 overflow-x-hidden",
           className
         )}
         {...props}
@@ -36,7 +36,7 @@ export default function Leftbar({ className, children, ...props }) {
         <h2 className="font-bold mb-2 ">FAQ</h2>
         <ul className="mb-8 space-y-2 ml-3  ">
           <li className="hover:text-black font-medium ">
-            <Link href="/guide/apakah-semua-sampah-bisa-didaur-ulang?">Apakah semua sampah bisa didaur ulang?</Link>
+            <Link href="/guide/apakah-semua-sampah-bisa-didaur-ulang">Apakah semua sampah bisa didaur ulang?</Link>
           </li>
         </ul>
       </aside>

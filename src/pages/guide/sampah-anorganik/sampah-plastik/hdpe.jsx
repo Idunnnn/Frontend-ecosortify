@@ -2,7 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
-import Image from "next/image";
+import ImageArticle from "@/components/ImageArticle";
 import { Icon } from "@iconify/react";
 
 export default function hdpe() {
@@ -13,31 +13,29 @@ export default function hdpe() {
       <div className="flex">
         <Leftbar />
 
-        <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
+        <main className="2xl:ml-[430px] 2xl:mr-[380px]  lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               HDPE (High-Density Polyethylene) - Kode 2
             </h1>
 
-            <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">Karakteristik Si HDPE Ini:</h2>
+            <h2 id="karakteristik" className="text-xl font-semibold mt-8 mb-3 text-green-700">
+              Karakteristik Si HDPE Ini:
+            </h2>
             <p>
-              Kalau HDPE ini saudaranya PET, tapi dia lebih kuat, kaku, dan enggak bening alias agak buram. Dia punya kepadatan tinggi, tahan benturan, tahan bahan kimia, dan kuat di suhu tinggi. Uniknya, HDPE ini dianggap salah satu plastik paling aman buat dipakai berulang kali karena zat kimianya minim yang keluar.
+              Kalau HDPE ini saudaranya PET, tapi dia lebih kuat, kaku, dan enggak bening alias agak buram. Dia punya kepadatan
+              tinggi, tahan benturan, tahan bahan kimia, dan kuat di suhu tinggi. Uniknya, HDPE ini dianggap salah satu plastik
+              paling aman buat dipakai berulang kali karena zat kimianya minim yang keluar.
             </p>
             <br />
-            <div className="flex justify-center my-6">
-              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
-                <Image
-                  src="/images/guide/hdpe1.jpg"
-                  alt="Gambar Plastik HDPE (Kode 2)"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 687px"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
+
+            <ImageArticle src="/images/guide/hdpe1.jpg" alt="Gambar Plastik HDPE (Kode 2)" />
+
             <br />
 
-            <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">Contoh Gampang Ditemukan:</h2>
+            <h2 id="contoh" className="text-xl font-semibold mt-8 mb-3 text-green-700">
+              Contoh Gampang Ditemukan:
+            </h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-5">
               <li>Botol susu</li>
               <li>Botol deterjen, botol sampo, botol pemutih</li>
@@ -47,20 +45,14 @@ export default function hdpe() {
               <li>Beberapa kantong belanja yang tebal.</li>
             </ul>
             <br />
-            <div className="flex justify-center my-6">
-              <div style={{ width: '687px', height: '250px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
-                <Image
-                  src="/images/guide/hdpe2.jpg"
-                  alt="Gambar Plastik HDPE (Kode 2)"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 687px"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
+
+            <ImageArticle src="/images/guide/hdpe2.jpg" alt="Gambar Plastik HDPE (Kode 2)" />
+           
             <br />
 
-            <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">Cara Kita Menanganinya:</h2>
+            <h2 id="cara-menangani" className="text-xl font-semibold mt-8 mb-3 text-green-700">
+              Cara Kita Menanganinya:
+            </h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>Sama seperti PET, botol HDPE perlu dikosongkan dan dibilas bersih.</li>
               <li>Karena sifatnya yang lebih kaku, mungkin tidak mudah dipipihkan.</li>
@@ -69,7 +61,9 @@ export default function hdpe() {
             </ol>
             <br />
 
-            <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">Proses Daur Ulangnya di Pabrik:</h2>
+            <h2 id="proses-daur-ulang" className="text-xl font-semibold mt-8 mb-3 text-green-700">
+              Proses Daur Ulangnya di Pabrik:
+            </h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700">
               <li>
                 <strong>Pengumpulan & Penyortiran:</strong> HDPE dikumpulin dan disortir berdasarkan warna dan jenisnya.
@@ -84,7 +78,9 @@ export default function hdpe() {
                 <strong>Peleburan & Peletisasi:</strong> Serpihan kering dilelehkan lalu dibentuk jadi pelet.
               </li>
               <li>
-                <strong>Penggunaan Kembali:</strong> Pelet HDPE daur ulang sering digunakan buat bikin pipa saluran air, pagar plastik, bangku taman, tempat sampah, alas palet, botol-botol non-makanan, bahkan ada yang jadi serat tekstil juga, lho.
+                <strong>Penggunaan Kembali:</strong> Pelet HDPE daur ulang sering digunakan buat bikin pipa saluran air, pagar
+                plastik, bangku taman, tempat sampah, alas palet, botol-botol non-makanan, bahkan ada yang jadi serat tekstil
+                juga, lho.
               </li>
             </ol>
             <br />
@@ -112,16 +108,24 @@ export default function hdpe() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si HDPE Ini</Link>
+              <Link href="#karakteristik" className="hover:font-semibold">
+                Karakteristik Si HDPE Ini
+              </Link>
             </li>
             <li>
-              <Link href="#contoh" className="hover:font-semibold">Contoh Gampang Ditemukan</Link>
+              <Link href="#contoh" className="hover:font-semibold">
+                Contoh Gampang Ditemukan
+              </Link>
             </li>
             <li>
-              <Link href="#cara-menangani" className="hover:font-semibold">Cara Kita Menanganinya</Link>
+              <Link href="#cara-menangani" className="hover:font-semibold">
+                Cara Kita Menanganinya
+              </Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang" className="hover:font-semibold">Proses Daur Ulangnya di Pabrik</Link>
+              <Link href="#proses-daur-ulang" className="hover:font-semibold">
+                Proses Daur Ulangnya di Pabrik
+              </Link>
             </li>
           </ul>
         </Rightbar>

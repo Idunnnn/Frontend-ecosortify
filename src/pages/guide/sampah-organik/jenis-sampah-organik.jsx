@@ -2,8 +2,8 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
+import ImageArticle from "@/components/ImageArticle";
 
 export default function JenisSampahOrganik() {
   return (
@@ -13,7 +13,7 @@ export default function JenisSampahOrganik() {
       <div className="flex">
         <Leftbar />
 
-        <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
+        <main className="2xl:ml-[430px] 2xl:mr-[380px]  lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 id="jenis-sampah-organik" className="text-2xl font-bold mb-5 text-gray-800">
               Jenis Sampah Organik
@@ -27,14 +27,9 @@ export default function JenisSampahOrganik() {
             <h2 id="sampah-organik-basah" className="text-xl font-bold mb-5 text-gray-800">
               1. Sampah organik basah
             </h2>
-            <Image
-              src="/images/guide/sampah-organik-basah.jpg"
-              alt="sampah-organik-basah"
-              width={"400"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-              quality={30}
-            />
+
+            <ImageArticle src="/images/guide/sampah-organik-basah.jpg" alt="sampah-organik-basah" />
+
             <p>
               Sampah organik basah adalah sampah yang memiliki kandungan air yang cukup tinggi. Inilah yang menyebabkan sampah
               organik menjadi cepat membusuk dan menimbulkan bau tidak sedap. Dengan waktu penguraian
@@ -46,14 +41,9 @@ export default function JenisSampahOrganik() {
             <h2 id="sampah-organik-kering" className="text-xl font-bold mb-5 text-gray-800">
               2. Sampah organik kering
             </h2>
-            <Image
-              src="/images/guide/sampah-organik-kering.jpg"
-              alt="sampah-organik-kering"
-              width={"400"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-              quality={30}
-            />
+
+            <ImageArticle src="/images/guide/sampah-organik-kering.jpg" alt="sampah-organik-kering" />
+
             <p>
               Sampah organik kering termasuk sampah organik yang kadar airnya sedikit dan cenderung lebih lama terurainya
               dibandingkan sampah organik basah, tetapi tetap dapat terurai oleh mikroorganisme dalam jangka waktu tertentu.
@@ -64,7 +54,7 @@ export default function JenisSampahOrganik() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-organik/pengenalan"
+                href="/guide/sampah-organik/"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />

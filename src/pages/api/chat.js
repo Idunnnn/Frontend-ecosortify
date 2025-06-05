@@ -89,7 +89,7 @@ export default async function handler(req, res) {
         } else {
             res.status(200).json({ result });
         }
-        
+
     } catch (error) {
         console.error('🔥 Error in /api/chat:', error);
         res.status(500).json({ error: error.message || 'Internal Server Error' });

@@ -2,8 +2,8 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
+import ImageArticle from "@/components/ImageArticle";
 
 export default function theGreatPasificGarbagePatch() {
   return (
@@ -13,7 +13,7 @@ export default function theGreatPasificGarbagePatch() {
       <div className="flex">
         <Leftbar />
 
-        <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
+        <main className="2xl:ml-[430px] 2xl:mr-[380px]  lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 className="text-2xl font-bold mb-5 text-gray-800">The Great Pacific Garbage Patch</h1>
             <p>
@@ -24,12 +24,9 @@ export default function theGreatPasificGarbagePatch() {
               negara bagian Hawaii dan California, Amerika Serikat.
             </p>
             <br />
-            <Image
-              src="/images/guide/the-pacific-garbage-patch.jpg"
-              width={"550"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-            />
+
+            <ImageArticle src="/images/guide/the-pacific-garbage-patch.jpg" alt="the-pacific-garbage-patch" />
+
             <p>
               The Great Pacific Garbage Patch ditemukan pertama kali pada tahun 1990-an, dan sampah-sampah tersebut berasal dari
               negara-negara di Lingkar Pacific (Pacific Rim) yang tersebar di Asia, Amerika Utara, dan Amerika Selatan, ditambah
@@ -50,12 +47,7 @@ export default function theGreatPasificGarbagePatch() {
               menyumbang 8 persen dari total massa plastik yang mengapung di area luas tersebut.
             </p>
 
-            <Image
-              src="/images/guide/the-pacific-garbage-patch2.jpg"
-              width={"550"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-            />
+            <ImageArticle src="/images/guide/the-pacific-garbage-patch2.jpg" alt="the-pacific-garbage-patch2" />
 
             <p>
               Plastik yang berakhir di Great Pacific Garbage Patch berasal dari berbagai sumber, termasuk sampah daratan yang
@@ -84,7 +76,8 @@ export default function theGreatPasificGarbagePatch() {
               mendaur ulang sampah plastik, dan mengelola sampah secara lebih baik.
             </p>
 
-            <Image src="/images/guide/ocean-cleanup.jpg" width={"550"} height={"500"} className="rounded-md my-5 mx-auto" quality={50} />
+            <ImageArticle src="/images/guide/ocean-cleanup.jpg" alt="ocean-cleanup" />
+
 
             <p>
               Selain itu, penting untuk meningkatkan kesadaran masyarakat tentang bahaya sampah plastik bagi lingkungan.
@@ -101,14 +94,14 @@ export default function theGreatPasificGarbagePatch() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/apa-itu-sampah"
+                href="/guide/apa-itu-bank-sampah"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Kembali</p>
               </Link>
               <Link
-                href="/guide/sampah-organik/pengenalan"
+                href="/guide/sampah-organik/"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

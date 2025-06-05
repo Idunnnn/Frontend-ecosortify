@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import clsx from "clsx";
 
 const menuData = [
   {
@@ -10,23 +11,23 @@ const menuData = [
         id: "organik",
         title: "Sampah Organik",
         links: [
-          { name: "Pengenalan", href: "/guide/sampah-organik/pengenalan" },
+          { name: "Pengenalan", href: "/guide/sampah-organik" },
           { name: "Jenis Sampah Organik", href: "/guide/sampah-organik/jenis-sampah-organik" },
           { name: "Metode Pembuangan", href: "/guide/sampah-organik/metode-pembuangan" },
         ],
       },
       {
         id: "anorganic",
-        title: "Anorganic Waste",
+        title: "Sampah Anorganik",
         links: [
-          { name: "Pengenalan", href: "/guide/sampah-anorganik/pengenalan" },
+          { name: "Pengenalan", href: "/guide/sampah-anorganik" },
           {
             name: "Jenis-Jenis Sampah Anorganik",
             href: "/guide/sampah-anorganik/jenis-sampah-anorganik",
             subLinks: [
               {
                 name: "Sampah Plastik",
-                href: "/guide/sampah-anorganik/sampah-plastik/pet", // Default link for plastic
+                href: "/guide/sampah-anorganik/sampah-plastik/pet",
                 subLinks: [
                   { name: "PET (Kode 1)", href: "/guide/sampah-anorganik/sampah-plastik/pet" },
                   { name: "HDPE (Kode 2)", href: "/guide/sampah-anorganik/sampah-plastik/hdpe" },
@@ -39,7 +40,7 @@ const menuData = [
               },
               {
                 name: "Sampah Logam",
-                href: "/guide/sampah-anorganik/sampah-logam/aluminium", // Default link for metal
+                href: "/guide/sampah-anorganik/sampah-logam/aluminium",
                 subLinks: [
                   { name: "Aluminium", href: "/guide/sampah-anorganik/sampah-logam/aluminium" },
                   { name: "Besi dan Baja", href: "/guide/sampah-anorganik/sampah-logam/besi-baja" },
@@ -57,24 +58,27 @@ const menuData = [
       },
       {
         id: "elektronik",
-        title: "Elektronik Waste",
+        title: "Sampah Elektronik ",
         links: [
-          { name: "Pengenalan", href: "/guide/sampah-elektronik/pengenalan" },
+          { name: "Pengenalan", href: "/guide/sampah-elektronik" },
           {
-            name: "Penanganan E-Waste", // Ini adalah parent untuk sub-penanganan
-            href: "/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan", // Link ke halaman penanganan utama
+            name: "Penanganan E-Waste",
+            href: "/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan",
             subLinks: [
               { name: "Tahapan Penanganan Umum", href: "/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan" },
-              { name: "Penanganan oleh Individu", href: "/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan-individu" },
+              {
+                name: "Penanganan oleh Individu",
+                href: "/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan-individu",
+              },
             ],
           },
         ],
       },
       {
         id: "medic",
-        title: "Medic Waste",
+        title: "Sampah Medis",
         links: [
-          { name: "Pengenalan", href: "/guide/sampah-medis/pengenalan" },
+          { name: "Pengenalan", href: "/guide/sampah-medis" },
           {
             name: "Jenis-Jenis Sampah Medis",
             href: "/guide/sampah-medis/jenis-sampah-medis",
@@ -91,16 +95,16 @@ const menuData = [
         ],
       },
       {
-        id: "sampah-residu-b3", // ID untuk folder utama sampah-residu-b3
-        title: "Sampah Residu dan B3", // Judul utama
+        id: "sampah-residu-b3",
+        title: "Sampah Residu dan B3",
         links: [
           {
-            name: "Pengenalan", // Ini adalah file pengenalan.jsx yang langsung di dalam sampah-residu-b3
-            href: "/guide/sampah-residu-b3/pengenalan",
+            name: "Pengenalan", 
+            href: "/guide/sampah-residu-b3",
           },
           {
-            name: "Jenis-Jenis Sampah Residu dan B3", // Ini adalah judul untuk sub-menu
-            href: "/guide/sampah-residu-b3/jenis-sampah-residu-b3/sampah-terkontaminasi", // Link default ke salah satu jenis
+            name: "Jenis-Jenis Sampah Residu dan B3", 
+            href: "/guide/sampah-residu-b3/jenis-sampah-residu-b3/sampah-terkontaminasi", 
             subLinks: [
               {
                 name: "Sampah Terkontaminasi",
@@ -118,12 +122,11 @@ const menuData = [
                 name: "Kain yang Terkontaminasi",
                 href: "/guide/sampah-residu-b3/jenis-sampah-residu-b3/kain-terkontaminasi",
               },
-              // Tambahkan jenis-jenis sampah residu/B3 lainnya di sini
+             
             ],
           },
         ],
       },
-     
     ],
   },
 ];
@@ -149,15 +152,16 @@ export default function LeftbarMenu() {
     let listStyle = "list-none";
     if (level === 1) listStyle = "list-disc";
     if (level === 2) listStyle = "list-circle";
-    // Jika ada level 3 (sub-sub-sub-menu)
     if (level === 3) listStyle = "list-square";
 
-
-    const paddingLeft = (level + 1) * 4; // Menambah indentasi untuk setiap level
+    const paddingLeft = (level + 1) * 5; 
 
     return (
       <ul
-        className={`mt-1 ml-${paddingLeft} text-sm text-gray-600 space-y-2 ${listStyle} pt-1 transition-all duration-300`}
+        className={clsx(
+          `mt-1  text-sm text-gray-600 space-y-2  pt-1 transition-all duration-300`,
+          `${listStyle} ml-${paddingLeft}`
+        )}
       >
         {links.map((link) => (
           <li key={link.href}>
@@ -165,7 +169,7 @@ export default function LeftbarMenu() {
               <div>
                 <button
                   onClick={() => toggleSub(parentId, link.name)}
-                  className="w-full text-left font-medium hover:font-semibold flex gap-1 items-center"
+                  className="w-full text-left font-medium hover:font-semibold flex gap-1 items-center ml-1"
                 >
                   <Icon
                     icon="mdi:chevron-right"
@@ -176,7 +180,7 @@ export default function LeftbarMenu() {
                   <p>{link.name}</p>
                 </button>
                 <div
-                  className={`transition-all duration-300 overflow-hidden ${
+                  className={`transition-all duration-300 overflow-hidden ml-4 ${
                     openSubItems[parentId]?.includes(link.name) ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
@@ -199,7 +203,7 @@ export default function LeftbarMenu() {
       {menuData.map((section) => (
         <div key={section.section} className="mb-8 text-gray-800">
           <h2 className="font-bold mb-2">{section.section}</h2>
-          <ul className="space-y-2 ml-3">
+          <ul className="space-y-2 ml-1">
             {section.items.map((item) => (
               <li key={item.id}>
                 <button
@@ -215,11 +219,10 @@ export default function LeftbarMenu() {
                   <p>{item.title}</p>
                 </button>
                 <div
-                  className={`transition-all duration-300 overflow-hidden ${
+                  className={`transition-all duration-300 overflow-hidden ml-3 ${
                     openItems.includes(item.id) ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  {/* Pass item.id as parentId for the first level of sub-menus */}
                   {renderLinks(item.links, item.id)}
                 </div>
               </li>

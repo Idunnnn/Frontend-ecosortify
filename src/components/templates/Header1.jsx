@@ -99,7 +99,9 @@ export default function Header({ className, ...props }) {
                       : "opacity-0 transition duration-75 flex flex-col rounded-lg  border-gray-300 border shadow-lg mt-3 absolute top-full z-10 bg-white w-[250px] left-0 dan -translate-x-1/2"
                   }
                 >
-                  <h2 className="px-4 py-4 font-semibold text-lg truncate border-b-gray-300 border-b-1 mb-2">Profile </h2>
+                  <h2 className="px-4 py-4 font-semibold text-lg truncate border-b-gray-300 border-b-1 mb-2 text-black">
+                    Profile
+                  </h2>
                   <li className="px-4 py-3 body-7 text-[#292929] flex items-center gap-2 ">
                     <Icon icon="mdi-light:email" className="w-4 h-4"></Icon>
                     <p className="truncate"> {user.email}</p>
@@ -112,7 +114,7 @@ export default function Header({ className, ...props }) {
                   <li className="px-4 py-3 body-7 border-t-gray-300 border-t-1 mt-2">
                     <button
                       onClick={logoutHandler}
-                      className="py-3 px-4 rounded bg-gray-200 w-full hover:bg-gray-300 active:bg-gray-400 flex gap-1 items-center justify-center"
+                      className="py-3 px-4 rounded text-black bg-gray-300 w-full hover:bg-gray-400 active:bg-gray-500 flex gap-1 items-center justify-center"
                     >
                       <p>Logout</p>
                       <Icon icon="ic:round-logout"></Icon>
@@ -220,7 +222,9 @@ export default function Header({ className, ...props }) {
                       : "opacity-0 pointer-events-none transition duration-200 flex flex-col rounded-lg border-gray-300 border shadow-lg mt-3 absolute top-full z-50 bg-white w-[180px] left-1/2 -translate-x-1/2"
                   }
                 >
-                  <h2 className="px-4 py-4 font-semibold text-lg truncate border-b-gray-300 border-b-1 mb-2">Profile </h2>
+                  <h2 className="px-4 py-4 font-semibold text-lg truncate border-b-gray-300 border-b-1 mb-2 text-black">
+                    Profile
+                  </h2>
                   <li className="px-4 py-3 body-8 text-[#292929] flex items-center gap-2 ">
                     <Icon icon="mdi-light:email" className="w-4 h-4"></Icon>
                     <p className="truncate"> {user.email}</p>
@@ -233,7 +237,7 @@ export default function Header({ className, ...props }) {
                   <li className="px-4 py-3 body-7 border-t-gray-300 border-t-1 mt-2">
                     <button
                       onClick={logoutHandler}
-                      className="py-3 px-4 rounded bg-gray-200 w-full hover:bg-gray-300 active:bg-gray-400 flex gap-1 items-center justify-center"
+                      className="py-3 px-4 rounded text-black bg-gray-300 w-full hover:bg-gray-400 active:bg-gray-500 flex gap-1 items-center justify-center"
                     >
                       <p>Logout</p>
                       <Icon icon="ic:round-logout"></Icon>
