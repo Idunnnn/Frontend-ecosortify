@@ -73,12 +73,61 @@ export default function About() {
 
             <div data-aos="fade-up" className="flex flex-col gap-20 w-full mb-30 mt-8">
               <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-4 gap-y-20">
-                <AboutProfileImage alt="profile-dummy" src="/images/profile-dummy.png" data-aos="zoom-in" />
-                <AboutProfileImage alt="profile-dummy" src="/images/profile-dummy.png" data-aos="zoom-in" />
-                <AboutProfileImage alt="profile-dummy" src="/images/profile-dummy.png" data-aos="zoom-in" />
-                <AboutProfileImage alt="profile-dummy" src="/images/profile-dummy.png" data-aos="zoom-in" />
-                <AboutProfileImage alt="profile-dummy" src="/images/profile-dummy.png" data-aos="zoom-in" />
-                <AboutProfileImage alt="profile-dummy" src="/images/profile-dummy.png" data-aos="zoom-in" />
+                <AboutProfileImage
+                  text={""}
+                  role={"Frontend Developer"}
+                  alt="Syaiful"
+                  name={"Syaiful"}
+                  src="/images/about/syaiful.png"
+                  data-aos="zoom-in"
+                />
+
+                <AboutProfileImage
+                  text={
+                    "Pemuda antusias yang penasaran dan energik, menghargai kerja keras dan usaha. Bertanggung jawab menyusun UI/UX designer dan Backend"
+                  }
+                  role={"Backend Developer"}
+                  alt="farid-al-mudzakir"
+                  name={"Farid Al Mudzakir"}
+                  src="/images/about/farid-al-mudzakir.jpg"
+                  data-aos="zoom-in"
+                />
+
+                <AboutProfileImage
+                  text={""}
+                  role={"Frontend Developer"}
+                  alt="Muhammad Farid Rany"
+                  name={"Muhammad Farid Rany "}
+                  src="/images/about/muhammad-farid-rany.png"
+                  data-aos="zoom-in"
+                />
+
+                <AboutProfileImage
+                  text={""}
+                  role={"Machine Learning Developer"}
+                  alt="Nabila Faradiva"
+                  name={"Nabila Faradiva"}
+                  src="/images/about/nabila-faradiva.png"
+                  data-aos="zoom-in"
+                />
+
+                <AboutProfileImage
+                  name={"Abu Toyib Al Aziz"}
+                  text="Pemikir di balik layar yang mengembangkan sistem chatbot supaya bisa membantu pengguna berinteraksi lebih mudah dan manusiawi dengan Ecosortify."
+                  role="Machine Learning Developer"
+                  alt="abu-toyib-al-aziz"
+                  src="/images/about/abu-toyib-al-aziz.jpg"
+                  data-aos="zoom-in"
+                />
+
+                <AboutProfileImage
+                  text={""}
+                  role={"Machine Learning Developer"}
+                  alt="Aldhira Calysta Athalia Siahaan"
+                  name={"Aldhira Calysta Athalia Siahaan"}
+                  src="/images/about/aldhira-calysta-athalia-siahaan.png"
+                  data-aos="zoom-in"
+                />
               </div>
             </div>
           </div>

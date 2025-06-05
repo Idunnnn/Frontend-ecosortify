@@ -1,4 +1,4 @@
-import { sendLoginRequest } from "@/api/user";
+import { sendLoginRequest } from "@/utils/routeHelper";
 import { auth, provider } from "./config";
 import {
   createUserWithEmailAndPassword,
@@ -17,7 +17,7 @@ export const continueWithGoogle = async () => {
   const token = await user.getIdToken();
   const response = await sendLoginRequest({ token });
 
-  document.cookie = `firebase_id_token=${token}; path=/; max-age=86400; Secure; SameSite=Strict`;
+  document.cookie = `firebase_id_token=${token}; path=/; max-age=3600; Secure; SameSite=Strict`;
   return response;
 };
 

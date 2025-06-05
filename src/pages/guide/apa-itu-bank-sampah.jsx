@@ -2,7 +2,7 @@ import Header2 from "@/components/templates/Header2";
 import Leftbar from "@/components/templates/Leftbar";
 import Rightbar from "@/components/templates/Rightbar";
 import Link from "next/link";
-import Image from "next/image";
+import ImageArticle from "@/components/ImageArticle";
 import { Icon } from "@iconify/react";
 
 export default function ApaItuBankSampah() {
@@ -13,19 +13,14 @@ export default function ApaItuBankSampah() {
       <div className="flex">
         <Leftbar />
 
-        <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
+        <main className="2xl:ml-[430px] 2xl:mr-[380px]  lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 id="#" className="text-2xl font-bold mb-5 text-gray-800">
               Apa Itu Bank Sampah?
             </h1>
-            <Image
-              src="/images/guide/bank-sampah.jpg"
-              alt="bank-sampah"
-              width={"400"}
-              height={"500"}
-              className="rounded-md my-5 mx-auto"
-              quality={30}
-            />
+
+            <ImageArticle src="/images/guide/bank-sampah.jpg" alt="bank-sampah" />
+
             <p>
               Bank Sampah merupakan konsep pengumpulan sampah kering dan dipilah serta memiliki manajemen layaknya perbankan tapi
               yang ditabung bukan uang melainkan sampah. Warga yang menabung yang juga disebut nasabah memiliki buku tabungan dan
@@ -107,14 +102,14 @@ export default function ApaItuBankSampah() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-organik/pengenalan"
+                href="/guide/apa-itu-sampah"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Kembali</p>
               </Link>
               <Link
-                href="/guide/sampah-organik/metode-pembuangan"
+                href="/guide/the-great-pacific-garbage-patch"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <p>Selanjutnya</p>

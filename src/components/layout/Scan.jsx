@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import clsx from "clsx";
 import Image from "next/image";
 import CameraCapture from "../CameraCapture";
-import { getScanModel } from "@/api/user";
+import { getScanModel } from "@/utils/routeHelper";
 import { useUser } from "@/contexts/UserContext";
 
 export default function Scan() {
@@ -23,23 +23,26 @@ export default function Scan() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!selectedFile) return;
+    const userImageUrl = URL.createObjectURL(selectedFile);
     setMessages((prev) => [
       ...prev,
       {
         role: "user",
         type: "image",
-        content: URL.createObjectURL(selectedFile),
+        content: userImageUrl,
       },
     ]);
+
+    setSelectedFile(null);
+    setPreviewUrl(null);
     try {
       const result = await getScanModel(selectedFile, user.token);
-
       setMessages((prev) => [
         ...prev,
         {
           role: "bot",
           type: "text",
-          content: result.data.response, // ini dari backend kamu
+          content: result.data.response,
         },
       ]);
 

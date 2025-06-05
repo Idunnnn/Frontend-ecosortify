@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { useChat } from "ai/react";
 import { useUser } from "@/contexts/UserContext";
-import { getChatHistory, sendChatHistory } from "@/api/user";
+import { getChatHistory, sendChatHistory } from "@/utils/routeHelper";
 
 export default function Chat({ className }) {
   const { user } = useUser();
@@ -67,7 +67,6 @@ export default function Chat({ className }) {
         const response = await getChatHistory(user?.uid, user.token);
         const chatArray = response?.data?.chat ?? [];
         setSavedMessages(chatArray);
-        console.log(response.message)
       } catch (err) {
         console.error(err.message);
       } finally {
@@ -101,7 +100,7 @@ export default function Chat({ className }) {
                   </div>
                   <div className="rounded-full w-[32px] h-[32px] overflow-hidden">
                     <img
-                      src={user.picture || "/images/default-user-profile.jpg"}
+                      src={user?.picture || "/images/default-user-profile.jpg"}
                       alt="user"
                       className="w-full h-full object-cover"
                     />

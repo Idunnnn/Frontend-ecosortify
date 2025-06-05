@@ -4,7 +4,7 @@ export default function Rightbar({ className, children, ...props }) {
   return (
     <aside
       className={clsx(
-        "fixed hidden xl:flex flex-col top-20 right-0 w-[300px] h-[calc(100vh-4rem)] bg-white overflow-auto p-5 border-l-1 border-t-1 z-1 border-gray-200",
+        "fixed hidden 2xl:right-[80px] xl:flex flex-col top-20 right-0 w-[300px] h-[calc(100vh-4rem)] bg-white overflow-auto p-5 border-l-1 border-t-1 z-1 border-gray-200",
         className
       )}
       {...props}

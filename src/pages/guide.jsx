@@ -5,15 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-export default function Overview() {
+export default function GuidePage() {
   return (
     <>
       <Header2 className={"fixed w-full bg-white"} />
-
       <div className="flex">
         <Leftbar />
 
-        <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
+        <main className="2xl:ml-[430px] 2xl:mr-[380px]  lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
               Overview
@@ -54,10 +53,8 @@ export default function Overview() {
             <br />
 
             <p>Sudah siap? Yuk! kita langsung kepembahasanya</p>
-           
 
             <div className="flex justify-end mt-14">
-             
               <Link
                 href="/guide/apa-itu-sampah"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"

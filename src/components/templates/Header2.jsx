@@ -148,7 +148,6 @@ export default function Header2({ className, ...props }) {
                 : "hidden transition-all  duration-75  flex-col body-6 absolute top-full bg-white w-full left-0 right-0  shadow -z-10"
             }
           >
-            {}
             <Link
               href="/"
               className="p-5 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100 transition duration-75 flex justify-between items-center"
