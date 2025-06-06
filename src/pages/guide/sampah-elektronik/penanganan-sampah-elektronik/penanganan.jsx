@@ -26,11 +26,11 @@ export default function PenangananEwaste() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/elektronik3.jpg" // Path: public/images/guide/elektronik1.jpg
+                  src="/images/guide/elektronik3.jpg" 
                   alt="Contoh Produk Plastik Pengenalan"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 687px" 
+                  style={{ objectFit: 'cover' }} 
                 />
               </div>
             </div>
@@ -129,8 +129,8 @@ export default function PenangananEwaste() {
               <Link href="#overview" className="font-bold">Panduan Lengkap Penanganan E-Waste</Link>
             </li>
             <li>
-              <Link href="#tahapan-kunci" className="hover:font-semibold">Tahapan Kunci Penanganan E-Waste</Link>
-              <ul className="list-disc list-inside ml-4 space-y-2">
+              <Link href="#tahapan-kunci" >Tahapan Kunci Penanganan E-Waste</Link>
+              <ul className="list-disc space-y-2 ml-4">
                 <li><Link href="#pengumpulan" >Pengumpulan (Collection)</Link></li>
                 <li><Link href="#penyortiran" >Penyortiran (Sorting)</Link></li>
                 <li><Link href="#pembongkaran" >Pembongkaran (Dismantling/Disassembly)</Link></li>

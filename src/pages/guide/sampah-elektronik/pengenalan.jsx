@@ -19,21 +19,21 @@ export default function PengenalanEwaste() {
               Sampah Elektronik (E-Waste): Pengenalan
             </h1>
             <p>
-              Sampah elektronik atau yang dikenal juga dengan **e-waste**, merujuk pada definisi The International Telecommunication Union (yang mengacu pada Step Initiative, 2014) sebagai berbagai item yang berkaitan dengan peralatan listrik dan elektronik (electrical and electronic equipment/EEE) yang telah dibuang oleh pemiliknya dan tidak ada maksud untuk digunakan kembali. Oleh karena itu, sampah elektronik atau e-waste sering juga disebut sebagai **WEEE (Waste Electrical and Electronic Equipment)**.
+              Sampah elektronik atau yang dikenal juga dengan <strong>e-waste</strong>, merujuk pada definisi The International Telecommunication Union (yang mengacu pada Step Initiative, 2014) sebagai berbagai item yang berkaitan dengan peralatan listrik dan elektronik (electrical and electronic equipment/EEE) yang telah dibuang oleh pemiliknya dan tidak ada maksud untuk digunakan kembali. Oleh karena itu, sampah elektronik atau e-waste sering juga disebut sebagai <strong>WEEE (Waste Electrical and Electronic Equipment)</strong>.
             </p>
             <br />
             <p>
-              Di samping itu, berdasarkan pada **PP No. 27 Tahun 2020 tentang Pengelolaan Sampah Spesifik**, sampah elektronik termasuk ke dalam golongan sampah yang mengandung **B3 (Bahan Berbahaya dan Beracun)**. Jenis sampah B3 ini memiliki dampak negatif terhadap lingkungan dan manusia apabila tidak dikelola dengan baik dan benar.
+              Di samping itu, berdasarkan pada <strong>PP No. 27 Tahun 2020 tentang Pengelolaan Sampah Spesifik</strong>, sampah elektronik termasuk ke dalam golongan sampah yang mengandung <strong>B3 (Bahan Berbahaya dan Beracun)</strong>. Jenis sampah B3 ini memiliki dampak negatif terhadap lingkungan dan manusia apabila tidak dikelola dengan baik dan benar.
             </p>
             <br />
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '550px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/elektronik1.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/elektronik1.jpg" 
                   alt="Contoh Produk Pengenalan"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 687px" 
+                  style={{ objectFit: 'cover' }} 
                 />
               </div>
             </div>
@@ -48,11 +48,11 @@ export default function PengenalanEwaste() {
              <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/elektronik2.jpg" // Path: public/images/guide/pet2.jpg
+                  src="/images/guide/elektronik2.jpg" 
                   alt="Contoh Produk Pengenalan"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 687px" 
+                  style={{ objectFit: 'cover' }} 
                 />
               </div>
             </div>
@@ -143,23 +143,23 @@ export default function PengenalanEwaste() {
         </main>
 
         <Rightbar>
-          <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
-            <li>
-              <Link href="#overview" className="font-bold">Pengenalan E-Waste</Link>
-            </li>
-            <li>
-              <Link href="#contoh-e-waste-kategori" className="font-bold">Contoh E-Waste Berdasarkan Kategori</Link>
-              <ul className="list-disc list-inside ml-4 space-y-2">
-                <li><Link href="#peralatan-rumah-tangga" >Peralatan Rumah Tangga</Link></li>
-                <li><Link href="#peralatan-hiburan" >Peralatan Hiburan & Elektronik Konsumen</Link></li>
-                <li><Link href="#peralatan-tik" >Peralatan Teknologi Informasi dan Komunikasi (TIK)</Link></li>
-                <li><Link href="#peralatan-listrik-komponen" >Peralatan Listrik dan Komponennya</Link></li>
-                <li><Link href="#perlengkapan-pencahayaan" >Perlengkapan Pencahayaan</Link></li>
-                <li><Link href="#mainan-alat-olahraga" >Mainan serta Alat Olahraga Elektronik</Link></li>
-              </ul>
-            </li>
-          </ul>
-        </Rightbar>
+  <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
+    <li>
+      <Link href="#overview" className="font-bold">Pengenalan E-Waste</Link>
+    </li>
+    <li>
+      <Link href="#contoh-e-waste-kategori" className="font-bold">Contoh E-Waste Berdasarkan Kategori</Link>
+      <ul className="list-disc space-y-2 ml-4"> {/* Menghapus `list-inside` dan tetap mempertahankan `ml-4` untuk indentasi bullet points */}
+        <li><Link href="#peralatan-rumah-tangga">Peralatan Rumah Tangga</Link></li>
+        <li><Link href="#peralatan-hiburan">Peralatan Hiburan & Elektronik Konsumen</Link></li>
+        <li><Link href="#peralatan-tik">Peralatan Teknologi Informasi dan Komunikasi (TIK)</Link></li>
+        <li><Link href="#peralatan-listrik-komponen">Peralatan Listrik dan Komponennya</Link></li>
+        <li><Link href="#perlengkapan-pencahayaan">Perlengkapan Pencahayaan</Link></li>
+        <li><Link href="#mainan-alat-olahraga">Mainan serta Alat Olahraga Elektronik</Link></li>
+      </ul>
+    </li>
+  </ul>
+</Rightbar>
       </div>
     </>
   );

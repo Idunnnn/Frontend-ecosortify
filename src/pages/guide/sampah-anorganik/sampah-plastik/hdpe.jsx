@@ -112,16 +112,16 @@ export default function hdpe() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#karakteristik" className="hover:font-semibold">Karakteristik Si HDPE Ini</Link>
+              <Link href="#karakteristik" >Karakteristik Si HDPE Ini</Link>
             </li>
             <li>
-              <Link href="#contoh" className="hover:font-semibold">Contoh Gampang Ditemukan</Link>
+              <Link href="#contoh" >Contoh Gampang Ditemukan</Link>
             </li>
             <li>
-              <Link href="#cara-menangani" className="hover:font-semibold">Cara Kita Menanganinya</Link>
+              <Link href="#cara-menangani" >Cara Kita Menanganinya</Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang" className="hover:font-semibold">Proses Daur Ulangnya di Pabrik</Link>
+              <Link href="#proses-daur-ulang" >Proses Daur Ulangnya di Pabrik</Link>
             </li>
           </ul>
         </Rightbar>

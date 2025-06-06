@@ -25,11 +25,11 @@ export default function PenangananIndividuEwaste() {
             <div className="flex justify-center my-6">
               <div style={{ width: '687px', height: '350px', position: 'relative' }} className="rounded-lg shadow-md overflow-hidden">
                 <Image
-                  src="/images/guide/elektronik4.jpg" // Path: public/images/guide/elektronik1.jpg
+                  src="/images/guide/elektronik4.jpg" 
                   alt="Contoh Produk Plastik Pengenalan"
-                  fill // Mengisi parent container
-                  sizes="(max-width: 768px) 100vw, 687px" // Penting untuk responsivitas yang lebih baik
-                  style={{ objectFit: 'cover' }} // Memastikan gambar mengisi tanpa distorsi
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 687px" 
+                  style={{ objectFit: 'cover' }} 
                 />
               </div>
             </div>
@@ -83,15 +83,14 @@ export default function PenangananIndividuEwaste() {
 
             <div className="flex justify-between mt-14">
               <Link
-                href="/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan" // MENGARAH KEMBALI KE TAHAPAN PENANGANAN UMUM
+                href="/guide/sampah-elektronik/penanganan-sampah-elektronik/penanganan"
                 className="py-3 px-5 bg-green-200 rounded items-center flex gap-2 hover:bg-green-300 active:bg-green-300"
               >
                 <Icon icon="icon-park-solid:back" />
                 <p>Sebelumnya</p>
               </Link>
-              {/* Tambahkan link selanjutnya jika ada materi setelah penanganan individu */}
-              {/* Jika ada halaman selanjutnya, ganti div kosong ini dengan Link */}
-              <div className="flex-grow"></div> {/* Ini untuk mendorong tombol selanjutnya ke kanan jika tidak ada tombol sebelumnya */}
+
+              <div className="flex-grow"></div> 
             </div>
             <div className="h-[40px]"></div>
           </article>
@@ -113,7 +112,7 @@ export default function PenangananIndividuEwaste() {
               </ul>
             </li>
             <li>
-              <Link href="#hal-perlu-diperhatikan" className="hover:font-semibold">Hal yang Perlu Diperhatikan</Link>
+              <Link href="#hal-perlu-diperhatikan" >Hal yang Perlu Diperhatikan</Link>
             </li>
           </ul>
         </Rightbar>

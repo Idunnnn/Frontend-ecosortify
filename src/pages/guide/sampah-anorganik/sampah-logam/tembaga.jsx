@@ -109,16 +109,16 @@ export default function tembaga() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#karakteristik" className="hover:font-semibold">Karakteristik</Link>
+              <Link href="#karakteristik" >Karakteristik</Link>
             </li>
             <li>
-              <Link href="#contoh-sampah" className="hover:font-semibold">Contoh Umum Sampah</Link>
+              <Link href="#contoh-sampah" >Contoh Umum Sampah</Link>
             </li>
             <li>
-              <Link href="#cara-penanganan" className="hover:font-semibold">Cara Penanganan Individu</Link>
+              <Link href="#cara-penanganan" >Cara Penanganan Individu</Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang-industri" className="hover:font-semibold">Proses Pengolahan/Daur Ulang Industri</Link>
+              <Link href="#proses-daur-ulang-industri" >Proses Pengolahan/Daur Ulang Industri</Link>
             </li>
           </ul>
         </Rightbar>

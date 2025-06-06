@@ -16,7 +16,7 @@ export default function sampahKainTekstil() {
         <main className="lg:ml-[350px] flex-1 h-[calc(100vh-4rem)] p-8 mb-30 xl:mr-[300px] z-1 bg-white relative top-20 ">
           <article className="selection:bg-green-700 selection:text-white text-gray-700">
             <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
-              Mengenal Lebih Dalam Sampah Kain/Tekstil: Dari Lemari ke Lingkungan
+              Sampah Kain/Tekstil
             </h1>
 
             <h2 id="pendahuluan" className="text-xl font-semibold mt-8 mb-3 text-green-700">Pendahuluan</h2>
