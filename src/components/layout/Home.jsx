@@ -341,7 +341,7 @@ export default function Home() {
             <div data-aos="fade-up" duration="1000" className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {/* Card 1: Organik  */}
               <Link
-                href="/guide/sampah-organik/pengenalan"
+                href="/guide/sampah-organik/"
                 className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg group col-span-3 row-span-2"
               >
                 <div className="relative h-64 lg:h-full w-full">
@@ -364,7 +364,7 @@ export default function Home() {
 
               {/* Card 2: Anorganik */}
               <Link
-                href="/guide/sampah-anorganik/pengenalan"
+                href="/guide/sampah-anorganik/"
                 className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg group col-span-3 lg:col-span-2"
               >
                 <div className="relative h-64 w-full">
@@ -388,7 +388,7 @@ export default function Home() {
 
               {/* Card 3: B3 */}
               <Link
-                href="/guide/sampah-residu-b3/pengenalan"
+                href="/guide/sampah-residu-b3/"
                 className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg group col-span-3 lg:col-span-2"
               >
                 <div className="relative h-64 w-full">
