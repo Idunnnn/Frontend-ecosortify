@@ -320,7 +320,7 @@ export default function Home() {
 
                 {/* Card 4: Edukasi dan ajak */}
                 <div className="bg-green-700 rounded-lg p-6 flex items-start gap-5 flex-col">
-                  <Image src="/images/assets/add-user.png" alt="Educate Icon" width={48} height={48} />
+                  <Image src="/images/icon/add-user.png" alt="Educate Icon" width={48} height={48} />
                   <div>
                     <h3 className="font-semibold text-xl mb-1">Edukasi dan ajak orang lain</h3>
                   </div>
