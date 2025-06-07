@@ -210,27 +210,27 @@ export default function sampahKaca() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#pendahuluan" className="hover:font-semibold">
+              <Link href="#pendahuluan" >
                 Pendahuluan
               </Link>
             </li>
             <li>
-              <Link href="#jenis-umum" className="hover:font-semibold">
+              <Link href="#jenis-umum" >
                 Jenis Kaca yang Umum Ditemui dalam Sampah
               </Link>
             </li>
             <li>
-              <Link href="#jenis-tidak-didaur-ulang" className="hover:font-semibold">
+              <Link href="#jenis-tidak-didaur-ulang" >
                 Jenis Kaca yang Tidak Dapat Didaur Ulang Melalui Program Standar
               </Link>
             </li>
             <li>
-              <Link href="#cara-penanganan" className="hover:font-semibold">
+              <Link href="#cara-penanganan" >
                 Cara Penanganan Sampah Kaca oleh Individu
               </Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang-industri" className="hover:font-semibold">
+              <Link href="#proses-daur-ulang-industri" >
                 Proses Pengolahan/Daur Ulang Kaca Industri
               </Link>
             </li>

@@ -174,7 +174,7 @@ export default function PenangananEwaste() {
               </Link>
             </li>
             <li>
-              <Link href="#tahapan-kunci" className="hover:font-semibold">
+              <Link href="#tahapan-kunci" >
                 Tahapan Kunci Penanganan E-Waste
               </Link>
               <ul className="list-disc list-inside ml-4 space-y-2">

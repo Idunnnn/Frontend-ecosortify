@@ -237,27 +237,27 @@ export default function sampahKainTekstil() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#pendahuluan" className="hover:font-semibold">
+              <Link href="#pendahuluan" >
                 Pendahuluan
               </Link>
             </li>
             <li>
-              <Link href="#jenis-tekstil" className="hover:font-semibold">
+              <Link href="#jenis-tekstil" >
                 Jenis-Jenis Sampah Tekstil
               </Link>
             </li>
             <li>
-              <Link href="#tidak-didaur-ulang" className="hover:font-semibold">
+              <Link href="#tidak-didaur-ulang" >
                 Jenis Tekstil yang Tidak Dapat Didaur Ulang
               </Link>
             </li>
             <li>
-              <Link href="#cara-penanganan" className="hover:font-semibold">
+              <Link href="#cara-penanganan" >
                 Cara Penanganan Sampah Kain/Tekstil oleh Individu
               </Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang-industri" className="hover:font-semibold">
+              <Link href="#proses-daur-ulang-industri" >
                 Proses Pengolahan/Daur Ulang Tekstil Industri
               </Link>
             </li>

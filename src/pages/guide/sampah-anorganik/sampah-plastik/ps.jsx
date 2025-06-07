@@ -103,22 +103,22 @@ export default function ps() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#karakteristik" className="hover:font-semibold">
+              <Link href="#karakteristik" >
                 Karakteristik Si PS Ini
               </Link>
             </li>
             <li>
-              <Link href="#contoh" className="hover:font-semibold">
+              <Link href="#contoh" >
                 Contoh Gampang Ditemukan
               </Link>
             </li>
             <li>
-              <Link href="#cara-menangani" className="hover:font-semibold">
+              <Link href="#cara-menangani" >
                 Cara Kita Menanganinya
               </Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang" className="hover:font-semibold">
+              <Link href="#proses-daur-ulang" >
                 Proses Daur Ulangnya di Pabrik
               </Link>
             </li>

@@ -153,57 +153,57 @@ export default function PlastikTipe67() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#overview" className="font-bold cursor-default">
+              <Link href="#overview" >
                 Plastik Tipe 6 dan Tipe 7
               </Link>
             </li>
             <li>
-              <Link href="#plastik-tipe-6" className="hover:text-green-700">
+              <Link href="#plastik-tipe-6" >
                 Plastik Tipe 6 (Polistirena - PS)
               </Link>
             </li>
             <li className="ml-5">
-              <Link href="#karakteristik-tipe-6" className="hover:text-green-700">
+              <Link href="#karakteristik-tipe-6" >
                 Karakteristik Tipe 6
               </Link>
             </li>
             <li className="ml-5">
-              <Link href="#mengapa-sulit-didaur-ulang-tipe-6" className="hover:text-green-700">
+              <Link href="#mengapa-sulit-didaur-ulang-tipe-6" >
                 Mengapa Sulit Didaur Ulang Tipe 6
               </Link>
             </li>
             <li className="ml-5">
-              <Link href="#contoh-spesifik-tipe-6" className="hover:text-green-700">
+              <Link href="#contoh-spesifik-tipe-6" >
                 Contoh Spesifik Tipe 6
               </Link>
             </li>
             <li>
-              <Link href="#plastik-tipe-7" className="hover:text-green-700">
+              <Link href="#plastik-tipe-7">
                 Plastik Tipe 7 (Jenis Lain-lain/Campuran)
               </Link>
             </li>
             <li className="ml-5">
-              <Link href="#karakteristik-tipe-7" className="hover:text-green-700">
+              <Link href="#karakteristik-tipe-7">
                 Karakteristik Tipe 7
               </Link>
             </li>
             <li className="ml-5">
-              <Link href="#mengapa-sulit-didaur-ulang-tipe-7" className="hover:text-green-700">
+              <Link href="#mengapa-sulit-didaur-ulang-tipe-7" >
                 Mengapa Sulit Didaur Ulang Tipe 7
               </Link>
             </li>
             <li className="ml-5">
-              <Link href="#contoh-spesifik-tipe-7" className="hover:text-green-700">
+              <Link href="#contoh-spesifik-tipe-7" >
                 Contoh Spesifik Tipe 7
               </Link>
             </li>
             <li>
-              <Link href="#cara-penanganan-individu" className="hover:text-green-700">
+              <Link href="#cara-penanganan-individu" >
                 Cara Penanganan oleh Individu
               </Link>
             </li>
             <li>
-              <Link href="#proses-pengolahan-fasilitas" className="hover:text-green-700">
+              <Link href="#proses-pengolahan-fasilitas">
                 Proses Pengolahan/Pemusnahan
               </Link>
             </li>

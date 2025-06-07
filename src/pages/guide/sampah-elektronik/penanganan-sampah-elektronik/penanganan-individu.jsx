@@ -159,7 +159,7 @@ export default function PenangananIndividuEwaste() {
               </ul>
             </li>
             <li>
-              <Link href="#hal-perlu-diperhatikan" className="hover:font-semibold">
+              <Link href="#hal-perlu-diperhatikan" >
                 Hal yang Perlu Diperhatikan
               </Link>
             </li>

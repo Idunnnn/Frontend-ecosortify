@@ -139,27 +139,27 @@ export default function radioaktif() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#overview" className="font-bold cursor-default">
+              <Link href="#overview">
                 Limbah Radioaktif
               </Link>
             </li>
             <li>
-              <Link href="#risiko-utama" className="hover:text-green-700">
+              <Link href="#risiko-utama" >
                 Risiko Utama
               </Link>
             </li>
             <li>
-              <Link href="#contoh-spesifik" className="hover:text-green-700">
+              <Link href="#contoh-spesifik" >
                 Contoh Spesifik
               </Link>
             </li>
             <li>
-              <Link href="#cara-penanganan-individu-fasilitas" className="hover:text-green-700">
+              <Link href="#cara-penanganan-individu-fasilitas" >
                 Cara Penanganan oleh Individu (Fasilitas Kesehatan)
               </Link>
             </li>
             <li>
-              <Link href="#proses-pengolahan-pemusnahan" className="hover:text-green-700">
+              <Link href="#proses-pengolahan-pemusnahan" >
                 Proses Pengolahan/Pemusnahan (Fasilitas Khusus)
               </Link>
             </li>

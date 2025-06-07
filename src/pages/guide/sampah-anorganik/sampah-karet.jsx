@@ -227,27 +227,27 @@ export default function sampahKaret() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#pendahuluan" className="hover:font-semibold">
+              <Link href="#pendahuluan" >
                 Pendahuluan
               </Link>
             </li>
             <li>
-              <Link href="#jenis-umum" className="hover:font-semibold">
+              <Link href="#jenis-umum" >
                 Jenis Sampah Karet yang Umum Ditemui
               </Link>
             </li>
             <li>
-              <Link href="#tidak-didaur-ulang" className="hover:font-semibold">
+              <Link href="#tidak-didaur-ulang" >
                 Jenis Karet yang Tidak Dapat Didaur Ulang
               </Link>
             </li>
             <li>
-              <Link href="#cara-penanganan" className="hover:font-semibold">
+              <Link href="#cara-penanganan" >
                 Cara Penanganan Sampah Karet oleh Individu
               </Link>
             </li>
             <li>
-              <Link href="#proses-daur-ulang-industri" className="hover:font-semibold">
+              <Link href="#proses-daur-ulang-industri" >
                 Proses Pengolahan/Daur Ulang Karet Industri
               </Link>
             </li>

@@ -107,22 +107,22 @@ export default function KainTerkontaminasi() {
         <Rightbar>
           <ul className="mb-8 space-y-3 ml-3 text-gray-600 text-sm">
             <li>
-              <Link href="#overview" className="font-bold cursor-default">
+              <Link href="#overview" >
                 Kain yang Terkontaminasi
               </Link>
             </li>
             <li>
-              <Link href="#contoh-spesifik" className="hover:text-green-700">
+              <Link href="#contoh-spesifik" >
                 Contoh Spesifik
               </Link>
             </li>
             <li>
-              <Link href="#cara-penanganan-individu" className="hover:text-green-700">
+              <Link href="#cara-penanganan-individu" >
                 Cara Penanganan oleh Individu
               </Link>
             </li>
             <li>
-              <Link href="#proses-pengolahan-fasilitas" className="hover:text-green-700">
+              <Link href="#proses-pengolahan-fasilitas" >
                 Proses Pengolahan/Pemusnahan
               </Link>
             </li>
