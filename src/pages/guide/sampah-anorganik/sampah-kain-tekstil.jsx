@@ -16,7 +16,7 @@ export default function sampahKainTekstil() {
 
         <Article>
           <h1 id="overview" className="text-2xl font-bold mb-5 text-gray-800">
-            Mengenal Lebih Dalam Sampah Kain/Tekstil: Dari Lemari ke Lingkungan
+            Sampah Kain/Tekstil
           </h1>
 
           <h2 id="pendahuluan" className="text-xl font-semibold mt-8 mb-3 text-green-700">
