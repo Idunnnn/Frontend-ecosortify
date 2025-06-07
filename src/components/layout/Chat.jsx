@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import { useChat } from "ai/react";
 import { useUser } from "@/contexts/UserContext";
 import { getChatHistory, sendChatHistory } from "@/utils/routeHelper";
+import ReactMarkdown from "react-markdown";
 
 export default function Chat({ className }) {
   const { user } = useUser();
@@ -96,7 +97,7 @@ export default function Chat({ className }) {
               <div key={m.id} className="flex justify-end">
                 <div className="flex gap-2 items-center">
                   <div className="bg-green-300 break-all shadow overflow-hidden text-gray-800 w-full max-w-[500px] rounded-2xl py-3 px-5 text-sm">
-                    {m.content}
+                    <ReactMarkdown>{m.content}</ReactMarkdown>
                   </div>
                   <div className="rounded-full w-[32px] h-[32px] overflow-hidden">
                     <img
@@ -114,7 +115,7 @@ export default function Chat({ className }) {
                     <img src="/images/chatbot-profile.jpg" alt="bot" className="w-full h-full object-fill" />
                   </div>
                   <div className="shadow text-gray-800 border border-gray-300 w-full max-w-[500px] rounded-2xl py-3 px-5 text-sm">
-                    {m.content}
+                    <ReactMarkdown>{m.content}</ReactMarkdown>
                   </div>
                 </div>
               </div>

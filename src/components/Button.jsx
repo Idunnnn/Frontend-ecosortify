@@ -102,7 +102,7 @@ export default function Button({ variant = "primary_lg", children, className, ..
   };
 
   return (
-    <button className={clsx(className, variants[variant])} {...props}>
+    <button className={clsx(className, variants[variant], "cursor-pointer")} {...props}>
       {variant === "google" && <Icon icon="devicon:google" width={"28"} />}
       {children}
     </button>

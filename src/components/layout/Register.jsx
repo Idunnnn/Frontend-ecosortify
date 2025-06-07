@@ -76,6 +76,7 @@ export default function Register() {
       const result = await continueWithGoogle();
       login(result.data.user);
       router.push("/");
+      router.reload();
     } catch (err) {
       console.error(err.message);
     }

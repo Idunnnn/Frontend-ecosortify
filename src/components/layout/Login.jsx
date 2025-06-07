@@ -37,6 +37,7 @@ export default function Login() {
       const result = await loginWithEmailAndPassword(email, password);
       login(result.data.user);
       router.push("/");
+      router.reload();
     } catch (err) {
       setToastMessage(getFirebaseErrorMessage(err));
       setToastType("danger");
@@ -52,6 +53,7 @@ export default function Login() {
       const result = await continueWithGoogle();
       login(result.data.user);
       router.push("/");
+      router.reload();
     } catch (err) {
       console.error(err.message);
     }

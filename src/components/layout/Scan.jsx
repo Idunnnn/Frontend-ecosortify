@@ -5,6 +5,7 @@ import Image from "next/image";
 import CameraCapture from "../CameraCapture";
 import { getScanModel } from "@/utils/routeHelper";
 import { useUser } from "@/contexts/UserContext";
+import { getScanResultContent } from "@/utils/scanResultContent";
 
 export default function Scan() {
   const { user } = useUser();
@@ -117,7 +118,9 @@ export default function Scan() {
               {msg.type === "image" ? (
                 <img src={msg.content} alt="User upload" className="rounded-xl max-w-full" />
               ) : (
-                <p>{msg.content}</p>
+                <div>
+                  {getScanResultContent(msg.content)}
+                </div>
               )}
             </div>
           ))
@@ -132,7 +135,7 @@ export default function Scan() {
               className="w-44 h-44 mx-auto mb-4"
             />
             <p className="text-lg">
-              Hai, aku <strong>SortiBot</strong>!
+              Hai, aku <strong>SortiScan</strong>!
             </p>
             <p className="text-sm text-gray-600 max-w-[400px]">
               Yuk, bantu bumi dengan mengenali sampahmu. Scan sekarang dan temukan cara mengelolanya!
