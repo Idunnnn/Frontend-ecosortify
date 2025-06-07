@@ -121,11 +121,14 @@ export default function About() {
                 />
 
                 <AboutProfileImage
-                  text={""}
+                  text={
+                    "Pengembang inti yang merancang sistem klasifikasi gambar agar Ecosortify mampu mengenali jenis sampah secara akurat dan efisien dari sebuah foto."
+                  }
                   role={"Machine Learning Developer"}
                   alt="Aldhira Calysta Athalia Siahaan"
+                  className={"object-center"}
                   name={"Aldhira Calysta Athalia Siahaan"}
-                  src="/images/about/aldhira-calysta-athalia-siahaan.png"
+                  src="/images/about/aldhira-calysta-athalia-siahaan.jpg"
                   data-aos="zoom-in"
                 />
               </div>
