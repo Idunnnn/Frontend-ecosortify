@@ -17,7 +17,7 @@ export const continueWithGoogle = async () => {
   const token = await user.getIdToken();
   const response = await sendLoginRequest({ token });
 
-  document.cookie = `firebase_id_token=${token}; path=/; max-age=3600; Secure; SameSite=Strict`;
+  document.cookie = `firebase_id_token=${token}; path=/; max-age=3600`;
   return response;
 };
 
@@ -39,7 +39,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
       throw new Error("Login request failed");
     }
 
-    document.cookie = `firebase_id_token=${token}; path=/; max-age=3600; Secure; SameSite=Strict`;
+    document.cookie = `firebase_id_token=${token}; path=/; max-age=3600`;
 
     return response;
   } catch (err) {
@@ -52,7 +52,7 @@ export const getFreshToken = async () => {
   return idToken;
 };
 export const logout = async () => {
-  document.cookie = "firebase_id_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; SameSite=Strict";
+  document.cookie = "firebase_id_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   await signOut(auth);
 };
 
