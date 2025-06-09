@@ -96,12 +96,13 @@ export default function About() {
                 />
 
                 <AboutProfileImage
-                  text={"Yang sudah boleh pulang"}
+                  text={
+                    "Peran saya dalam proyek ini adalah mengelola landing page dan tampilan antarmuka pengguna (front-end) untuk memastikan tampilan yang menarik, responsif, dan memudahkan pengguna dalam mengakses informasi."
+                  }
                   role={"Frontend Developer"}
                   alt="Muhammad Farid Rany"
                   name={"Muhammad Farid Rany "}
-                  src="/images/about/muhammad-farid-rany.jpg
-                  "
+                  src="/images/about/muhammad-farid-rany.jpg"
                   data-aos="zoom-in"
                 />
 
