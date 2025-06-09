@@ -18,14 +18,11 @@ export default function Button({ variant = "primary_lg", children, className, ..
     google: "btn-google",
 
     figma_green_reversed: clsx(
-      "body-6",
-      "text-base",
-      "font-normal",
-      "leading-none",
-      "tracking-normal",
-      "w-[200px] h-[64px]",
-      "px-10 py-5",
-      "rounded-[8px]",
+      "lg:w-[200px]",
+      "text-base lg:font-semibold",
+      "lg:px-10 lg:py-5 px-6 py-3",
+      "rounded-lg",
+      "min-w-[120px]",
       "border border-white text-white",
       "hover:border-[#058C42] hover:text-[#058C42]",
       "active:border-[#058C42] active:text-[#058C42]",
@@ -33,31 +30,24 @@ export default function Button({ variant = "primary_lg", children, className, ..
     ),
 
     figma_green_solid: clsx(
-      "body-6",
-      "font-montserrat", 
-      "text-base", // Untuk font-size: 16px (default Tailwind)
-      "font-normal", // Untuk font-weight: 400
-      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
-      "tracking-normal",
-      "w-[200px] h-[64px]",
-      "px-10 py-5",
-      "rounded-[8px]",
+      "body-6 lg:font-semibold",
+      "lg:w-[200px]",
+      "lg:px-10 lg:py-5 px-6 py-3",
+      "rounded-lg",
+      "min-w-[120px]",
       "bg-[#088D43] text-white",
       "hover:bg-[#0C6F39] active:bg-[#0C6F39]",
       "transition-colors duration-200 ease-in"
     ),
 
-    // ✅ Varian baru (rounded pill, Login button)
     figma_green_pill: clsx(
-      "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-      // Jika tidak, tambahkan kelas berikut:
-      "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base", // Untuk font-size: 16px (default Tailwind)
-      "font-normal", // Untuk font-weight: 400
-      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
-      "tracking-normal",
+      "body-6",
+      "text-base",
+      "font-normal",
+      "leading-none",
       "w-[131px] h-[52px]",
       "px-8 py-4",
+      "min-w-[120px]",
       "rounded-full",
       "bg-[#088D43] text-white",
       "hover:bg-[#0C6F39] active:bg-[#0C6F39]",
@@ -65,13 +55,8 @@ export default function Button({ variant = "primary_lg", children, className, ..
     ),
 
     figma_green_outline_pill: clsx(
-      "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-      // Jika tidak, tambahkan kelas berikut:
-      "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base", // Untuk font-size: 16px (default Tailwind)
-      "font-normal", // Untuk font-weight: 400
-      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
-      "tracking-normal",
+      "body-6",
+      "text-base",
       "w-[131px] h-[52px]",
       "px-8 py-4",
       "rounded-full",
@@ -82,18 +67,11 @@ export default function Button({ variant = "primary_lg", children, className, ..
     ),
 
     figma_white_outline_pill: clsx(
-      "body-6", // Jika 'body-6' sudah mengurus tipografi, biarkan saja.
-      // Jika tidak, tambahkan kelas berikut:
-      "font-montserrat", // Pastikan Montserrat dikonfigurasi di tailwind.config.js
-      "text-base", // Untuk font-size: 16px (default Tailwind)
-      "font-normal", // Untuk font-weight: 400
-      "leading-none", // Untuk line-height: 100% (atau 'leading-[1]')
-      "tracking-normal", // Untuk letter-spacing: 0%
-
-      // Properti layout, border, hover, active yang sudah ada
-      "w-[131px] h-[52px]",
-      "px-8 py-4",
+      "body-6",
+      "lg:w-[131px] lg:h-[52px]",
+      "lg:px-8 lg:py-4 px-4 py-3",
       "rounded-full",
+      "min-w-[100px]",
       "border border-[#088D43] text-[#088D43]",
       "hover:border-[#0C6F39] hover:text-[#0C6F39]",
       "active:border-[#0C6F39] active:text-[#0C6F39]",

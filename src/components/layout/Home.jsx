@@ -48,7 +48,7 @@ export default function Home() {
         </section>
 
         {/*Realita Sampah Section */}
-        <section className="bg-white text-gray-800py-[60px] px-5 py-[60px] md:px-[52px] lg:py-24 lg:px-8">
+        <section className="bg-white text-gray-800py-[60px] px-7 py-[60px] md:px-[52px] lg:py-24 lg:px-8">
           <div
             className="max-w-[412px] mx-auto flex flex-col items-start gap-8 md:max-w-[1023px]  md:flex-row md:items-center md:gap-20 lg:max-w-6xl 
           lg:gap-20 lg:flex-row lg:items-center justify-center"
@@ -72,7 +72,7 @@ export default function Home() {
               className=" w-full  max-w-[380px] flex flex-col items-start gap-2 md:w-1/2 md:max-w-[488px] md:items-start md:gap-2 lg:max-w-[572px] lg:items-start "
             >
               {/* "REALITA SAMPAH DI SEKITAR KITA" Paragraph */}
-              <p className="font-normal uppercase text-[14px] text-[#0B5C31] mb-2 w-auto max-w-[245px] text-left md:text-[16px] md:max-w-[280px]   lg:max-w-none ">
+              <p className="font-normal uppercase body-7 text-[#0B5C31] mb-2 w-auto max-w-[245px] text-left md:text-[16px] md:max-w-[280px]   lg:max-w-none ">
                 REALITA SAMPAH DI SEKITAR KITA
               </p>
 
@@ -82,7 +82,7 @@ export default function Home() {
               </h2>
 
               {/* Long Paragraph */}
-              <p className="body-6 w-full max-w-[380px] text-gray-800 text-left md:max-w-[488px] lg:max-w-none">
+              <p className="text-base w-full max-w-[380px] text-gray-800 text-left md:max-w-[488px] lg:max-w-none">
                 Menurut United Nations Programme (UNEP), sekitar 33% sampah yang dihasilkan diseluruh dunia tidak dikelola dengan
                 baik, sampah-sampah ini berakhir menumpuk di Tempat Pembuangan Akhir (TPA). Beberapa sumber menyebutkan alasan
                 tidak terkelola dengan baik adalah pemisahan sampah yang buruk, kesadaran masyarakat yang rendah dan sampah yang
@@ -111,21 +111,21 @@ export default function Home() {
             </p>
 
             {/* Benefit Cards Grid */}
-            <div className="grid grid-cols-2 gap-11 md:grid-cols-3 w-full ">
+            <div className="grid grid-cols-2 gap-11 md:grid-cols-3 w-full md:mt-0 mt-10">
               {/* Individual Benefit Card 1 */}
-              <div className="text-center flex flex-col gap-10 px-4 pb-10 pt-20 pr-5 w-[210px]  items-center">
+              <div className="text-center flex flex-col md:gap-10 gap-5 px-4 md:pb-10 pt-5 md:pt-20 pr-5  items-center">
                 <Image src="/images/icon/forest.png" alt="hutan" width={80} height={80} />
                 <h3 className="mb-2 subheading-6 text-gray-300">Meningkatkan kesadaran lingkungan</h3>
               </div>
 
               {/* Individual Benefit Card 2 */}
-              <div className="text-center flex flex-col gap-10 px-4 pb-10 pt-20 pr-5 w-[210px]  items-center">
+              <div className="text-center flex flex-col md:gap-10 gap-5 px-4 md:pb-10 pt-5 md:pt-20 pr-5  items-center">
                 <Image src="/images/icon/planet-earth.png" alt="planet" width={80} height={80} />
                 <h3 className="mb-2 subheading-6 text-gray-300">Menghemat Sumber Daya Alam</h3>
               </div>
 
               {/* Individual Benefit Card 3 */}
-              <div className="text-center flex flex-col gap-10 px-4 pb-10 pt-20 pr-5 w-[210px]  items-center col-span-2 md:col-span-1 mx-auto ">
+              <div className="text-center flex flex-col md:gap-10 gap-5 px-4 md:pb-10 pt-5 md:pt-20 pr-5  items-center col-span-2 md:col-span-1 mx-auto ">
                 <Image src="/images/icon/law.png" alt="Law Document Icon" width={80} height={80} />
                 <h3 className="mb-2 subheading-6 text-gray-300">Mendorong Kebijakan yang Lebih Baik</h3>
               </div>
@@ -145,8 +145,8 @@ export default function Home() {
 
         {/* Apa Kata Mereka?  */}
         <section className="bg-white py-16 md:py-24 text-gray-800">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center md:text-left flex flex-col md:flex-row md:justify-between md:items-end">
+          <div className="max-w-6xl mx-auto px-7 sm:px-6 lg:px-8">
+            <div className="mb-12  md:text-left flex flex-col md:flex-row md:justify-between md:items-end">
               <div>
                 <p className="text-sm font-semibold text-green-600 uppercase mb-2 tracking-wide">PESAN DARI LINGKUNGAN</p>
                 <h2 className="text-4xl md:text-5xl font-bold leading-tight">Apa Kata Mereka?</h2>
@@ -174,7 +174,7 @@ export default function Home() {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h3 className="font-bold text-xl">Kencanaonline.com</h3>
+                    <h3 className="font-bold text-xl break-all">Kencanaonline.com</h3>
                     <p className="text-sm text-gray-500">Media Online</p>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function Home() {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h3 className="font-bold text-xl">World Health Organization (WHO)</h3>
+                    <h3 className="font-bold text-xl  ">World Health Organization (WHO)</h3>
                     <p className="text-sm text-gray-500">Media Online</p>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export default function Home() {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h3 className="font-bold text-xl">United Nations (UN)</h3>
+                    <h3 className="font-bold text-xl  ">United Nations (UN)</h3>
                     <p className="text-sm text-gray-500">Lembaga Dunia</p>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function Home() {
                     className="rounded-full mr-4"
                   />
                   <div>
-                    <h3 className="font-bold text-xl">United Nations Environment Programme (UNEP)</h3>
+                    <h3 className="font-bold text-xl  ">United Nations Environment Programme (UNEP)</h3>
                     <p className="text-sm text-gray-500">Lembaga Dunia</p>
                   </div>
                 </div>
@@ -295,34 +295,34 @@ export default function Home() {
               {/* Action Cards Grid */}
               <div className="grid grid-cols-2 gap-4">
                 {/* Card 1: Buang sampah */}
-                <div className="bg-green-700 rounded-lg p-6 flex items-start gap-5 flex-col">
+                <div className="bg-green-700 rounded-lg md:p-6 p-3 flex items-start gap-5 flex-col">
                   <Image src="/images/icon/litter.png" alt="Trash Bin Icon" width={48} height={48} />
                   <div>
-                    <h3 className="font-semibold text-xl mb-1">Buang sampah pada tempat sampah</h3>
+                    <h3 className="font-semibold md:text-xl text-[14px] mb-1">Buang sampah pada tempat sampah</h3>
                   </div>
                 </div>
 
                 {/* Card 2: Pilah sampah */}
-                <div className="bg-green-700 rounded-lg p-6 flex items-start gap-5 flex-col">
+                <div className="bg-green-700 rounded-lg md:p-6 p-3 flex items-start gap-5 flex-col">
                   <Image src="/images/icon/reach.png" alt="Sort Trash Icon" width={48} height={48} />
                   <div>
-                    <h3 className="font-semibold text-xl mb-1">Pilah sampah sebelum di buang</h3>
+                    <h3 className="font-semibold md:text-xl text-[14px] mb-1">Pilah sampah sebelum di buang</h3>
                   </div>
                 </div>
 
                 {/* Card 3: Kurangi plastik */}
-                <div className="bg-green-700 rounded-lg p-6 flex items-start gap-5 flex-col">
+                <div className="bg-green-700 rounded-lg md:p-6 p-3 flex items-start gap-5 flex-col">
                   <Image src="/images/icon/ad-blocker.png" alt="No Plastic Icon" width={48} height={48} />
                   <div>
-                    <h3 className="font-semibold text-xl mb-1">Kurangi penggunaan plastic</h3>
+                    <h3 className="font-semibold md:text-xl text-[14px] mb-1">Kurangi penggunaan plastic</h3>
                   </div>
                 </div>
 
                 {/* Card 4: Edukasi dan ajak */}
-                <div className="bg-green-700 rounded-lg p-6 flex items-start gap-5 flex-col">
+                <div className="bg-green-700 rounded-lg md:p-6 p-3 flex items-start gap-5 flex-col">
                   <Image src="/images/icon/add-user.png" alt="Educate Icon" width={48} height={48} />
                   <div>
-                    <h3 className="font-semibold text-xl mb-1">Edukasi dan ajak orang lain</h3>
+                    <h3 className="font-semibold md:text-xl text-[14px] mb-1">Edukasi dan ajak orang lain</h3>
                   </div>
                 </div>
               </div>
@@ -335,7 +335,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-7 sm:px-6 lg:px-8">
             <div className="mb-12">
               <p className="body-6 text-green-800 uppercase mb-2">FEATURED GUIDE</p>
-              <h2 className="heading-3 text-gray-800 leading-tight">Panduan ini bisa bantu kamu beraksi untuk lingkungan</h2>
+              <h2 className="font-semibold md:text-[36px] text-[28px] text-gray-800 leading-tight">Panduan ini bisa bantu kamu beraksi untuk lingkungan</h2>
             </div>
 
             <div data-aos="fade-up" duration="1000" className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -422,13 +422,13 @@ export default function Home() {
           }}
         >
           <div className="max-w-6xl mx-auto ">
-            <div className="relative bg-white rounded-[20px] border xl:h-[350px] h-[300px] border-[#E8E8E8] flex flex-col md:flex-row items-center justify-between px-10 py-6">
+            <div className="relative bg-white rounded-[20px] border xl:h-[350px] h-[300px] border-[#E8E8E8] flex flex-col md:flex-row sm:items-center justify-between md:px-10 md:py-6 px-6 py-2">
               <div
                 data-aos="fade-up"
                 duration="1000"
-                className="relative z-10 w-full h-full md:w-1/2 text-gray-800 flex flex-col justify-center"
+                className="relative z-10 w-full h-full md:w-1/2 text-gray-800 flex flex-col sm:justify-center mt-10 md:mt-0"
               >
-                <h2 className="body-5 text-black mb-7">Biarkan AI membantu mu dalam hal pengelolaan sampah</h2>
+                <h2 className="md:text-[20px] text-16px text-black mb-7">Biarkan AI membantu mu dalam hal pengelolaan sampah</h2>
                 <Link href="/chatbot">
                   <Button variant="figma_white_outline_pill" className="hover:cursor-pointer">
                     Chatbot
