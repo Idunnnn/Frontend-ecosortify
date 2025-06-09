@@ -2,13 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function CameraCapture({ onCapture }) {
   const videoRef = useRef(null);
-  const [stream, setStream] = useState(null);
+  const streamRef = useRef(null);
 
   useEffect(() => {
     async function openCamera() {
       try {
         const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
-        setStream(mediaStream);
+        streamRef.current = mediaStream;
         if (videoRef.current) {
           videoRef.current.srcObject = mediaStream;
         }
@@ -19,10 +19,9 @@ export default function CameraCapture({ onCapture }) {
 
     openCamera();
 
-    // Matikan kamera saat unmount
     return () => {
-      if (stream) {
-        stream.getTracks().forEach((track) => track.stop());
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach((track) => track.stop());
       }
     };
   }, []);

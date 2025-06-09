@@ -6,6 +6,8 @@ import CameraCapture from "../CameraCapture";
 import { getScanModel } from "@/utils/routeHelper";
 import { useUser } from "@/contexts/UserContext";
 import { getScanResultContent } from "@/utils/scanResultContent";
+import Button from "../Button";
+import Link from "next/link";
 
 export default function Scan() {
   const { user } = useUser();
@@ -120,6 +122,10 @@ export default function Scan() {
               ) : (
                 <div>
                   {getScanResultContent(msg.content)}
+                  <br />
+                  <Link href="/chatbot">
+                    <Button variant="primary_sm">Tanyakan Lebih Lanjut di Chatbot 🤖</Button>
+                  </Link>
                 </div>
               )}
             </div>
