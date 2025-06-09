@@ -19,7 +19,7 @@ const organicWasteContent = <>🍃 <b>Sampah Organik</b><br />
 const anorganicWasteContent = <>🧴 <b>Sampah Anorganik</b><br />
     <br />
 
-    <p>Sampah pada gambar terdiri dari botol plastik, kemasan makanan, dan kaleng bekas. Berdasarkan klasifikasi, ini termasuk dalam kategori <strong>sampah anorganik</strong>, yaitu sampah buatan manusia yang sulit terurai secara alami.</p>
+    <p>Berdasarkan klasifikasi, ini termasuk dalam kategori <strong>sampah anorganik</strong>, yaitu sampah buatan manusia yang sulit terurai secara alami.</p>
     <br />
 
     <b>🔎 Penjelasan Sampah</b>
@@ -37,7 +37,7 @@ const anorganicWasteContent = <>🧴 <b>Sampah Anorganik</b><br />
 const residualB3WasteContent = <>⚠️ <b>Sampah Residu dan B3</b><br />
     <br />
 
-    <p>Sampah pada gambar mencakup pembalut bekas, popok, puntung rokok, serta cat dan oli bekas. Ini termasuk <strong>sampah residu dan B3 (Bahan Berbahaya dan Beracun)</strong> yang tidak bisa didaur ulang dan berpotensi mencemari lingkungan.</p>
+    <p>Sampah pada gambar termasuk <strong>sampah residu dan B3 (Bahan Berbahaya dan Beracun)</strong> yang tidak bisa didaur ulang dan berpotensi mencemari lingkungan.</p>
     <br />
 
     <b>🔎 Penjelasan Sampah</b>
@@ -55,7 +55,7 @@ const residualB3WasteContent = <>⚠️ <b>Sampah Residu dan B3</b><br />
 const eletronicWasteContent = <>📱 <b>Sampah Elektronik</b><br />
     <br />
 
-    <p>Sampah pada gambar terdiri dari handphone rusak, kabel, baterai, dan perangkat elektronik bekas lainnya. Ini tergolong dalam <strong>sampah elektronik</strong> yang bisa mengandung bahan kimia berbahaya jika tidak ditangani dengan benar.</p>
+    <p>Sampah pada gambar tergolong dalam <strong>sampah elektronik</strong> yang bisa mengandung bahan kimia berbahaya jika tidak ditangani dengan benar.</p>
     <br />
 
     <b>🔎 Penjelasan Sampah</b>
@@ -70,6 +70,8 @@ const eletronicWasteContent = <>📱 <b>Sampah Elektronik</b><br />
     <p>Kumpulkan perangkat elektronik bekas dalam wadah khusus. Jika memungkinkan, pisahkan bagian baterai atau komponen berbahaya. Jangan mencampurkannya dengan sampah basah atau organik agar perangkat yang masih bisa dimanfaatkan tidak rusak.</p>
 </>
 
+const nonWasteContent = <><p>Gambar yang dimasukan berada <b>di luar kategori sampah</b>.</p></>
+
 export const getScanResultContent = (content) => {
     switch (content) {
         case 'Organik':
@@ -80,6 +82,8 @@ export const getScanResultContent = (content) => {
             return residualB3WasteContent;
         case 'Elektronik':
             return eletronicWasteContent;
+        case 'Non-Sampah':
+            return nonWasteContent;
         default:
             break;
     }
