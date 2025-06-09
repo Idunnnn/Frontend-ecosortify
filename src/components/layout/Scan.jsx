@@ -18,6 +18,7 @@ export default function Scan() {
   const [showCamera, setShowCamera] = useState(false);
   const [messages, setMessages] = useState([]);
   const [file, setFile] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleActive = () => {
     setActive(!active);
@@ -39,6 +40,7 @@ export default function Scan() {
     setSelectedFile(null);
     setPreviewUrl(null);
     try {
+      setIsLoading(true);
       const result = await getScanModel(selectedFile, user.token);
       setMessages((prev) => [
         ...prev,
@@ -53,6 +55,8 @@ export default function Scan() {
       setPreviewUrl(null);
     } catch (err) {
       console.error(err.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -97,56 +101,70 @@ export default function Scan() {
 
   return (
     <>
-      <main className="mx-auto flex flex-col justify-center items-center max-w-[700px] mb-30 w-full mt-5 gap-8 p-8 lg:p-0 ">
+      <main className="mx-auto flex flex-col justify-center items-center max-w-[700px] mb-30 w-full mt-5 gap-8 p-8 lg:p-0">
         {showCamera ? (
           <div className="mt-10 w-full">
             <CameraCapture
               onCapture={(capturedFile) => {
                 setSelectedFile(capturedFile);
-                setShowCamera(false); // hide camera after capture
+                setShowCamera(false);
               }}
             />
           </div>
-        ) : messages.length > 0 ? (
-          messages.map((msg, i) => (
-            <div
-              key={i}
-              className={`mb-2  rounded-xl  ${
-                msg.role === "user"
-                  ? " text-white self-end max-w-[55%] border border-gray-300 "
-                  : "bg-gray-100 border-gray-300 border shadow text-black self-start p-3  max-w-[70%]"
-              }`}
-            >
-              {msg.type === "image" ? (
-                <img src={msg.content} alt="User upload" className="rounded-xl max-w-full" />
-              ) : (
-                <div>
-                  {getScanResultContent(msg.content)}
-                  <br />
-                  <Link href="/chatbot">
-                    <Button variant="primary_sm">Tanyakan Lebih Lanjut di Chatbot 🤖</Button>
-                  </Link>
-                </div>
-              )}
-            </div>
-          ))
         ) : (
-          <div className="text-center text-gray-700 mt-20">
-            <Image
-              src="/images/scan.png"
-              alt="Welcome"
-              width={200}
-              height={200}
-              quality={30}
-              className="w-44 h-44 mx-auto mb-4"
-            />
-            <p className="text-lg">
-              Hai, aku <strong>SortiScan</strong>!
-            </p>
-            <p className="text-sm text-gray-600 max-w-[400px]">
-              Yuk, bantu bumi dengan mengenali sampahmu. Scan sekarang dan temukan cara mengelolanya!
-            </p>
-          </div>
+          <>
+            {messages.length > 0 && (
+              <>
+                {messages.map((msg, i) => (
+                  <div
+                    key={i}
+                    className={`mb-2 rounded-xl ${
+                      msg.role === "user"
+                        ? "text-white self-end max-w-[55%] border border-gray-300"
+                        : "bg-gray-100 border-gray-300 border shadow text-black self-start p-3 lg:max-w-[80%] "
+                    }`}
+                  >
+                    {msg.type === "image" ? (
+                      <img src={msg.content} alt="User upload" className="rounded-xl max-w-full" />
+                    ) : (
+                      <div>
+                        {getScanResultContent(msg.content)}
+                        <br />
+                        <Link href="/chatbot">
+                          <Button variant="primary_sm">Tanyakan Lebih Lanjut di Chatbot 🤖</Button>
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                {isLoading && (
+                  <div className="self-start mt-4 ml-15">
+                    <div className="ai-loader"></div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {messages.length === 0 && !isLoading && (
+              <div className="text-center text-gray-700 mt-20">
+                <Image
+                  src="/images/scan.png"
+                  alt="Welcome"
+                  width={200}
+                  height={200}
+                  quality={30}
+                  className="w-44 h-44 mx-auto mb-4"
+                />
+                <p className="text-lg">
+                  Hai, aku <strong>SortiScan</strong>!
+                </p>
+                <p className="text-sm text-gray-600 max-w-[400px]">
+                  Yuk, bantu bumi dengan mengenali sampahmu. Scan sekarang dan temukan cara mengelolanya!
+                </p>
+              </div>
+            )}
+          </>
         )}
       </main>
 

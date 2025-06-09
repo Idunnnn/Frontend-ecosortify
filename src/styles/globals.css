@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind utilities;
 @import "tailwindcss";
 @import "./typography.css";
@@ -17,6 +17,28 @@
   --text-primary: #38f087;
   --text-secondary: #d9d9d9;
 }
+
+/* HTML: <div class="loader"></div> */
+.ai-loader {
+  --d:14px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  color: #25b09b;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 1.5px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 2px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 2.5px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 3px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 3.5px;
+  animation: l27 1s infinite steps(8);
+}
+@keyframes l27 {
+  100% {transform: rotate(1turn)}
+}
+
 body {
   background: var(--background);
   font-family: "Montserrat", Helvetica, sans-serif;
@@ -72,7 +94,6 @@ body {
    hover:border-[var(--btn-primary-hover)] active:bg-[var(--btn-primary-hover)] py-3 px-6 text-sm min-w-[100px]
    hover:cursor-pointer;
 }
-
 
 .primary__sm {
   @apply bg-[var(--btn-primary)] duration-200 transition 

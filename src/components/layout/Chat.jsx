@@ -10,9 +10,16 @@ export default function Chat({ className }) {
   const { user } = useUser();
   const textareaRef = useRef(null);
   const bottomRef = useRef(null);
+  const [isWaitingResponse, setIsWaitingResponse] = useState(false);
 
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     keepLastMessageOnError: true,
+    onResponse() {
+      setIsWaitingResponse(true);
+    },
+    onFinish() {
+      setIsWaitingResponse(false);
+    },
   });
   const chatContainer = useRef(null);
   const [active, setActive] = useState(false);
@@ -88,39 +95,48 @@ export default function Chat({ className }) {
 
   return (
     <>
+    
+
       <main ref={chatContainer} className="mx-auto flex flex-col max-w-[700px] mb-32  w-full mt-5 gap-8 p-8 lg:p-0 ">
         {loading ? (
           <p className="text-center text-sm text-gray-500 ">Retrieves chat...</p>
         ) : savedMessages.length > 0 || messages.length > 0 ? (
-          savedMessages.concat(messages).map((m) =>
-            m.role === "user" ? (
-              <div key={m.id} className="flex justify-end">
-                <div className="flex gap-2 items-center">
-                  <div className="bg-green-300 break-all shadow overflow-hidden text-gray-800 w-full max-w-[500px] rounded-2xl py-3 px-5 text-sm">
-                    <ReactMarkdown>{m.content}</ReactMarkdown>
-                  </div>
-                  <div className="rounded-full w-[32px] h-[32px] overflow-hidden">
-                    <img
-                      src={user?.picture || "/images/default-user-profile.jpg"}
-                      alt="user"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div key={m.id} className="flex justify-start">
-                <div className="flex gap-2 items-center">
-                  <div className="rounded-full w-[32px] h-[32px] overflow-hidden">
-                    <img src="/images/chatbot-profile.jpg" alt="bot" className="w-full h-full object-fill" />
-                  </div>
-                  <div className="shadow text-gray-800 border border-gray-300 w-full max-w-[500px] rounded-2xl py-3 px-5 text-sm">
-                    <ReactMarkdown>{m.content}</ReactMarkdown>
+          <>
+            {savedMessages.concat(messages).map((m) =>
+              m.role === "user" ? (
+                <div key={m.id} className="flex justify-end">
+                  <div className="flex gap-2 items-center">
+                    <div className="bg-green-300 break-all shadow overflow-hidden text-gray-800 w-full max-w-[500px] rounded-2xl py-3 px-5 text-sm">
+                      <ReactMarkdown>{m.content}</ReactMarkdown>
+                    </div>
+                    <div className="rounded-full w-[32px] h-[32px] overflow-hidden">
+                      <img
+                        src={user?.picture || "/images/default-user-profile.jpg"}
+                        alt="user"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
+              ) : (
+                <div key={m.id} className="flex justify-start">
+                  <div className="flex gap-2 items-center">
+                    <div className="rounded-full w-[32px] h-[32px] overflow-hidden">
+                      <img src="/images/chatbot-profile.jpg" alt="bot" className="w-full h-full object-fill" />
+                    </div>
+                    <div className="shadow text-gray-800 border border-gray-300 w-full max-w-[500px] rounded-2xl py-3 px-5 text-sm">
+                      <ReactMarkdown>{m.content}</ReactMarkdown>
+                    </div>
+                  </div>
+                </div>
+              )
+            )}
+            {isWaitingResponse && (
+              <div className="self-start mt-4 ml-15">
+                <div className="ai-loader"></div>
               </div>
-            )
-          )
+            )}
+          </>
         ) : shouldShowWelcome ? (
           <div className="text-center text-gray-700 mt-20">
             <img src="/images/welcome-bot.gif" alt="Welcome" className="w-44 h-44 mx-auto mb-4" />
