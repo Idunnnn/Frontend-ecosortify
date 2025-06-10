@@ -134,7 +134,7 @@ export default function About() {
                   alt="Aldhira Calysta Athalia Siahaan"
                   className={"object-center"}
                   name={"Aldhira Calysta Athalia Siahaan"}
-                  src="/images/about/aldhira-calysta-athalia-siahaan.jpg"
+                  src="/images/about/aldhira-calysta-athalia-siahaan.JPG"
                   data-aos="zoom-in"
                 />
               </div>

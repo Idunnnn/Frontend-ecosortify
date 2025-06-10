@@ -41,7 +41,7 @@ export default function Header2({ className, ...props }) {
   return (
     <>
       <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
-      <header className={clsx("hidden xl:block z-2", className)}>
+      <header data-aos="fade-down" className={clsx("hidden xl:block z-2", className)}>
         <div className="flex justify-between px-[100px] relative py-5 border-b-1 border-b-gray-200 items-center">
           <Link href="/" className="flex items-start max-w-[188px]">
             <img src="/images/logo.png" alt="logo" />
@@ -135,8 +135,8 @@ export default function Header2({ className, ...props }) {
           </div>
         </div>
       </header>
-        <header className={clsx("block xl:hidden z-2 bg-white ", className)}>
-          <div className="flex justify-between px-5 relative py-5 border-b-1 border-b-gray-200 items-center bg-white">
+      <header className={clsx("block xl:hidden z-2 bg-white ", className)}>
+        <div className="flex justify-between px-5 relative py-5 border-b-1 border-b-gray-200 items-center bg-white">
           <Link href="/" className="flex items-start max-w-[150px]">
             <img src="/images/logo.png" alt="logo" />
           </Link>
@@ -193,7 +193,9 @@ export default function Header2({ className, ...props }) {
                   <Button variant="primary_sm">Login</Button>
                 </Link>
                 <Link href="/register">
-                  <Button variant="secondary_sm" className="text-gray-600 border-gray-600 border">Register</Button>
+                  <Button variant="secondary_sm" className="text-gray-600 border-gray-600 border">
+                    Register
+                  </Button>
                 </Link>
               </li>
             )}

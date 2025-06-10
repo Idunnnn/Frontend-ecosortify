@@ -41,7 +41,7 @@ export default function Header({ className, ...props }) {
   return (
     <>
       <ToastAlert show={showToast} onClose={() => setShowToast(false)} type={toastType} message={toastMessage} />
-      <header className={clsx("hidden xl:block z-2", className)}>
+      <header data-aos="fade-down" className={clsx("hidden xl:block z-2", className)}>
         <div className="flex justify-between px-[100px] relative py-5 items-center">
           <Link href="/" className="flex items-start max-w-[188px]">
             <img src="/images/logo.png" alt="logo" />

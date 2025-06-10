@@ -28,7 +28,10 @@ export default function Home() {
         <Header1 />
 
         {/* (main hero section) */}
-        <section className="flex flex-col items-start justify-center min-h-[calc(100vh-100px)] text-white px-7 md:items-center">
+        <section
+          data-aos="zoom-in"
+          className="flex flex-col items-start justify-center min-h-[calc(100vh-100px)] text-white px-7 md:items-center"
+        >
           <div className="flex flex-col items-start w-full max-w-[380px] md:max-w-[650px] md:items-center">
             <h1 className="font-bold  text-[40px] text-left md:text-[52px] md:text-center">Untuk Bumi yang Lebih Bersih</h1>
 
@@ -335,7 +338,9 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-7 sm:px-6 lg:px-8">
             <div className="mb-12">
               <p className="body-6 text-green-800 uppercase mb-2">FEATURED GUIDE</p>
-              <h2 className="font-semibold md:text-[36px] text-[28px] text-gray-800 leading-tight">Panduan ini bisa bantu kamu beraksi untuk lingkungan</h2>
+              <h2 className="font-semibold md:text-[36px] text-[28px] text-gray-800 leading-tight">
+                Panduan ini bisa bantu kamu beraksi untuk lingkungan
+              </h2>
             </div>
 
             <div data-aos="fade-up" duration="1000" className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
