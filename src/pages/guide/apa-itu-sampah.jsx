@@ -19,7 +19,7 @@ export default function ApaItuSampahPage() {
           <p>
             Pengertian sampah pada umumnya merupakan sisa atau hasil dari kegiatan manusia sehari-hari yang tidak lagi bisa
             dimanfaatkan. Dapat ditemui di berbagai tempat dengan jenis dan wujud yang berbeda-beda.{" "}
-            <Link href="/guide/organik" className="text-blue-700">
+            <Link href="/guide/sampah-organik" className="text-blue-700">
               Sampah organik
             </Link>{" "}
             dan{" "}
